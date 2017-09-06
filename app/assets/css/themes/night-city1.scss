@@ -517,8 +517,11 @@ a {
     color: $primary-color-D;
     text-decoration: underline; }
 .link-on-dark {
-  color: #FFF;
+  color: #ababab;
   opacity: .8;
+}
+.link-on-dark:hover {
+  color: #fff;
 }
 
 a:not([href]):not([tabindex]) {
@@ -7617,6 +7620,13 @@ p {
       font-size: 14px;
       font-weight: 500;
       height: 36px; }
+    .user-message-right {
+      background: rgb(30,87,153);
+      background: -moz-linear-gradient(left, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 100%, rgba(125,185,232,1) 100%, rgba(32,124,202,1) 100%);
+      background: -webkit-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 100%,rgba(125,185,232,1) 100%,rgba(32,124,202,1) 100%);
+      background: linear-gradient(to right, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 100%,rgba(125,185,232,1) 100%,rgba(32,124,202,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=1 );
+    }
 
 .mai-top-header {
   border: 0;
