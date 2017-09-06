@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 gulp.task('autoprefixer', function() {
     return gulp.src('./app/assets/css/themes/night-city1.scss')
-        .pipe(groupMedia())
+        //.pipe(groupMedia())
         .pipe(sass().on('error', sass.logError)) // Turn scss file into css
         .pipe(autoprefixer({browsers: ['last 5 versions', '> 3%']}))
         .pipe(rename("app.css"))
@@ -23,7 +23,7 @@ gulp.task('minCss', function() {
 });
 
 gulp.task('watch_autoprefixer', function() {
-    gulp.watch('./app/assets/css/themes/night-city.scss', ['autoprefixer'])
+    gulp.watch('./app/assets/css/themes/night-city1.scss', ['autoprefixer'])
 });
 gulp.task('watch_min', function() {
     gulp.watch('./app/assets/css/themes/night-city.css', ['minCss'])
