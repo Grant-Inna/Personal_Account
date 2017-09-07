@@ -8908,7 +8908,7 @@ p {
   margin-right: .4rem; }
 
 .mai-nav-tabs-sub > .nav-item > .nav-link [class*="s7-"] {
-  font-weight: 600; }
+  font-weight: 500; }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .mai-nav-tabs-sub > .nav-item > .nav-link .icon {
@@ -13813,7 +13813,7 @@ input[type="checkbox"] {
   color: #6d89d3; }
 
 .nav-link .icon {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   vertical-align: middle; }
 
 .tab-content {
