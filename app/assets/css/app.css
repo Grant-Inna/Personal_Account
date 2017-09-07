@@ -10280,7 +10280,7 @@ li.L9 {
   color: #FFFFFF; }
 
 .panel-heading-color-primary .tools .icon:hover {
-  color: #855ebf; }
+  color: #3e5aa4; }
 
 .panel-heading-color-success {
   background-color: #2cc185;
@@ -10370,7 +10370,7 @@ li.L9 {
   color: #FFFFFF; }
 
 .panel-full-color-primary .tools .icon:hover {
-  color: #855ebf; }
+  color: #3e5aa4; }
 
 .panel-full-color-success {
   background-color: #2cc185;
@@ -11471,7 +11471,7 @@ li.L9 {
   border-color: #4f6bb5; }
 
 .badge-primary[href]:focus, .badge-primary[href]:hover {
-  background-color: #7a4fba; }
+  background-color: #3e5593; }
 
 .badge-success {
   background-color: #2cc185;
@@ -15748,7 +15748,7 @@ form.dropzone .dz-preview .dz-error-message {
 
 .full-calendar .fc-view-container .fc-event-container .fc-event {
   background: #4f6bb5;
-  border-color: #8057bc;
+  border-color: #39559f;
   color: #FFFFFF;
   border-radius: 0;
   font-size: .923077rem; }
@@ -18177,3 +18177,7 @@ fieldset[disabled] .full-calendar .fc-button.active {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
+
+.icon {
+  min-width: 15px;
+  width: auto; }

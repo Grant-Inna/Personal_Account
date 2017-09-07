@@ -8550,7 +8550,7 @@ li.L9 {
   .panel-heading-color-primary .tools .icon {
     color: #FFFFFF; }
     .panel-heading-color-primary .tools .icon:hover {
-      color: #855ebf; }
+      color: $primary-color - 17; }
 
 .panel-heading-color-success {
   background-color: #2cc185;
@@ -8621,7 +8621,7 @@ li.L9 {
   .panel-full-color-primary .tools .icon {
     color: #FFFFFF; }
     .panel-full-color-primary .tools .icon:hover {
-      color: #855ebf; }
+      color: $primary-color - 17; }
 
 .panel-full-color-success {
   background-color: #2cc185;
@@ -9524,7 +9524,7 @@ li.L9 {
   color: #FFFFFF;
   border-color: $primary-color; }
   .badge-primary[href]:focus, .badge-primary[href]:hover {
-    background-color: #7a4fba; }
+    background-color: darken( $primary-color, 10% ); }
 
 .badge-success {
   background-color: #2cc185;
@@ -13013,7 +13013,7 @@ form.dropzone {
 
 .full-calendar .fc-view-container .fc-event-container .fc-event {
   background: $primary-color;
-  border-color: #8057bc;
+  border-color: $primary-color - 22;
   color: #FFFFFF;
   border-radius: 0;
   font-size: .923077rem; }
@@ -14896,4 +14896,8 @@ form.dropzone {
 }
 .jc-center {
   justify-content: center;
+}
+.icon {
+  min-width: 15px;
+  width: auto;
 }
