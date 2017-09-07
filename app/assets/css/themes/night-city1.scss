@@ -13783,15 +13783,15 @@ form.dropzone {
         color: #FFFFFF;
         background: $primary-color; }
         .fuelux .wizard > .steps-container > ul.steps li.complete .chevron {
-          border-left-color: #8057bc; }
+          border-left-color: $primary-color - 22; }
           .fuelux .wizard > .steps-container > ul.steps li.complete .chevron:before {
             border-left: 14px solid $primary-color; }
         .fuelux .wizard > .steps-container > ul.steps li.complete:hover {
-          background: #9e7fcc; }
+          background: $primary-color - 7; }
           .fuelux .wizard > .steps-container > ul.steps li.complete:hover .chevron {
-            border-left-color: #855ebf; }
+            border-left-color: $primary-color - 17; }
             .fuelux .wizard > .steps-container > ul.steps li.complete:hover .chevron:before {
-              border-left-color: #9e7fcc; }
+              border-left-color: $primary-color - 7; }
       .fuelux .wizard > .steps-container > ul.steps li .chevron {
         -moz-transform: scale(0.9999); }
   .fuelux .wizard > .actions button {
@@ -14300,9 +14300,9 @@ form.dropzone {
   background-color: $primary-color;
   color: #FFFFFF; }
   .usage.usage-primary .usage-detail {
-    color: #7f68a1; }
+    color: darken( $primary-color, 10% ) + 5; }
   .usage.usage-primary .usage-icon .icon {
-    color: #7f68a1; }
+    color: darken( $primary-color, 10% ) + 5; }
 
 .usage.usage-success {
   background-color: #2cc185;
@@ -14828,7 +14828,7 @@ form.dropzone {
             right: -5px;
             top: 7px;
             border-bottom: 6px solid transparent;
-            border-left: 6px solid #9c7bcb;
+            border-left: 6px solid $primary-color + 6;
             border-top: 6px solid transparent; }
         .chat-window .chat-messages ul > li.friend {
           padding: 15px 63px 15px 61px; }
@@ -14847,7 +14847,7 @@ form.dropzone {
           .chat-window .chat-messages ul > li.self .user-avatar {
             right: 15px; }
           .chat-window .chat-messages ul > li.self .msg {
-            background-color: #9c7bcb;
+            background-color: $primary-color + 6;
             color: #FFFFFF;
             display: inline-block;
             text-align: right; }
