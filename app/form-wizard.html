@@ -317,15 +317,6 @@
                                         <option value="3">Украина</option>
                                         <option value="4">Казахстан</option>
                                     </select>
-                                    <!--<span class="select2 select2-container select2-container&#45;&#45;default select2-container&#45;&#45;below" dir="ltr" style="width: 100%;">
-                                        <span class="selection">
-                                            <span class="select2-selection select2-selection&#45;&#45;single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-3phl-container">
-                                                <span class="select2-selection__rendered" id="select2-3phl-container" title="Basic">Basic</span>
-                                                <span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
-                                            </span>
-                                        </span>
-                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                    </span>-->
                                 </div>
 
                             </div>
@@ -339,27 +330,6 @@
                                         <option value="3">Украина</option>
                                         <option value="4">Казахстан</option>
                                     </select>
-                                    <!--<span class="select2 select2-container select2-container&#45;&#45;default select2-container&#45;&#45;below" dir="ltr" style="width: 100%;">
-                                        <span class="selection">
-                                            <span class="select2-selection select2-selection&#45;&#45;multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                                                <ul class="select2-selection__rendered">
-                                                    <li class="select2-selection__choice" title="Twitter">
-                                                        <span class="select2-selection__choice__remove" role="presentation">×</span>Twitter
-                                                    </li>
-                                                    <li class="select2-selection__choice" title="Google">
-                                                        <span class="select2-selection__choice__remove" role="presentation">×</span>Google
-                                                    </li>
-                                                    <li class="select2-selection__choice" title="Facebook">
-                                                        <span class="select2-selection__choice__remove" role="presentation">×</span>Facebook
-                                                    </li>
-                                                    <li class="select2-search select2-search&#45;&#45;inline">
-                                                        <input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;">
-                                                    </li>
-                                                </ul>
-                                            </span>
-                                        </span>
-                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                    </span>-->
                                 </div>
 
                             </div>
@@ -379,81 +349,93 @@
                                   <h3 class="wizard-title">Выберите каналы коммуникации</h3>
                               </div>
                           </div>
-                          <div class="form-group row align-items-center">
-                              <div class="col-sm-7">
-                                  <label class="control-label">Facebook Messenger <small>Бесплатно</small></label>
-                                  <p>Чат с пользователями социальной сети Facebook.</p>
-                              </div>
-                              <div class="col-sm-3 xs-pt-15">
-                                  <div class="switch-button">
-                                      <input type="checkbox" checked="" name="swt1" id="swt1"><span>
-                              <label for="swt1"></label></span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="form-group row align-items-center">
-                              <div class="col-sm-7">
-                                  <label class="control-label">Telegram Bot <small>Бесплатно</small></label>
-                                  <p>Чат с пользователями Telegram.</p>
-                              </div>
-                              <div class="col-sm-3 xs-pt-15">
-                                  <div class="switch-button">
-                                      <input type="checkbox" checked="" name="swt2" id="swt2"><span>
-                              <label for="swt2"></label></span>
-                                  </div>
-                              </div>
-                          </div>
+                          <div class="wizardHolder">
 
-                          <div class="form-group row align-items-center">
-                              <div class="col-sm-7">
-                                  <label class="control-label">Viber Public Account <small>Бесплатно</small></label>
-                                  <p>Чат с пользователями Viber.</p>
-                              </div>
-                              <div class="col-sm-3 xs-pt-15">
-                                  <div class="switch-button">
-                                      <input type="checkbox" checked="" name="swt3" id="swt3"><span>
-                              <label for="swt3"></label></span>
+                              <div class="wizardHolder-elem ">
+                                  <h4 class="wizardHolder-title">Каналы для общения с клиентами</h4>
+                                  <div class="wizardHolder-item form-group row">
+                                      <div class="">
+                                          <label class="control-label">Facebook Messenger <small>Бесплатно</small></label>
+                                          <p>Чат с пользователями социальной сети Facebook.</p>
+                                      </div>
+                                      <div class="col-sm-3 xs-pt-15">
+                                          <div class="switch-button">
+                                              <input type="checkbox" checked="" name="swt1" id="swt1"><span>
+                                      <label for="swt1"></label></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="wizardHolder-item form-group row">
+                                      <div class="">
+                                          <label class="control-label">Telegram Bot <small>Бесплатно</small></label>
+                                          <p>Чат с пользователями Telegram.</p>
+                                      </div>
+                                      <div class="col-sm-3 xs-pt-15">
+                                          <div class="switch-button">
+                                              <input type="checkbox" checked="" name="swt2" id="swt2"><span>
+                                      <label for="swt2"></label></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="wizardHolder-item form-group row">
+                                      <div class="">
+                                          <label class="control-label">Viber Public Account <small>Бесплатно</small></label>
+                                          <p>Чат с пользователями Viber.</p>
+                                      </div>
+                                      <div class="col-sm-3 xs-pt-15">
+                                          <div class="switch-button">
+                                              <input type="checkbox" checked="" name="swt3" id="swt3"><span>
+                                      <label for="swt3"></label></span>
+                                          </div>
+                                      </div>
                                   </div>
                               </div>
-                          </div>
-                          <div class="form-group row align-items-center">
-                              <div class="col-sm-7">
-                                  <label class="control-label">Viber Рассылки</label>
-                                  <p>Используется номер телефона для доставки сообщения.<br>
-                                      <small><mark>Платный канал с тарификацией за доставленные сообщения</mark></small></p>
-                              </div>
-                              <div class="col-sm-3 xs-pt-15">
-                                  <div class="switch-button">
-                                      <input type="checkbox" checked="" name="swt3" id="swt4"><span>
-                              <label for="swt4"></label></span>
+                              <div class="wizardHolder-elem">
+                                  <h4 class="wizardHolder-title">Каналы для массовых рассылок</h4>
+                                  <div class="wizardHolder-item form-group row">
+                                      <div class="">
+                                          <label class="control-label">Viber Рассылки</label>
+                                          <p>Используется номер телефона для доставки сообщения.<br>
+                                              <small><mark>Платный канал с тарификацией за доставленные сообщения</mark></small>
+                                          </p>
+                                      </div>
+                                      <div class="col-sm-3 xs-pt-15">
+                                          <div class="switch-button">
+                                              <input type="checkbox" checked="" name="swt3" id="swt4"><span>
+                                      <label for="swt4"></label></span>
+                                          </div>
+                                      </div>
                                   </div>
-                              </div>
-                          </div>
-                          <div class="form-group row align-items-center">
-                              <div class="col-sm-7">
-                                  <label class="control-label">VK.com Рассылки</label>
-                                  <p>Используется номер телефона для доставки сообщения.<br>
-                                      <small><mark>Платный канал с тарификацией за отправленные сообщения</mark></small></p>
-                              </div>
-                              <div class="col-sm-3 xs-pt-15">
-                                  <div class="switch-button">
-                                      <input type="checkbox" checked="" name="swt3" id="swt5"><span>
-                              <label for="swt5"></label></span>
+                                  <div class="wizardHolder-item form-group row">
+                                      <div class="">
+                                          <label class="control-label">VK.com Рассылки</label>
+                                          <p>Используется номер телефона для доставки сообщения.<br>
+                                              <small><mark>Платный канал с тарификацией за отправленные сообщения</mark></small></p>
+                                      </div>
+                                      <div class="col-sm-3 xs-pt-15">
+                                          <div class="switch-button">
+                                              <input type="checkbox" checked="" name="swt3" id="swt5"><span>
+                                      <label for="swt5"></label></span>
+                                          </div>
+                                      </div>
                                   </div>
+                                  <div class="wizardHolder-item form-group row">
+                                      <div class="">
+                                          <label class="control-label">SMS Рассылки</label>
+                                          <p>Используется номер телефона для доставки сообщения.<br>
+                                              <small><mark>Платный канал с тарификацией за отправленные сообщения</mark></small>
+                                          </p>
+                                      </div>
+                                      <div class="col-sm-3 xs-pt-15">
+                                          <div class="switch-button">
+                                              <input type="checkbox" checked="" name="swt3" id="swt6"><span>
+                                          <label for="swt6"></label></span>
+                                          </div>
+                                      </div>
+                                </div>
                               </div>
-                          </div><div class="form-group row align-items-center">
-                          <div class="col-sm-7">
-                              <label class="control-label">SMS Рассылки</label>
-                              <p>Используется номер телефона для доставки сообщения.<br>
-                                  <small><mark>Платный канал с тарификацией за отправленные сообщения</mark></small></p>
+
                           </div>
-                          <div class="col-sm-3 xs-pt-15">
-                              <div class="switch-button">
-                                  <input type="checkbox" checked="" name="swt3" id="swt6"><span>
-                              <label for="swt6"></label></span>
-                              </div>
-                          </div>
-                      </div>
                           <div class="form-group row pt-3">
                               <div class="col-sm-12">
                                   <button data-wizard="#wizard1" class="btn btn-secondary btn-space wizard-previous">Назад</button>

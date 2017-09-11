@@ -81,54 +81,33 @@
               </li>
             </ul>
           </li>
-          <li class="dropdown nav-item mai-settings"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon s7-edit"></span></a>
-            <ul class="dropdown-menu">
-              <li>
-                <div class="title">Settings</div>
-                <div class="content">
-                  <ul>
-                    <li><span>Enable Notifications</span>
-                      <div class="float-right">
-                        <div class="switch-button switch-button-sm">
-                          <input type="checkbox" checked="" name="check" id="switch1"><span>
-                            <label for="switch1"></label></span>
-                        </div>
-                      </div>
+            <li class="dropdown nav-item menu__languageSelect">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle menu__languageSelect-item">
+                    <span class="menu__languageSelect-title">RU</span>  <span class="angle-down s7-angle-down"></span>
+                </a>
+                <ul class="menu__languageSelect-holder dropdown-menu">
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/rf.png" alt="">  <span class="menu__languageSelect-title">RU</span></a>
                     </li>
-                    <li><span>Auto Commit</span>
-                      <div class="float-right">
-                        <div class="switch-button switch-button-sm">
-                          <input type="checkbox" checked="" name="check2" id="switch2"><span>
-                            <label for="switch2"></label></span>
-                        </div>
-                      </div>
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/uf.png" alt="">  <span class="menu__languageSelect-title">UA</span></a>
                     </li>
-                    <li><span>Sidebar</span>
-                      <div class="float-right">
-                        <div class="switch-button switch-button-sm">
-                          <input type="checkbox" name="check3" id="switch3"><span>
-                            <label for="switch3"></label></span>
-                        </div>
-                      </div>
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/usaf.png" alt=""><span class="menu__languageSelect-title">ENG</span></a>
                     </li>
-                    <li><span>Full-width Layout</span>
-                      <div class="float-right">
-                        <div class="switch-button switch-button-sm">
-                          <input type="checkbox" checked="" name="check4" id="switch4"><span>
-                            <label for="switch4"></label></span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </li>
+                </ul>
+            </li>
         </ul>
         <!--User Menu-->
         <ul class="nav navbar-nav float-lg-right mai-user-nav">
           <li class="dropdown nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle nav-link"> <img src="assets/img/avatar.jpg"><span class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span></a>
-            <div role="menu" class="dropdown-menu"><a href="#" class="dropdown-item"> <span class="icon s7-home"> </span>My Account</a><a href="#" class="dropdown-item"> <span class="icon s7-user"> </span>Profile</a><a href="#" class="dropdown-item"> <span class="icon s7-cash"> </span>Billing</a><a href="#" class="dropdown-item"> <span class="icon s7-tools"> </span>Settings</a><a href="#" class="dropdown-item"> <span class="icon s7-power"> </span>Log Out</a></div>
+            <div role="menu" class="dropdown-menu">
+                <a href="#" class="dropdown-item"> <span class="icon s7-home"> </span>Личный кабинет</a>
+                <a href="#" class="dropdown-item"> <span class="icon s7-user"> </span>Профиль</a>
+                <a href="#" class="dropdown-item"> <span class="icon s7-cash"> </span>Платежи</a>
+                <a href="#" class="dropdown-item"> <span class="icon s7-tools"> </span>Настройки</a>
+                <a href="#" class="dropdown-item"> <span class="icon s7-power"> </span>Выход</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -179,9 +158,9 @@
                                                   </li>-->
                                       </ul>
                                     </li>
-                                    <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-chat"></span><span>Диалоги</span></a>
+                                    <li class="nav-item parent"><a href="email-inbox.html" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-chat"></span><span>Диалоги</span></a>
                                       <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item"><a href="tables-general.html" class="nav-link"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
+                                                  <li class="nav-item"><a href="email-inbox.html" class="nav-link"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
                                                   </li>
                                                   <!--<li class="nav-item"><a href="tables-datatables.html" class="nav-link"><span class="icon s7-box2"></span><span class="name">Data Tables</span></a>
                                                   </li>
@@ -276,7 +255,7 @@
                     </nav>
           <!--Search input-->
           <div class="search">
-            <input type="text" placeholder="Search..." name="q"><span class="s7-search"></span>
+            <input type="text" placeholder="Поиск..." name="q"><span class="s7-search"></span>
           </div>
         </div>
       </nav>
@@ -295,38 +274,62 @@
           </div>
           <div class="col-md-5">
             <div class="widget-indicators">
-              <div class="indicator-item">
-                <div class="indicator-item-icon">
-                  <div class="icon"><span class="s7-graph1"></span></div>
-                </div>
-                <div class="indicator-item-value"><span data-toggle="counter" data-end="36" class="indicator-value-counter">0</span>
-                  <div class="indicator-value-title">Today's Orders</div>
-                </div>
-              </div>
-              <div class="indicator-item">
-                <div class="indicator-item-icon">
-                  <div class="icon"><span class="s7-graph"></span></div>
-                </div>
-                <div class="indicator-item-value"><span data-toggle="counter" data-end="157" class="indicator-value-counter">0</span>
-                  <div class="indicator-value-title">Support Tickets</div>
-                </div>
-              </div>
-              <div class="indicator-item">
-                <div class="indicator-item-icon">
-                  <div class="icon"><span class="s7-graph3"></span></div>
-                </div>
-                <div class="indicator-item-value"><span data-toggle="counter" data-decimals="1" data-end="17.9" class="indicator-value-counter">0</span>
-                  <div class="indicator-value-title">Download Files</div>
-                </div>
-              </div>
-              <div class="indicator-item">
-                <div class="indicator-item-icon">
-                  <div class="icon"><span class="s7-cart"></span></div>
-                </div>
-                <div class="indicator-item-value"><span data-toggle="counter" data-decimals="2" data-end="78,450" data-prefix="$" class="indicator-value-counter">0</span>
-                  <div class="indicator-value-title">Total Purchases</div>
-                </div>
-              </div>
+                <div class="widget widget-fullwidth todo-list">
+                    <div class="widget-head"><span class="title">Каналы коммуникации</span></div>
+                    <div class="todo-list-container">
+                        <table class="table">
+
+                            <tbody>
+                            <tr>
+                                <td class="td__iconHolder"><div class="icon-channel icon-channel-facebook"></div></td>
+                                <td>Facebook Messenger</td>
+                                <td><span class="badge badge-warning">Не настроен</span></td>
+
+
+                                <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="td__iconHolder"><div class="icon-channel icon-channel-telegram"></div></td>
+                                <td>Telegram Bot</td>
+                                <td><span class="badge badge-warning">Не настроен</span></td>
+
+
+                                <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="td__iconHolder"><div class="icon-channel icon-channel-viber"></div></td>
+                                <td>Viber Рассылки</td>
+                                <td><span class="badge badge-default">Активен</span></td>
+
+
+                                <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="td__iconHolder"><div class="icon-channel icon-channel-vk"></div></td>
+                                <td>VK.com</td>
+                                <td><span class="badge badge-default">Активен</span></td>
+
+
+                                <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="td__iconHolder"><div class="icon-channel icon-channel-sms"></div></td>
+                                <td>SMS Рассылки</td>
+                                <td><span class="badge badge-default">Активен</span></td>
+
+
+                                <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <a href="#" class="user-stats-more-details"> Управление каналами</a></div>
             </div>
           </div>
         </div>
