@@ -6,3 +6,5 @@ Testing repo for personal account page
 [Wizard](https://grant-inna.github.io/Personal_Account/app/form-wizard.html)
 
 [Login page](https://grant-inna.github.io/Personal_Account/app/pages-login.html)
+
+[Email-inbox page](https://grant-inna.github.io/Personal_Account/app/email-inbox.html)
