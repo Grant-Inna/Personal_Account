@@ -9,6 +9,7 @@
     <title>Messaggio | Новое письмо</title>
     <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/lib/dropzone/dist/dropzone.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
   </head>
@@ -222,7 +223,18 @@
                   <div class="content">
                       <div class="aside-header navbar-toggleable-sm">
                           <button data-target=".aside-nav" data-toggle="collapse" type="button" class="navbar-toggler"><span class="icon s7-angle-down"></span></button><span class="title">Сообщения </span>
-                          <p class="description">Интернет–магазин «Рога и Копыта»</p>
+                          <div class="col-sm-12 ">
+                              <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
+                                  <div class="form-group row">
+                                      <select class="tags select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                          <option value="1">«Рога и Копыта»</option>
+                                          <option value="2">«Awesome Company»</option>
+                                          <option value="" disabled></option>
+                                          <option value="3">Показать все сервисы</option>
+                                      </select>
+                                  </div>
+                              </form>
+                          </div>
                       </div>
                       <div class="aside-header navbar-toggleable-sm">
                           <div class="aside-compose"><a href="email-compose.html" class="btn btn-secondary btn-block">Новое сообщение</a></div>
@@ -281,7 +293,7 @@
                   </div>
                 </div>
               </div>
-                <form id="my-awesome-dropzone" action="assets/lib/dropzone/upload.php" class="dropzone dz-clickable">
+                <form id="my-awesome-dropzone" action="#" class="dropzone dz-clickable">
                     <div class="dz-message">
                         <div class="icon"><i class="icon-paper-clip"></i></div>
                         <h3 class="dropzoneMessage">Прикрепить файлы к письму</h3><span class="note"></span>
@@ -311,7 +323,6 @@
     <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
     <script src="assets/js/app-mail-compose.js" type="text/javascript"></script>
     <script src="assets/lib/dropzone/dist/min/dropzone.min.js" type="text/javascript"></script>
-    <script src="assets/lib/dropzone/dist/min/dropzone-amd-module.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
