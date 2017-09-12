@@ -223,28 +223,15 @@
             <div class="aside-content">
                 <div class="content">
                     <div class="aside-header navbar-toggleable-sm">
-                        <button data-target=".aside-nav" data-toggle="collapse" type="button" class="navbar-toggler"><span class="icon s7-angle-down"></span></button><span class="title">Сообщения </span>
-                        <div class="col-sm-12 ">
-                            <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
-                                <div class="form-group row">
-                                    <select class="tags select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                                        <option value="1">«Рога и Копыта»</option>
-                                        <option value="2">«Awesome Company»</option>
-                                        <option value="" disabled></option>
-                                        <option value="3">Показать все сервисы</option>
-                                    </select>
-                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="aside-header navbar-toggleable-sm">
                         <div class="aside-compose"><a href="email-compose.html" class="btn btn-secondary btn-block">Новое сообщение</a></div>
                     </div>
+
                     <div class="aside-nav navbar-collapse collapse">
                         <ul class="navbar-nav">
                             <li class="nav-item active"><a href="email-inbox.html" class="nav-link"><span class="badge badge-primary">1</span><i class="icon s7-drawer"></i> Диалоги</a></li>
                             <li class="nav-item"><a href="email-important.html" class="nav-link"><span class="badge badge-default">2</span><i class="icon s7-portfolio"></i> Важные</a></li>
                         </ul>
+
                         <hr>
                         <span class="title">Каналы </span>
                           <ul class="navbar-nav nav-pills nav-stacked">
@@ -262,15 +249,15 @@
           <div class="col-md-9 email-content">
             <div class="email-inbox-header">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-9">
                   <div class="email-title">
                       <div class="email-title-holder">
                           <i class="icon s7-drawer"></i>
-                          <span>Входящие</span>
+                          <span>Все диалоги</span>
                       </div>
                       <span class="new-messages">есть новые сообщения (1)</span>  </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <div class="email-search mt-2">
                     <div class="input-group input-search">
                       <input type="text" placeholder="Поиск по сообщениям..." class="form-control"><span class="input-group-btn">
@@ -285,14 +272,38 @@
                 <label class="custom-control custom-checkbox mai-select-all">
                   <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
                 </label>
+                  <div class="btn-group">
+                      <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выбрать сервис <span class="icon-dropdown s7-angle-down"></span></button>
+                      <div role="menu" class="dropdown-menu">
+                          <a href="#" class="dropdown-item">«Рога и Копыта»</a>
+                          <a href="#" class="dropdown-item">«Awesome Company»</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="#" class="dropdown-item"> Все сервисы </a>
+                      </div>
+                  </div>
                 <div class="btn-group">
                   <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выбрать канал <span class="icon-dropdown s7-angle-down"></span></button>
                     <div role="menu" class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Telegram </a>
-                        <a href="#" class="dropdown-item">Viber </a>
-                        <a href="#" class="dropdown-item">Facebook Messanger </a>
-                        <a href="#" class="dropdown-item">VK.com </a>
-                        <a href="#" class="dropdown-item">SMS </a>
+                        <a href="#" class="dropdown-item dropdown-item-channel">
+                            <span class="icon-channel icon-channel-telegram"></span>
+                            <span>Telegram</span>
+                        </a>
+                        <a href="#" class="dropdown-item dropdown-item-channel">
+                            <span class="icon-channel icon-channel-viber"></span>
+                            <span>Viber</span>
+                        </a>
+                        <a href="#" class="dropdown-item dropdown-item-channel">
+                            <span class="icon-channel icon-channel-facebook"></span>
+                            <span>Facebook Messanger</span>
+                        </a>
+                        <a href="#" class="dropdown-item dropdown-item-channel">
+                            <span class="icon-channel icon-channel-vk"></span>
+                            <span>VK.com</span>
+                        </a>
+                        <a href="#" class="dropdown-item dropdown-item-channel">
+                            <span class="icon-channel icon-channel-sms"></span>
+                            <SPAN>SMS</SPAN>
+                        </a>
                     </div>
                 </div>
                 <div class="btn-group">

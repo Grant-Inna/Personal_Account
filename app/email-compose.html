@@ -221,21 +221,7 @@
           <div class="col-md-3 email-aside">
               <div class="aside-content">
                   <div class="content">
-                      <div class="aside-header navbar-toggleable-sm">
-                          <button data-target=".aside-nav" data-toggle="collapse" type="button" class="navbar-toggler"><span class="icon s7-angle-down"></span></button><span class="title">Сообщения </span>
-                          <div class="col-sm-12 ">
-                              <form action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="" class="form-horizontal group-border-dashed">
-                                  <div class="form-group row">
-                                      <select class="tags select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                                          <option value="1">«Рога и Копыта»</option>
-                                          <option value="2">«Awesome Company»</option>
-                                          <option value="" disabled></option>
-                                          <option value="3">Показать все сервисы</option>
-                                      </select>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
+
                       <div class="aside-header navbar-toggleable-sm">
                           <div class="aside-compose"><a href="email-compose.html" class="btn btn-secondary btn-block">Новое сообщение</a></div>
                       </div>
@@ -262,34 +248,28 @@
               <div class="email-head-title">Compose new message</div>
             </div>-->
             <div class="email-compose-fields">
-              <div class="to">
+              <div class="from">
                 <div class="form-group row">
-                  <label class="col-sm-1 control-label">Кому:</label>
-                  <div class="col-sm-11">
-                    <select multiple="" class="tags">
-                      <option value="1" selected="">Yellow</option>
-                      <option value="2" selected="">Violet</option>
-                    </select>
-                  </div>
+                  <label class="col-sm-1 control-label">От:</label>
+                                <div class="col-sm-11 form-group row">
+                                    <select class="tags select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                        <option value="1">«Рога и Копыта»</option>
+                                        <option value="2">«Awesome Company»</option>
+                                        <option value="" disabled></option>
+                                        <option value="3">Все сервисы</option>
+                                    </select>
+                                </div>
                 </div>
               </div>
-              <div class="to cc">
+              <div class="to">
                 <div class="form-group row">
-                  <label class="col-sm-1 control-label">Копия: </label>
+                  <label class="col-sm-1 control-label">Кому: </label>
                   <div class="col-sm-11">
                     <select multiple="" class="tags">
                       <option value="1" selected="">Colorado</option>
                       <option value="2" selected="">Arkansas</option>
                       <option value="3" selected="">Nevada</option>
                     </select>
-                  </div>
-                </div>
-              </div>
-              <div class="subject">
-                <div class="form-group row">
-                  <label class="col-sm-1 control-label">Тема: </label>
-                  <div class="col-sm-11">
-                    <input type="text" class="form-control">
                   </div>
                 </div>
               </div>
@@ -307,7 +287,7 @@
               <div class="form-group">
                   <label class="col-1 col-form-label text-right"></label>
                 <button type="submit" class="btn btn-primary btn-space">Отправить</button>
-                <button type="button" class="btn btn-secondary btn-space">Отмена</button>
+                <a href="email-inbox.html" type="button" class="btn btn-secondary btn-space">Отмена</a>
               </div>
             </div>
           </div>

@@ -14885,6 +14885,31 @@ form.dropzone {
       font-size: 28px;
       top: 25px;
       right: auto; }
+.chat-input__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.chat-input__addFiles {
+width: 50px;
+height: 100%;
+}
+.chat-input__addFiles label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #cccccc;
+}
+.chat-input__addFiles label > .photo {
+  position: relative;
+  margin: 0;
+  left: auto;
+  font-size: 28px;
+  top: auto;
+  right: auto;
+}
 
 
 
@@ -14958,6 +14983,23 @@ form.dropzone {
   }
 }
 
+
+.email-compose-fields {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .from > .form-group {
+    margin-bottom: 0;
+  }
+  .to .form-group {
+    margin-bottom: 30px;
+  }
+}
+
 .addFileLabel {
   padding-top: 10px !important;
 }
@@ -14979,6 +15021,7 @@ form.dropzone {
 .dropzoneMessage {
   margin: 0 10px;
 }
+
 
 .email-title, .email-title-holder, .chat-title, .chat-title-holder {
   display: flex;
@@ -15003,6 +15046,7 @@ td > .icon-channel {
 }
 
 .icon-channel {
+  display: block;
   width: 25px;
   height: 25px;
   border-radius: 25px;
@@ -15029,3 +15073,13 @@ td > .icon-channel {
     background-size: contain;
   }
 }
+.dropdown-item-channel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > .icon-channel {
+    width: 20px;
+    height: 20px;
+  }
+}
+
