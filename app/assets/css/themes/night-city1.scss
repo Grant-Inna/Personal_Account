@@ -14924,28 +14924,73 @@ height: 100%;
 .main-content {
   padding: 45px 0;
 }
+.d-flex {
+  display: flex;
+}
 .jc-center {
   justify-content: center;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.at-center {
+  align-items: center;
 }
 .icon {
   min-width: 15px;
   width: auto;
 }
 
+/* ====== WIZARD ====== */
 .wizardHolder {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   &-elem {
-    width: 48%;
+    width: 46%;
   }
   &-item {
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  &-item .col-sm-3 {
+    display: flex;
+    justify-content: center;
+  }
+  &-itemWrapper {
+    min-width: 70%;
   }
   &-title {
     margin-bottom: 30px;
   }
+}
+@media screen and (max-width: 1200px){
+  .wizardHolder {
+    flex-direction: column;
+    align-items: flex-end;
+    &-elem {
+      width: 90%;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .wizardHolder {
+    &-elem {
+      width: 100%;
+    }
+    &-item .col-sm-3 {
+      width: auto;
+    }
+
+  }
+}
+
+
+.control-label-wizard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu__languageSelect {

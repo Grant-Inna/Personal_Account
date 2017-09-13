@@ -18222,28 +18222,46 @@ fieldset[disabled] .full-calendar .fc-button.active {
 .main-content {
   padding: 45px 0; }
 
+.d-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .jc-center {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
 
+.jc-sb {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.at-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .icon {
   min-width: 15px;
   width: auto; }
 
+/* ====== WIZARD ====== */
 .wizardHolder {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
   .wizardHolder-elem {
-    width: 48%; }
+    width: 46%; }
   .wizardHolder-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -18252,9 +18270,57 @@ fieldset[disabled] .full-calendar .fc-button.active {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+  .wizardHolder-item .col-sm-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .wizardHolder-itemWrapper {
+    min-width: 70%; }
   .wizardHolder-title {
     margin-bottom: 30px; }
+
+@media screen and (max-width: 1200px) {
+  .wizardHolder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    .wizardHolder-elem {
+      width: 90%; } }
+
+@media screen and (max-width: 580px) {
+  .wizardHolder-elem {
+    width: 100%; }
+  .wizardHolder-item .col-sm-3 {
+    width: auto; } }
+
+.control-label-wizard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .menu__languageSelect {
   display: -webkit-box;
