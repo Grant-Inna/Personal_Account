@@ -11712,12 +11712,15 @@ input[type="checkbox"] {
 .table tr th.actions, .table tr td.actions {
   text-align: center; }
   .table tr th.actions .icon, .table tr td.actions .icon {
-    color: #545454;
-    font-size: 1.38462rem;
+    color: #fff;
+    font-size: 1.3rem;
     line-height: 0.8;
-    vertical-align: middle; }
+    vertical-align: middle;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
     .table tr th.actions .icon:hover, .table tr td.actions .icon:hover {
-      color: #807f7f; }
+      color: #f1f1f1; }
 
 .table tbody tr td.user-avatar img {
   height: 30px;
@@ -15164,4 +15167,38 @@ td > .icon-channel {
 
 .sup-full-width {
   width: 100% !important;
+}
+
+/* ========= SENDERS ========= */
+
+.margin-center {
+  margin: 0 auto;
+}
+.add-button {
+  font-size: 17px;
+}
+.with-sm-border {
+  border: 1px solid #dadada;
+}
+.status-label {
+  border-radius: 2px;
+  max-width: 90px;
+  min-width: 90px;
+}
+.margin-bottom-sm {
+  margin-bottom: 3px;
+}
+
+table.dataTable td, table.dataTable th {
+  box-sizing: inherit;
+}
+table.dataTable .icon-channel {
+  width: 50px;
+  padding: 0;
+  margin: 20% auto 20% 20px;
+  color: transparent;
+}
+.table-inner-column {
+  display: flex;
+  flex-direction: column;
 }
