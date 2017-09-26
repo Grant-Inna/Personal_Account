@@ -8,3 +8,5 @@ Testing repo for personal account page
 [Login page](https://grant-inna.github.io/Personal_Account/app/pages-login.html)
 
 [Email-inbox page](https://grant-inna.github.io/Personal_Account/app/email-inbox.html)
+
+[Senders page](https://grant-inna.github.io/Personal_Account/app/senders.html)
