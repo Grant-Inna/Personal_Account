@@ -10897,10 +10897,13 @@ pre {
   min-width: 1.69231rem; }
 
 .custom-control-input:checked ~ .custom-control-indicator {
-  border-color: $primary-color; }
+  //border-color: $primary-color;
+  border-color: #c2c2c2;
+}
 
 .custom-control-input:checked ~ .custom-control-color {
-  background-color: $primary-color;
+  //background-color: $primary-color;
+  background-color: #c2c2c2;
   color: #FFFFFF; }
 
 .custom-select {
@@ -15202,3 +15205,6 @@ table.dataTable .icon-channel {
   display: flex;
   flex-direction: column;
 }
+
+
+

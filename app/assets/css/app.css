@@ -13103,10 +13103,10 @@ pre code {
   min-width: 1.69231rem; }
 
 .custom-control-input:checked ~ .custom-control-indicator {
-  border-color: #4f6bb5; }
+  border-color: #c2c2c2; }
 
 .custom-control-input:checked ~ .custom-control-color {
-  background-color: #4f6bb5;
+  background-color: #c2c2c2;
   color: #FFFFFF; }
 
 .custom-select {
