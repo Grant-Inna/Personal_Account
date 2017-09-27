@@ -14051,10 +14051,18 @@ input[type="checkbox"] {
   margin: 0;
   vertical-align: middle; }
 
-.table tr th.actions, .table tr td.actions {
-  text-align: center; }
+#table-index-1 tr th.actions .icon, #table-index-1 tr td.actions .icon {
+  color: #111;
+  font-size: 1.3rem;
+  line-height: 0.8;
+  vertical-align: middle;
+  border-radius: 2px;
+  padding: 0 2px; }
 
-.table tr th.actions .icon, .table tr td.actions .icon {
+#table-index-1 tr th.actions .icon:hover, #table-index-1 tr td.actions .icon:hover {
+  color: #2b4791; }
+
+#table1 tr th.actions .icon, #table1 tr td.actions .icon {
   color: #fff;
   font-size: 1.3rem;
   line-height: 0.8;
@@ -14062,8 +14070,11 @@ input[type="checkbox"] {
   border-radius: 2px;
   padding: 0 2px; }
 
-.table tr th.actions .icon:hover, .table tr td.actions .icon:hover {
+#table1 tr th.actions .icon:hover, #table1 tr td.actions .icon:hover {
   color: #f1f1f1; }
+
+.table tr th.actions, .table tr td.actions {
+  text-align: center; }
 
 .table tbody tr td.user-avatar img {
   height: 30px;
@@ -18524,9 +18535,17 @@ td > .icon-channel {
 .sup-full-width {
   width: 100% !important; }
 
-/* ========= SENDERS ========= */
+/* ========= SENDERS + MESSAGES ========= */
 .margin-center {
   margin: 0 auto; }
+
+.table-holder {
+  padding: 20px 60px; }
+  .table-holder table {
+    border: 1px solid #dadada; }
+
+#table1_wrapper .mai-datatable-header {
+  border-bottom: none; }
 
 .add-button {
   font-size: 17px; }
@@ -18536,8 +18555,15 @@ td > .icon-channel {
 
 .status-label {
   border-radius: 2px;
-  max-width: 90px;
-  min-width: 90px; }
+  padding: 5px 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; }
+
+#table1 .status-label {
+  /*  max-width: 210px;
+  width: auto;
+  min-width: 90px;*/ }
 
 .margin-bottom-sm {
   margin-bottom: 3px; }
