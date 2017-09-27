@@ -10,3 +10,7 @@ Testing repo for personal account page
 [Email-inbox page](https://grant-inna.github.io/Personal_Account/app/email-inbox.html)
 
 [Senders page](https://grant-inna.github.io/Personal_Account/app/senders.html)
+
+[Messages list](https://grant-inna.github.io/Personal_Account/app/messages.html)
+
+
