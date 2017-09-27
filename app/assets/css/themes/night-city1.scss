@@ -14150,6 +14150,7 @@ form.dropzone {
 .project-item {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #FFFFFF;
   padding: 23px;
@@ -14180,6 +14181,8 @@ form.dropzone {
 .project-item-user {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 40px;
   flex: 0 1 20%; }
   @media (max-width: 575px) {
     .project-item-user {
@@ -14240,7 +14243,8 @@ form.dropzone {
 .project-item-actions {
   flex: 0 1 5%;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  align-items: center}
   @media (max-width: 575px) {
     .project-item-actions {
       position: absolute;
@@ -15217,6 +15221,9 @@ td > .icon-channel {
 }
 .margin-bottom-sm {
   margin-bottom: 3px;
+}
+.margin-right-sm {
+  margin-right: 15px;
 }
 
 table.dataTable td, table.dataTable th {
