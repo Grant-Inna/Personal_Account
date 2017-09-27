@@ -126,18 +126,12 @@
                                       <ul class="mai-nav-tabs-sub mai-sub-nav nav">
                                                   <li class="nav-item"><a href="index.html" class="nav-link active"><span class="icon s7-monitor"></span><span class="name">Панель управления</span></a>
                                                   </li>
-                                                  <li class="nav-item dropdown parent"><a href="ui-elements.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-portfolio"></span><span class="name">Сервисы</span></a>
-                                                              <!--<div role="menu" class="dropdown-menu mai-sub-nav"><a href="ui-general.html" class="dropdown-item">General</a><a href="ui-panels.html" class="dropdown-item">Panels</a><a href="ui-buttons.html" class="dropdown-item">Buttons</a><a href="ui-typography.html" class="dropdown-item">Typography</a><a href="ui-grid.html" class="dropdown-item">Grid</a>
-                                                              </div>-->
-                                                  </li>
-                                                  <li class="nav-item dropdown parent"><a href="ui-elements.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-cash"></span><span class="name">Платежи</span></a>
-                                                              <!--<div role="menu" class="dropdown-menu mai-sub-nav"><a href="ui-alerts.html" class="dropdown-item">Alerts</a><a href="ui-icons.html" class="dropdown-item">Icons</a><a href="ui-tabs-accordions.html" class="dropdown-item">Tabs &amp; Accordions</a>
-                                                              </div>-->
-                                                  </li>
-                                                  <li class="nav-item dropdown parent"><a href="plugins.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-timer"></span><span class="name">Действия пользователей</span></a>
-                                                              <!--<div role="menu" class="dropdown-menu mai-sub-nav"><a href="ui-modals.html" class="dropdown-item">Modals</a><a href="ui-nestable-lists.html" class="dropdown-item">Nestable Lists</a><a href="ui-notifications.html" class="dropdown-item">Notifications</a>
-                                                              </div>-->
-                                                  </li>
+                                          <li class="nav-item"><a href="index.html#services" class="nav-link"><span class="icon s7-portfolio"></span><span class="name">Сервисы</span></a>
+                                          </li>
+                                          <li class="nav-item"><a href="ui-elements.html" class="nav-link"><span class="icon s7-cash"></span><span class="name">Платежи</span></a>
+                                          </li>
+                                          <li class="nav-item"><a href="plugins.html" class="nav-link"><span class="icon s7-timer"></span><span class="name">Действия пользователей</span></a>
+                                          </li>
                                       </ul>
                                     </li>
                                     <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-paper-plane"></span><span>Рассылки</span></a>
@@ -393,68 +387,102 @@
         <div class="row">
           <div class="col-12">
             <div class="project-list">
-              <div class="project-list-title">Project Progress</div>
+              <a id="services"></a>
+              <div class="project-list-title">Сервисы</div>
+
               <div class="project-item">
-                <div class="project-item-title"><span class="name">Product Design</span><span class="description">Create the new product design</span></div>
+                <div class="project-item-title">
+                    <span class="name">название сервиса</span>
+                    <span class="description">http://адрес_сайта.com</span>
+                </div>
                 <div class="project-item-user">
-                  <div class="user-avatar"><img src="assets/img/avatar.jpg" alt="avatar"></div>
-                  <div class="user-info"><span class="name">Marsha Hogan</span><span class="position description">Product designer</span></div>
+                    <div class="icon icon-channel icon-channel-telegram margin-right-sm"></div>
+                  <div class="icon icon-channel icon-channel-vk margin-right-sm"></div>
+                    <div class="icon icon-channel icon-channel-sms margin-right-sm"></div>
                 </div>
-                <div class="project-item-state"><span class="name">In Progress</span><span class="description">3D modeling</span></div>
-                <div class="project-item-date"><span class="date">May 6, 2017</span><span class="time description">8:30</span></div>
-                <div class="project-item-progress"><span class="description">50%</span>
-                  <div class="progress">
-                    <div style="width: 50%" class="progress-bar progress-bar-primary"></div>
-                  </div>
+
+                <div class="project-item-actions">
+                    <button class="btn btn-secondary margin-right-sm">Создать рассылку</button>
+                    <span class="icon s7-config"></span>
                 </div>
-                <div class="project-item-actions"><span class="icon s7-refresh-2"></span><span class="icon s7-close"></span></div>
               </div>
-              <div class="project-item">
-                <div class="project-item-title"><span class="name">Concept Design</span><span class="description">Create the concept</span></div>
-                <div class="project-item-user">
-                  <div class="user-avatar"><img src="assets/img/avatars/img1.jpg" alt="avatar"></div>
-                  <div class="user-info"><span class="name">Ryan Lawrence</span><span class="position description">Marketing</span></div>
+
+                <div class="project-item">
+                    <div class="project-item-title">
+                        <span class="name">название сервиса</span>
+                        <span class="description">http://адрес_сайта.com</span>
+                    </div>
+                    <div class="project-item-user">
+                        <div class="icon icon-channel icon-channel-facebook margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-telegram margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-viber margin-right-sm"></div>
+                    </div>
+
+                    <div class="project-item-actions">
+                        <button class="btn btn-secondary margin-right-sm">Создать рассылку</button>
+                        <span class="icon s7-config"></span>
+                    </div>
                 </div>
-                <div class="project-item-state"><span class="name">Completed</span><span class="description">Collection concept</span></div>
-                <div class="project-item-date"><span class="date">April 22, 2017</span><span class="time description">14:45</span></div>
-                <div class="project-item-progress"><span class="description">100%</span>
-                  <div class="progress">
-                    <div style="width: 100%" class="progress-bar progress-bar-primary"></div>
-                  </div>
+
+
+                <div class="project-item">
+                    <div class="project-item-title">
+                        <span class="name">название сервиса</span>
+                        <span class="description">http://адрес_сайта.com</span>
+                    </div>
+                    <div class="project-item-user">
+                        <div class="icon icon-channel icon-channel-telegram margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-viber margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-vk margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-sms margin-right-sm"></div>
+                    </div>
+
+                    <div class="project-item-actions">
+                        <button class="btn btn-secondary margin-right-sm">Создать рассылку</button>
+                        <span class="icon s7-config"></span>
+                    </div>
                 </div>
-                <div class="project-item-actions"><span class="icon s7-refresh-2"></span><span class="icon s7-close"></span></div>
-              </div>
-              <div class="project-item">
-                <div class="project-item-title"><span class="name">Product Development</span><span class="description">3D printing</span></div>
-                <div class="project-item-user">
-                  <div class="user-avatar"><img src="assets/img/avatars/img2.jpg" alt="avatar"></div>
-                  <div class="user-info"><span class="name">Benji Miller</span><span class="position description">3D printer</span></div>
+
+
+                <div class="project-item">
+                    <div class="project-item-title">
+                        <span class="name">название сервиса</span>
+                        <span class="description">http://адрес_сайта.com</span>
+                    </div>
+                    <div class="project-item-user">
+                        <div class="icon icon-channel icon-channel-facebook margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-viber margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-vk margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-telegram margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-sms margin-right-sm"></div>
+                    </div>
+
+                    <div class="project-item-actions">
+                        <button class="btn btn-secondary margin-right-sm">Создать рассылку</button>
+                        <span class="icon s7-config"></span>
+                    </div>
                 </div>
-                <div class="project-item-state"><span class="name">Waiting</span><span class="description">Waiting for 3D design</span></div>
-                <div class="project-item-date"><span class="date">April 15, 2017</span><span class="time description">10:00</span></div>
-                <div class="project-item-progress"><span class="description">0%</span>
-                  <div class="progress">
-                    <div style="width: 0%" class="progress-bar progress-bar-primary"></div>
-                  </div>
+
+
+                <div class="project-item">
+                    <div class="project-item-title">
+                        <span class="name">название сервиса</span>
+                        <span class="description">http://адрес_сайта.com</span>
+                    </div>
+                    <div class="project-item-user">
+                        <div class="icon icon-channel icon-channel-viber margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-vk margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-telegram margin-right-sm"></div>
+                        <div class="icon icon-channel icon-channel-telegram margin-right-sm"></div>
+                    </div>
+
+                    <div class="project-item-actions">
+                        <button class="btn btn-secondary margin-right-sm">Создать рассылку</button>
+                        <span class="icon s7-config"></span>
+                    </div>
                 </div>
-                <div class="project-item-actions"><span class="icon s7-refresh-2"></span><span class="icon s7-close"></span></div>
-              </div>
-              <div class="project-item">
-                <div class="project-item-title"><span class="name">Web site</span><span class="description">Web site development</span></div>
-                <div class="project-item-user">
-                  <div class="user-avatar"><img src="assets/img/avatars/img3.jpg" alt="avatar"></div>
-                  <div class="user-info"><span class="name">Justin Adams</span><span class="position description">Web Designer</span></div>
-                </div>
-                <div class="project-item-state"><span class="name">In progress</span><span class="description">HTML markup</span></div>
-                <div class="project-item-date"><span class="date">April 8, 2016</span><span class="time description">17:24</span></div>
-                <div class="project-item-progress"><span class="description">60%</span>
-                  <div class="progress">
-                    <div style="width: 60%" class="progress-bar progress-bar-primary"></div>
-                  </div>
-                </div>
-                <div class="project-item-actions"><span class="icon s7-refresh-2"></span><span class="icon s7-close"></span></div>
-              </div>
-              <div class="project-item">
+
+              <!--<div class="project-item">
                 <div class="project-item-title"><span class="name">SEO strategy</span><span class="description">Define target</span></div>
                 <div class="project-item-user">
                   <div class="user-avatar"><img src="assets/img/avatars/img2.jpg" alt="avatar"></div>
@@ -468,7 +496,7 @@
                   </div>
                 </div>
                 <div class="project-item-actions"><span class="icon s7-refresh-2"></span><span class="icon s7-close"></span></div>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
