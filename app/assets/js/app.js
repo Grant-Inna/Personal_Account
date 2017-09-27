@@ -174,6 +174,9 @@ var App = (function () {
       
       // Popover
       $('[data-toggle="popover"]').popover();
+
+      // Auto size
+      autosize( $( 'textarea' ) );
     }
   };
  
@@ -195,3 +198,9 @@ var App = (function () {
  * @license Released under the MIT license
  */
 !function(a){a.isBreakpoint=function(b){var c,d;return c=a("<div/>",{class:"hidden-"+b+"-down"}).appendTo("body"),d=c.is(":hidden"),c.remove(),d},a.extend(a,{isXs:function(){return a.isBreakpoint("xs")},isSm:function(){return a.isBreakpoint("sm")},isMd:function(){return a.isBreakpoint("md")},isLg:function(){return a.isBreakpoint("lg")}})}(jQuery);
+
+
+
+$(function(){
+  autosize( $( 'textarea' ) );
+});

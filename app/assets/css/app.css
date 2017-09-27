@@ -316,9 +316,6 @@ progress {
   display: inline-block;
   vertical-align: baseline; }
 
-textarea {
-  overflow: auto; }
-
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
@@ -3323,7 +3320,8 @@ tbody.collapse.show {
   text-align: center; }
 
 .tab-content > .tab-pane {
-  display: none; }
+  display: none;
+  height: auto; }
 
 .tab-content > .active {
   display: block; }
@@ -13355,10 +13353,10 @@ pre code {
   padding: 14px 13px; }
 
 textarea.form-control {
-  background-color: #fafafa; }
+  background-color: #fff; }
 
 textarea.form-control:focus {
-  background-color: #fafafa; }
+  background-color: #fff; }
 
 .inputfile {
   width: 0.1px;
@@ -13832,16 +13830,17 @@ input[type="checkbox"] {
   vertical-align: middle; }
 
 .tab-content {
+  height: auto;
   padding: 1.538rem;
   background-color: #FFFFFF; }
 
 .nav-tabs-dark .nav-link.active {
-  background-color: #545454;
+  background-color: #f4f4f4;
   color: #4f6bb5; }
 
 .nav-tabs-dark + .tab-content {
-  background-color: #545454;
-  color: #FFFFFF; }
+  background-color: #f4f4f4;
+  color: #545454; }
 
 .nav-tabs-primary .nav-link.active {
   background-color: #4f6bb5;
@@ -18548,10 +18547,7 @@ td > .icon-channel {
 .sup-full-width {
   width: 100% !important; }
 
-/* ========= SENDERS + MESSAGES ========= */
-.margin-center {
-  margin: 0 auto; }
-
+/* ========= SENDERS + MESSAGES + NEW MESSAGES ========= */
 .table-holder {
   padding: 20px 60px; }
   .table-holder table {
@@ -18563,26 +18559,12 @@ td > .icon-channel {
 .add-button {
   font-size: 17px; }
 
-.with-sm-border {
-  border: 1px solid #dadada; }
-
 .status-label {
   border-radius: 2px;
   padding: 5px 10px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content; }
-
-#table1 .status-label {
-  /*  max-width: 210px;
-  width: auto;
-  min-width: 90px;*/ }
-
-.margin-bottom-sm {
-  margin-bottom: 3px; }
-
-.margin-right-sm {
-  margin-right: 15px; }
 
 table.dataTable td, table.dataTable th {
   -webkit-box-sizing: inherit;
@@ -18604,3 +18586,161 @@ table.dataTable .icon-channel {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+.templates-holder {
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.templates-wrapper {
+  width: 115px;
+  height: 120px;
+  background: #b8b8b8;
+  border: 2px solid #aeaeae;
+  margin: 5px;
+  -webkit-transition: border-color .2s;
+  -o-transition: border-color .2s;
+  transition: border-color .2s; }
+  .templates-wrapper:hover {
+    border-color: #868686;
+    -webkit-transition: border-color .2s;
+    -o-transition: border-color .2s;
+    transition: border-color .2s; }
+
+.templates-one {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 13px; }
+
+.templates-plain-text {
+  height: 4px;
+  width: 100%;
+  background: #fff; }
+
+.templates-banner {
+  height: 20px;
+  width: 90%;
+  background-color: #4f6bb5;
+  border-radius: 2px; }
+
+.templates-image {
+  height: 43px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .templates-image .templates-image-circle {
+    height: 12px;
+    width: 12px;
+    background: #545454;
+    border-radius: 25px;
+    margin: 4px 7px; }
+  .templates-image .templates-image-house-holder {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
+    height: 25px; }
+    .templates-image .templates-image-house-holder .templates-image-house {
+      width: 100%;
+      background-color: #545454; }
+      .templates-image .templates-image-house-holder .templates-image-house-1 {
+        height: 10%; }
+      .templates-image .templates-image-house-holder .templates-image-house-2 {
+        height: 20%; }
+      .templates-image .templates-image-house-holder .templates-image-house-3 {
+        height: 30%; }
+      .templates-image .templates-image-house-holder .templates-image-house-4 {
+        height: 40%; }
+      .templates-image .templates-image-house-holder .templates-image-house-5 {
+        height: 50%; }
+      .templates-image .templates-image-house-holder .templates-image-house-6 {
+        height: 60%; }
+      .templates-image .templates-image-house-holder .templates-image-house-7 {
+        height: 70%; }
+      .templates-image .templates-image-house-holder .templates-image-house-8 {
+        height: 80%; }
+      .templates-image .templates-image-house-holder .templates-image-house-9 {
+        height: 90%; }
+      .templates-image .templates-image-house-holder .templates-image-house-10 {
+        height: 100%; }
+
+.templates-one-image .templates-image {
+  height: 100%; }
+  .templates-one-image .templates-image .templates-image-circle {
+    height: 16px;
+    width: 16px;
+    margin: 7px; }
+  .templates-one-image .templates-image .templates-image-house-holder {
+    height: 60px; }
+
+/* ========= COMMON ========= */
+.margin-bottom-sm {
+  margin-bottom: 3px; }
+
+.margin-right-sm {
+  margin-right: 15px; }
+
+.with-sm-border {
+  border: 1px solid #dadada; }
+
+.margin-center {
+  margin: 0 auto; }
+
+.half {
+  width: 50%; }
+
+textarea {
+  min-height: 100px;
+  height: auto; }

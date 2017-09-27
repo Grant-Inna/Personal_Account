@@ -362,7 +362,8 @@ progress {
   vertical-align: baseline; }
 
 textarea {
-  overflow: auto; }
+  //overflow: auto;
+}
 
 [type="checkbox"],
 [type="radio"] {
@@ -604,7 +605,8 @@ input[type="month"] {
   -webkit-appearance: listbox; }
 
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 fieldset {
   min-width: 0;
@@ -2825,7 +2827,10 @@ tbody.collapse.show {
   text-align: center; }
 
 .tab-content > .tab-pane {
-  display: none; }
+  display: none;
+  height: auto;
+
+}
 
 .tab-content > .active {
   display: block; }
@@ -11110,9 +11115,9 @@ pre {
     padding: 14px 13px; }
 
 textarea.form-control {
-  background-color: #fafafa; }
+  background-color: #fff; }
   textarea.form-control:focus {
-    background-color: #fafafa; }
+    background-color: #fff; }
 
 .inputfile {
   width: 0.1px;
@@ -11507,16 +11512,17 @@ input[type="checkbox"] {
     vertical-align: middle; }
 
 .tab-content {
+  height: auto;
   padding: 1.538rem;
   background-color: #FFFFFF; }
 
 .nav-tabs-dark .nav-link.active {
-  background-color: #545454;
+  background-color: #f4f4f4;
   color: $primary-color; }
 
 .nav-tabs-dark + .tab-content {
-  background-color: #545454;
-  color: #FFFFFF; }
+  background-color: #f4f4f4;
+  color: #545454; }
 
 .nav-tabs-primary .nav-link.active {
   background-color: $primary-color;
@@ -15188,11 +15194,9 @@ td > .icon-channel {
   width: 100% !important;
 }
 
-/* ========= SENDERS + MESSAGES ========= */
+/* ========= SENDERS + MESSAGES + NEW MESSAGES ========= */
 
-.margin-center {
-  margin: 0 auto;
-}
+
 .table-holder {
   padding: 20px 60px;
   table {
@@ -15206,24 +15210,11 @@ td > .icon-channel {
 .add-button {
   font-size: 17px;
 }
-.with-sm-border {
-  border: 1px solid #dadada;
-}
+
 .status-label {
   border-radius: 2px;
   padding: 5px 10px;
   width: max-content;
-}
-#table1 .status-label {
-/*  max-width: 210px;
-  width: auto;
-  min-width: 90px;*/
-}
-.margin-bottom-sm {
-  margin-bottom: 3px;
-}
-.margin-right-sm {
-  margin-right: 15px;
 }
 
 table.dataTable td, table.dataTable th {
@@ -15240,5 +15231,120 @@ table.dataTable .icon-channel {
   flex-direction: column;
 }
 
+.templates-holder {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.templates-wrapper {
+  width: 115px;
+  height: 120px;
+  background: #545454 + 100;
+  border: 2px solid #545454 + 90;
+  margin: 5px;
+  transition: border-color .2s;
+  &:hover {
+    border-color: #545454 + 50;
+    transition: border-color .2s;
+  }
+}
 
+.templates-one {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 13px;
+}
+.templates-plain-text {
+  height: 4px;
+  width: 100%;
+  background: #fff;
+}
+.templates-banner {
+  height: 20px;
+  width: 90%;
+  background-color: $primary-color;
+  border-radius: 2px;
+}
+.templates-image {
+  height: 43px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .templates-image-circle {
+    height: 12px;
+    width: 12px;
+    background: #545454;
+    border-radius: 25px;
+    margin: 4px 7px;
+  }
+  .templates-image-house-holder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 25px;
+    .templates-image-house {
+      width: 100%;
+      background-color: #545454;
+      &-1 { height: 10%;}
+      &-2 { height: 20%;}
+      &-3 { height: 30%;}
+      &-4 { height: 40%;}
+      &-5 { height: 50%;}
+      &-6 { height: 60%;}
+      &-7 { height: 70%;}
+      &-8 { height: 80%;}
+      &-9 { height: 90%;}
+      &-10 { height: 100%;}
+    }
+  }
+}
+.templates-one-image {
+  .templates-image {
+    height: 100%;
+    .templates-image-circle {
+      height: 16px;
+      width: 16px;
+      margin: 7px;
+    }
+    .templates-image-house-holder {
+      height: 60px;
+    }
+  }
+}
+
+/* ========= COMMON ========= */
+
+.margin-bottom-sm {
+  margin-bottom: 3px;
+}
+.margin-right-sm {
+  margin-right: 15px;
+}
+.with-sm-border {
+  border: 1px solid #dadada;
+}
+.margin-center {
+  margin: 0 auto;
+}
+
+.half {
+  width: 50%;
+
+}
+
+textarea {
+  min-height: 100px;
+  height: auto;
+}
