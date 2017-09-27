@@ -7,7 +7,7 @@ var App = (function () {
     $.extend( true, $.fn.dataTable.defaults, {
       dom:
         "<'row mai-datatable-header'<'col-sm-6'l><'col-sm-6'f>>" +
-        "<'row mai-datatable-body'<'col-sm-12'tr>>" +
+        "<'row mai-datatable-body'<'col-sm-12 table-holder'tr>>" +
         "<'row mai-datatable-footer'<'col-sm-5'i><'col-sm-7'p>>"
     } );
 
