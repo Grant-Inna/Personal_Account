@@ -13,4 +13,4 @@ Testing repo for personal account page
 
 [Messages list](https://grant-inna.github.io/Personal_Account/app/messages.html)
 
-
+[New message page](https://grant-inna.github.io/Personal_Account/app/new-messages.html)
