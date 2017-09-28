@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="assets/lib/fuelux/css/wizard.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/css/dataTables.bootstrap4.min.css"/>
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
 
     <script src="assets/js/autosize.min.js" type="text/javascript"></script>
@@ -341,13 +343,13 @@
                     <div class="panel-body">
                         <form>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Название рассылки:</label>
+                                <label class="col-sm-3 col-form-label text-right">Название рассылки</label>
                                 <div class="col-sm-8">
-                                    <input type="text" required="" placeholder="Рассылка 27-09-2049 16:21"class="form-control">
+                                    <input type="text" required="" placeholder="Рассылка 27-09-2049 16:21" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Канал отправки:</label>
+                                <label class="col-sm-3 col-form-label text-right">Канал отправки</label>
                                 <div class="col-sm-8 mt-2">
                                     <div class="form-group">
                                         <label class="custom-control custom-checkbox has-default">
@@ -364,7 +366,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 control-label col-form-label text-right">Отправитель: </label>
+                                <label class="col-sm-3 control-label col-form-label text-right">Отправитель </label>
                                 <div class="col-sm-8">
                                     <select required="" class="tags" tabindex="-1" aria-hidden="true">
                                         <option value="1">ChatTest</option>
@@ -382,7 +384,7 @@
                                     <div class="tab-content">
                                         <div id="d-home" role="tabpanel" class="tab-pane active">
                                             <div class="form-group row">
-                                                <label class="col-sm-3 col-form-label text-right">Макет сообщения:</label>
+                                                <label class="col-sm-3 col-form-label text-right">Макет сообщения</label>
                                                 <div class="templates-holder col-sm-8">
                                                     <div class="templates-wrapper">
                                                         <div class="templates-one templates-one-plain">
@@ -461,9 +463,41 @@
 
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-sm-3 col-form-label text-right">Пример текста сообщения</label>
+                                                <label class="col-sm-3 col-form-label text-right">Текст сообщения</label>
                                                 <div class="col-sm-8">
                                                     <textarea placeholder="Проснись и пой!" class="form-control" rows="auto" cols="100%"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-border panel-border-color panel-border-color-primary col-sm-10 margin-center">
+                                                <div class="panel-heading panel-heading-divider">
+                                                    <div class="tools">
+                                                        <span class="icon mdi mdi-refresh-sync"></span>
+                                                        <span class="icon mdi mdi-more-vert"></span>
+                                                    </div>
+                                                    <span class="title">Расширенные настройки</span>
+                                                    <span class="panel-subtitle">Дополнительные настройки позволяют отправлять собственный текст каждому получателю и устанавливать текст для SMS, если у получаетля нет Viber Messenger</span>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label text-right">Персонализированная</label>
+                                                        <div class="col-sm-8 mt-2">
+                                                            <div class="form-group">
+                                                                <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                                    <input type="checkbox" class="custom-control-input">
+                                                                    <span class="custom-control-indicator"></span>
+                                                                    <span class="custom-control-description margin-left-md">
+                                                                        <a href="">Что это?</a>
+                                                                    </span>
+                                                               </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label text-right">Текст сообщения</label>
+                                                        <div class="col-sm-8">
+                                                            <textarea placeholder="Проснись и пой!" class="form-control" rows="auto" cols="100%"></textarea>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -473,72 +507,293 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-sm-11 margin-center">
+                                    <div class="panel panel-default row">
+                                        <div class="panel-heading col-sm-3">
+                                            <span>Загрузка телефонов</span>
+                                        </div>
+                                        <div class="col-sm-8 messages-add-btn-holder">
+                                            <button class="btn btn-space btn-xs btn-secondary messages-add-btn">Добавить из файла +</button>
+                                            <button class="btn btn-space btn-xs btn-secondary messages-add-btn">Добавить из textarea +</button>
+                                            <button class="btn btn-space btn-xs btn-secondary messages-add-btn">Добавить из телефонной книги +</button>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                            <table id="table1" class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="sorting_asc_disabled sorting_desc_disabled">
+                                                        <label class="custom-control custom-checkbox mai-select-all has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" id="table-checkbox-main">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </th>
+                                                    <th>Телефон</th>
+                                                    <th>Параметры</th>
+                                                    <th class="actions"></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="telephone-list">
+                                                <tr class="odd gradeX">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even gradeC">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="odd gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="odd gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="odd gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gradeA">
+                                                    <td>
+                                                        <label class="custom-control custom-checkbox has-default col-sm-8">
+                                                            <input type="checkbox" class="custom-control-input" name="table-checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>+79269103456</td>
+                                                    <td></td>
+                                                    <td class="center actions">
+                                                        <a href="#" class="icon btn-primary"><i class="s7-look"></i></a>
+                                                        <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
+                                                    </td>
+                                                </tr>
 
 
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Тематика проводимых рассылок:</label>
-                                <div class="col-sm-8">
-                                    <select required="" class="tags select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                                        <option value="1">Астрономия</option>
-                                        <option value="2">Медицина</option>
-                                        <option value="3">Погода</option>
-                                        <option value="4">Новости</option>
-                                        <option value="5">Анекдоты</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Цели рассылки</label>
-                                <div class="col-sm-8">
-                                    <input type="text" required="" placeholder="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Пример текста сообщения</label>
-                                <div class="col-sm-8">
-                                    <textarea placeholder="" class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Планируемый объём трафика в день</label>
-                                <div class="col-sm-8">
-                                    <input type="text" required="" placeholder="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Тип сервиса</label>
-                                <div class="col-sm-6 mt-2">
-                                    <label class="custom-control custom-radio">
-                                        <input type="radio" name="radio-color" checked="" class="custom-control-input"><span class="custom-control-indicator custom-control-color"></span><span class="custom-control-description">Рассылка</span>
-                                    </label>
-                                    <label class="custom-control custom-radio">
-                                        <input type="radio" name="radio-color" class="custom-control-input"><span class="custom-control-indicator custom-control-color"></span><span class="custom-control-description">Чат</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Возможные пиковые нагрузки (сообщений в секунду)</label>
-                                <div class="col-sm-8">
-                                    <input type="text" required="" placeholder="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Отправитель</label>
-                                <div class="col-sm-8">
-                                    <input type="text" required="" placeholder="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Адрес сайта</label>
-                                <div class="col-sm-8 input-group mb-2">
-                                    <input parsley-type="url" type="url" required="" placeholder="http://" class="form-control"><i class="input-group-addon icon icon-arrow-left"></i><span class="input-group-addon">введите адрес сайта</span>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Дата согласования</label>
-                                <div class="col-sm-8">
-                                    <input type="text" disabled="disabled" placeholder="Не указана" class="form-control">
+                            <div class="row">
+                                <div class="col-sm-12 margin-center">
+                                    <div class="panel-default row">
+                                        <div class="panel-heading col-sm-2">
+                                            <small class="badge-default">— Черновик —</small>
+                                        </div>
+                                        <div class="col-sm-9 messages-add-btn-holder">
+                                            <button class="btn btn-space btn-xs btn-secondary messages-add-btn"><i class="icon icon-left s7-look"></i> Предпросмотр</button>
+                                            <button class="btn btn-space btn-xs btn-success messages-add-btn"><i class="icon icon-left s7-lock"></i> Сохранить</button>
+                                            <button class="btn btn-space btn-xs btn-primary messages-add-btn"><i class="icon icon-left s7-paper-plane"></i> Разослать сейчас</button>
+                                            <button class="btn btn-space btn-xs btn-info messages-add-btn"><i class="icon icon-left s7-clock"></i> Запланировать</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -568,14 +823,27 @@
 <script src="assets/js/app-mail-compose.js" type="text/javascript"></script>
 <script src="assets/lib/dropzone/dist/min/dropzone.min.js" type="text/javascript"></script>
 
+<!-- DATA TABLES -->
+<script src="assets/lib/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.html5.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.flash.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.print.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.colVis.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+
+<script src="assets/js/app-mail-inbox.js" type="text/javascript"></script>
+
 <script src="assets/js/autosize.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         //initialize the javascript
         App.init();
         $('form').parsley();
-        //App.emailCompose();
-        App.wizard();
+        App.dataTables();
+        App.mailInbox();
     });
 </script>
 

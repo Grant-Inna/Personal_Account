@@ -175,8 +175,6 @@ var App = (function () {
       // Popover
       $('[data-toggle="popover"]').popover();
 
-      // Auto size
-      autosize( $( 'textarea' ) );
     }
   };
  
@@ -203,4 +201,6 @@ var App = (function () {
 
 $(function(){
   autosize( $( 'textarea' ) );
+  autosize( $( 'input[type="search"]' ) );
+
 });
