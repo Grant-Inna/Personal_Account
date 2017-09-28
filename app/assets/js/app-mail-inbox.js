@@ -10,7 +10,14 @@ var App = (function () {
       } else {
           checkboxes.prop('checked', false);
       }
+      var telephone_checkboxes = $(".telephone-list").find('input[type="checkbox"]');
+      if( $(this).is(':checked') ) {
+        telephone_checkboxes.prop('checked', true);
+      } else {
+        telephone_checkboxes.prop('checked', false);
+      }
     });
+
     
   };
 
