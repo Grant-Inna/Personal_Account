@@ -14067,7 +14067,7 @@ input[type="checkbox"] {
   line-height: 0.8;
   vertical-align: middle;
   border-radius: 2px;
-  padding: 0 2px; }
+  padding: 0 5px; }
 
 #table1 tr th.actions .icon:hover, #table1 tr td.actions .icon:hover {
   color: #f1f1f1; }
@@ -14137,7 +14137,8 @@ input[type="checkbox"] {
   padding-left: 20px; }
 
 .panel-table tr th:last-child, .panel-table tr td:last-child {
-  padding-right: 20px; }
+  padding-right: 20px;
+  padding-left: 0; }
 
 .panel-table thead tr th {
   padding-top: 15px;
@@ -18619,6 +18620,11 @@ table.dataTable .icon-channel {
     -webkit-transition: border-color .2s;
     -o-transition: border-color .2s;
     transition: border-color .2s; }
+  .templates-wrapper:active {
+    border-color: #b3cfff;
+    -webkit-transition: border-color .2s;
+    -o-transition: border-color .2s;
+    transition: border-color .2s; }
 
 .templates-one {
   height: 100%;
@@ -18725,12 +18731,38 @@ table.dataTable .icon-channel {
   .templates-one-image .templates-image .templates-image-house-holder {
     height: 60px; }
 
+.messages-add-btn-holder {
+  height: auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .messages-add-btn-holder .btn-space {
+    margin-bottom: 14px; }
+
+.messages-add-btn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+
 /* ========= COMMON ========= */
 .margin-bottom-sm {
   margin-bottom: 3px; }
 
 .margin-right-sm {
   margin-right: 15px; }
+
+.margin-left-md {
+  margin-left: 20%; }
 
 .with-sm-border {
   border: 1px solid #dadada; }
@@ -18743,4 +18775,10 @@ table.dataTable .icon-channel {
 
 textarea {
   min-height: 100px;
-  height: auto; }
+  height: auto;
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: horizontal; }
+
+button {
+  cursor: pointer; }
