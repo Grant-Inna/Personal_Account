@@ -14,7 +14,6 @@ $primary-color-RGB: rgba(79, 107, 181, 0.3);
 
 @import "../lib/dropzone/dist/min/basic.min.css";
 @import "../lib/dropzone/dist/min/dropzone.min.css";
-@import "../lib/select2/css/select2.min.css";
 @import "../lib/fuelux/css/wizard.css";
 @import "../lib/bootstrap-slider/css/bootstrap-slider.min.css";
 
@@ -204,6 +203,11 @@ $primary-color-RGB: rgba(79, 107, 181, 0.3);
 
 
 @charset "UTF-8";
+
+html, body {
+  min-width: 320px;
+  width: 100%;
+}
 
 html {
   font-family: sans-serif;
@@ -7489,23 +7493,33 @@ p {
       position: relative;
       top: 0;
       background-color: #3f3f3f;
-      flex-direction: column;
-      padding: 5px 0; } }
+      height: 50px;
+      padding: 5px 0; }
+    .mai-sub-header .navbar-nav > .nav-item > .nav-link:hover {
+        background-color: #4b576f;
+    }
+
+    }
   .nav-item.open .mai-nav-tabs-sub {
-    display: flex; }
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+  align-items: center}
   .mai-nav-tabs-sub > .nav-item.mega-menu {
     position: static; }
   .mai-nav-tabs-sub > .nav-item > .nav-link {
     padding: 0 26px;
-    line-height: 70px; }
+    &:hover {
+      color: #808ca5;
+    }
+  }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .mai-nav-tabs-sub > .nav-item > .nav-link {
     padding: 0 14px; } }
     @media (max-width: 767px) {
       .mai-nav-tabs-sub > .nav-item > .nav-link {
-        padding-left: 34px;
-        line-height: 50.4px;
+        padding: 0 10px;
         color: #a2a2a2;
         font-size: 1rem; } }
     .mai-nav-tabs-sub > .nav-item > .nav-link .icon {
@@ -7515,7 +7529,7 @@ p {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .mai-nav-tabs-sub > .nav-item > .nav-link .icon {
-    display: none; } }
+     } }
     .mai-nav-tabs-sub > .nav-item > .nav-link.active {
       color: $primary-color; }
   .mai-nav-tabs-sub > .nav-item.parent > .nav-link {
@@ -15343,6 +15357,27 @@ table.dataTable .icon-channel {
   height: fit-content;
 }
 
+@media (max-width: 767px) {
+  .messages-add-btn-holder {
+    flex-direction: column;
+  }
+  .mai-datatable-header, .mai-datatable-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .col-sm-6:first-of-type, .col-sm-5:first-of-type {
+      margin-bottom: 10px;
+    }
+  }
+  .mai-datatable-footer .col-sm-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* ========= COMMON ========= */
 
 .margin-bottom-sm {
@@ -15378,3 +15413,23 @@ button {
   cursor: pointer;
 }
 
+
+
+
+/* ========= SOME MEDIA ========= */
+
+/*  Extra small  */
+
+@media (max-width: 580px) {
+
+  // MAIN NAVIGATION
+  .nav-item.open .mai-nav-tabs-sub {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mai-nav-tabs-sub > .nav-item > .nav-link {
+    padding: 3px 0;
+  }
+}
