@@ -7503,7 +7503,7 @@ p {
   .nav-item.open .mai-nav-tabs-sub {
     height: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
   align-items: center}
   .mai-nav-tabs-sub > .nav-item.mega-menu {
     position: static; }
@@ -7561,6 +7561,9 @@ p {
       .mai-nav-tabs-sub .dropdown-menu .dropdown-item.active {
         color: $primary-color; }
     @media (max-width: 767px) {
+      .nav-item.open .mai-nav-tabs-sub {
+        justify-content: space-around;
+      }
       .mai-nav-tabs-sub .dropdown-menu {
         background-color: #424242;
         box-shadow: none;
