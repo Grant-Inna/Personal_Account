@@ -13,23 +13,37 @@
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
   </head>
   <body>
+  <!-- Top menu (always the same... so far) -->
     <nav class="navbar navbar-full mai-top-header-show-logo navbar-inverse navbar-fixed-top mai-top-header">
       <div class="container">
+          <!-- Logo -->
       <a href="#" class="navbar-brand">
           <div class="navbar-logo"></div>
       </a>
-        <!--Left Menu-->
+        <!-- Global Menu -->
         <ul class="nav navbar-nav mai-top-nav">
           <li class="nav-item"><a href="index.html" class="nav-link">На Сайт</a></li>
           <li class="nav-item"><a href="#" class="nav-link">О Сервисе</a></li>
-          <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Документация<span class="angle-down s7-angle-down"></span></a>
-            <div role="menu" class="dropdown-menu"><a href="#" class="dropdown-item">Information</a><a href="#" class="dropdown-item">Company</a><a href="#" class="dropdown-item">Documentation</a><a href="#" class="dropdown-item">API Settings</a><a href="#" class="dropdown-item">Export Info</a></div>
+          <li class="nav-item dropdown">
+              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Документация<span class="angle-down s7-angle-down"></span>
+              </a>
+              <!-- No use so far -->
+                <div role="menu" class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Information</a>
+                    <a href="#" class="dropdown-item">Company</a>
+                    <a href="#" class="dropdown-item">Documentation</a>
+                    <a href="#" class="dropdown-item">API Settings</a>
+                    <a href="#" class="dropdown-item">Export Info</a>
+                </div>
           </li>
           <li class="nav-item"><a href="email-to-support.html" class="nav-link">Поддержка</a></li>
         </ul>
-        <!--Icons Menu-->
+        <!-- Icons Menu -->
         <ul class="navbar-nav float-lg-right mai-icons-nav">
-          <li class="dropdown nav-item mai-messages"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon s7-comment"></span></a>
+
+            <!-- Messages -->
+          <li class="dropdown nav-item mai-messages">
+              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon s7-comment"></span></a>
             <ul class="dropdown-menu">
               <li>
                 <div class="title">Messages</div>
@@ -55,6 +69,8 @@
               </li>
             </ul>
           </li>
+
+            <!-- Notifications -->
           <li class="dropdown nav-item mai-notifications"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon s7-bell"></span><span class="indicator"></span></a>
             <ul class="dropdown-menu">
               <li>
@@ -81,6 +97,8 @@
               </li>
             </ul>
           </li>
+
+            <!-- Language select -->
             <li class="dropdown nav-item menu__languageSelect">
                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle menu__languageSelect-item">
                     <span class="menu__languageSelect-title">RU</span>  <span class="angle-down s7-angle-down"></span>
@@ -98,9 +116,13 @@
                 </ul>
             </li>
         </ul>
+
         <!--User Menu-->
         <ul class="nav navbar-nav float-lg-right mai-user-nav">
-          <li class="dropdown nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle nav-link"> <img src="assets/img/avatar.jpg"><span class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span></a>
+          <li class="dropdown nav-item">
+              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle nav-link">
+                  <img src="assets/img/avatar.jpg"><span class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span>
+              </a>
             <div role="menu" class="dropdown-menu">
                 <a href="#" class="dropdown-item"> <span class="icon s7-home"> </span>Личный кабинет</a>
                 <a href="#" class="dropdown-item"> <span class="icon s7-user"> </span>Профиль</a>
@@ -112,147 +134,129 @@
         </ul>
       </div>
     </nav>
+
+  <!-- Dynamic part -->
     <div class="mai-wrapper">
+
+        <!-- Pages navigation -->
       <nav class="navbar mai-sub-header">
         <div class="container">
-                    <!-- Mega Menu structure-->
-                    <nav class="navbar navbar-toggleable-sm">
-                      <button type="button" data-toggle="collapse" data-target="#mai-navbar-collapse" aria-controls="#mai-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler hidden-md-up collapsed">
-                        <div class="icon-bar"><span></span><span></span><span></span></div>
-                      </button>
-                      <div id="mai-navbar-collapse" class="navbar-collapse collapse mai-nav-tabs">
-                        <ul class="nav navbar-nav">
-                                    <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-home"></span><span>Главная</span></a>
-                                      <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item"><a href="index.html" class="nav-link active"><span class="icon s7-monitor"></span><span class="name">Панель управления</span></a>
-                                                  </li>
-                                          <li class="nav-item"><a href="index.html#services" class="nav-link"><span class="icon s7-portfolio"></span><span class="name">Сервисы</span></a>
-                                          </li>
-                                          <li class="nav-item"><a href="ui-elements.html" class="nav-link"><span class="icon s7-cash"></span><span class="name">Платежи</span></a>
-                                          </li>
-                                          <li class="nav-item"><a href="plugins.html" class="nav-link"><span class="icon s7-timer"></span><span class="name">Действия пользователей</span></a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                    <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-paper-plane"></span><span>Рассылки</span></a>
-                                      <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                          <li class="nav-item"><a href="email-compose.html" class="nav-link"><span class="icon s7-next-2"></span><span class="name">Отправить сообщение</span></a>
-                                          </li>
-                                          <li class="nav-item"><a href="messages.html" class="nav-link"><span class="icon s7-photo-gallery"></span><span class="name">Рассылки</span></a>
-                                          </li>
-                                          <li class="nav-item"><a href="form-xeditable.html" class="nav-link"><span class="icon s7-credit"></span><span class="name">Шаблоны</span></a>
-                                          </li>
-                                          <li class="nav-item"><a href="senders.html" class="nav-link"><span class="icon s7-expand2"></span><span class="name">Отправители</span></a>
-                                          </li>
-                                          <li class="nav-item"><a href="form-wizard.html" class="nav-link"><span class="icon s7-graph2"></span><span class="name">Статистика</span></a>
-                                          </li>
-                                                  <!--<li class="nav-item"><a href="form-upload.html" class="nav-link"><span class="name">Upload</span></a>
-                                                  </li>-->
-                                      </ul>
-                                    </li>
-                                    <li class="nav-item parent"><a href="email-inbox.html" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-chat"></span><span>Диалоги</span></a>
-                                      <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item"><a href="email-inbox.html" class="nav-link"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
-                                                  </li>
-                                                  <!--<li class="nav-item"><a href="tables-datatables.html" class="nav-link"><span class="icon s7-box2"></span><span class="name">Data Tables</span></a>
-                                                  </li>
-                                                  <li class="nav-item"><a href="tables-filters.html" class="nav-link"><span class="icon s7-box2"></span><span class="name">Filters</span></a>
-                                                  </li>-->
-                                      </ul>
-                                    </li>
-                                    <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-users"></span><span>Мои Клиенты</span></a>
-                                      <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item"><a href="pages-chat.html" class="nav-link"><span class="icon icon-list"></span><span class="name">Списки Клиентов</span></a>
-                                                  </li>
-                                                  <li class="nav-item"><a href="pages-profile.html" class="nav-link"><span class="icon s7-download"></span><span class="name">Импорт</span></a>
-                                                  </li>
-                                                  <!--<li class="nav-item"><a href="pages-pricing-tables.html" class="nav-link"><span class="icon s7-cash"></span><span class="name">Pricing</span></a>
-                                                  </li>
-                                                  <li class="nav-item"><a href="pages-invoice.html" class="nav-link"><span class="icon s7-wallet"></span><span class="name">Invoice</span></a>
-                                                  </li>
-                                                  <li class="nav-item dropdown parent"><a href="login.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-diamond"></span><span class="name">Login</span></a>
-                                                              <div role="menu" class="dropdown-menu mai-sub-nav"><a href="pages-login.html" class="dropdown-item">Login</a><a href="pages-sign-up.html" class="dropdown-item">Sign Up</a><a href="pages-forgot-password.html" class="dropdown-item">Forgot Password</a>
-                                                              </div>
-                                                  </li>
-                                                  <li class="nav-item dropdown parent"><a href="mail.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-mail"></span><span class="name">Mail</span></a>
-                                                              <div role="menu" class="dropdown-menu mai-sub-nav"><a href="email-inbox.html" class="dropdown-item">Inbox</a><a href="email-detail.html" class="dropdown-item">Detail</a><a href="email-compose.html" class="dropdown-item">Compose</a>
-                                                              </div>
-                                                  </li>
-                                                  <li class="nav-item dropdown parent"><a href="maps.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-map-marker"></span><span class="name">Maps</span></a>
-                                                              <div role="menu" class="dropdown-menu mai-sub-nav"><a href="maps-google.html" class="dropdown-item">Google Maps</a><a href="maps-vector.html" class="dropdown-item">Vector Maps</a>
-                                                              </div>
-                                                  </li>
-                                                  <li class="nav-item dropdown parent"><a href="extra.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-diamond"></span><span class="name">Extra Pages</span></a>
-                                                              <div role="menu" class="dropdown-menu mai-sub-nav"><a href="pages-blank.html" class="dropdown-item">Blank Page</a><a href="pages-blank-header.html" class="dropdown-item">Blank Page Header</a><a href="pages-404.html" class="dropdown-item">404 Page</a><a href="pages-gallery.html" class="dropdown-item">Gallery</a><a href="pages-calendar.html" class="dropdown-item">Calendar</a><a href="pages-timeline.html" class="dropdown-item">Timeline</a><a href="pages-timeline2.html" class="dropdown-item">Timeline v2</a>
-                                                              </div>
-                                                  </li>-->
-                                      </ul>
-                                    </li>
-                                   <!-- <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-display1"></span><span>Настройки</span></a>
-                                      <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item"><a href="charts-flot.html" class="nav-link"><span class="icon s7-graph"></span><span class="name">Flot</span></a>
-                                                  </li>
-                                                  <li class="nav-item"><a href="charts-sparklines.html" class="nav-link"><span class="icon s7-graph1"></span><span class="name">Sparklines</span></a>
-                                                  </li>
-                                                  <li class="nav-item"><a href="charts-morris.html" class="nav-link"><span class="icon s7-graph3"></span><span class="name">Morris.js</span></a>
-                                                  </li>
-                                                  <li class="nav-item"><a href="charts-chartjs.html" class="nav-link"><span class="icon s7-graph2"></span><span class="name">Chart.js</span></a>
-                                                  </li>
-                                      </ul>
-                                    </li>-->
-                                    <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-config"></span><span>Настройки</span></a>
-                                      <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                                  <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Каналы</span></a>
-                                                              <div role="menu" class="dropdown-menu mai-mega-menu mai-sub-nav">
-                                                                <div class="mai-mega-menu-row">
-                                                                  <div class="mai-mega-menu-column">
-                                                                              <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-note2"></span><span>Forms</span></a>
-                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="form-elements.html" class="dropdown-item">Elements</a><a href="form-validation.html" class="dropdown-item">Пользователи</a><a href="form-masks.html" class="dropdown-item">Input Masks</a><a href="form-xeditable.html" class="dropdown-item">X Editable</a><a href="form-multiselect.html" class="dropdown-item">Multiselect</a><a href="form-wizard.html" class="dropdown-item">Wizard</a><a href="form-upload.html" class="dropdown-item">Multi Upload</a><a href="form-editor.html" class="dropdown-item">Text Editor</a>
-                                                                                </div>
-                                                                              </div>
-                                                                  </div>
-                                                                  <div class="mai-mega-menu-column">
-                                                                              <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-keypad"></span><span>Tables</span></a>
-                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="tables-general.html" class="dropdown-item">General</a><a href="tables-datatables.html" class="dropdown-item">Компания</a>
-                                                                                </div>
-                                                                              </div>
-                                                                  </div>
-                                                                  <div class="mai-mega-menu-column">
-                                                                              <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-bookmarks"></span><span>Pages</span></a>
-                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="pages-login.html" class="dropdown-item">Login</a><a href="pages-sign-up.html" class="dropdown-item">Sign Up</a><a href="pages-forgot-password.html" class="dropdown-item">Forgot Password</a><a href="pages-blank.html" class="dropdown-item">Blank Page</a><a href="pages-calendar.html" class="dropdown-item">Calendar</a><a href="pages-gallery.html" class="dropdown-item">Gallery</a><a href="pages-pricing-tables.html" class="dropdown-item">Pricing Tables</a><a href="pages-invoice.html" class="dropdown-item">Invoice</a><a href="pages-profile.html" class="dropdown-item">Profile</a><a href="pages-404.html" class="dropdown-item">404 Page</a>
-                                                                                </div>
-                                                                              </div>
-                                                                  </div>
-                                                                  <div class="mai-mega-menu-column">
-                                                                              <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-map"></span><span>Maps</span></a>
-                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="maps-google.html" class="dropdown-item">Google Maps</a><a href="maps-vector.html" class="dropdown-item">Vector Maps</a>
-                                                                                </div>
-                                                                              </div>
-                                                                              <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-mail"></span><span>Mail</span></a>
-                                                                                <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="email-inbox.html" class="dropdown-item">Inbox</a><a href="email-detail.html" class="dropdown-item">Detail</a><a href="email-compose.html" class="dropdown-item">Compose</a>
-                                                                                </div>
-                                                                              </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                  </li>
-                                                  <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
-                                                  </li>
-                                          <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                        </ul>
-                      </div>
-                    </nav>
+            <!-- Mega Menu structure-->
+            <nav class="navbar navbar-toggleable-sm">
+                  <button type="button" data-toggle="collapse" data-target="#mai-navbar-collapse" aria-controls="#mai-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler hidden-md-up collapsed">
+                    <div class="icon-bar"><span></span><span></span><span></span></div> <!-- Have no idea, WTF is this(( -->
+                  </button>
+                    <!-- Menu itself -->
+                  <div id="mai-navbar-collapse" class="navbar-collapse collapse mai-nav-tabs">
+                    <ul class="nav navbar-nav">
+
+                        <!-- Main -->
+                        <!-- OPENED ITEM -->
+                        <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-home"></span><span>Главная</span></a>
+                          <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                              <!-- ACTIVE ITEM! --><li class="nav-item"><a href="index.html" class="nav-link active"><span class="icon s7-monitor"></span><span class="name">Панель управления</span></a>
+                              </li>
+                              <li class="nav-item"><a href="index.html#services" class="nav-link"><span class="icon s7-portfolio"></span><span class="name">Сервисы</span></a>
+                              </li>
+                              <li class="nav-item"><a href="ui-elements.html" class="nav-link"><span class="icon s7-cash"></span><span class="name">Платежи</span></a>
+                              </li>
+                              <li class="nav-item"><a href="plugins.html" class="nav-link"><span class="icon s7-timer"></span><span class="name">Действия пользователей</span></a>
+                              </li>
+                          </ul>
+                        </li>
+                        <!-- Messages -->
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-paper-plane"></span><span>Рассылки</span></a>
+                          <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                              <li class="nav-item"><a href="email-compose.html" class="nav-link"><span class="icon s7-next-2"></span><span class="name">Отправить сообщение</span></a>
+                              </li>
+                              <li class="nav-item"><a href="messages.html" class="nav-link"><span class="icon s7-photo-gallery"></span><span class="name">Рассылки</span></a>
+                              </li>
+                              <li class="nav-item"><a href="form-xeditable.html" class="nav-link"><span class="icon s7-credit"></span><span class="name">Шаблоны</span></a>
+                              </li>
+                              <li class="nav-item"><a href="senders.html" class="nav-link"><span class="icon s7-expand2"></span><span class="name">Отправители</span></a>
+                              </li>
+                              <li class="nav-item"><a href="form-wizard.html" class="nav-link"><span class="icon s7-graph2"></span><span class="name">Статистика</span></a>
+                              </li>
+                          </ul>
+                        </li>
+                        <!-- Emails -->
+                        <li class="nav-item parent"><a href="email-inbox.html" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-chat"></span><span>Диалоги</span></a>
+                          <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                              <li class="nav-item"><a href="email-inbox.html" class="nav-link"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
+                              </li>
+                          </ul>
+                        </li>
+                        <!-- Clients -->
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-users"></span><span>Мои Клиенты</span></a>
+                          <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                              <li class="nav-item"><a href="pages-chat.html" class="nav-link"><span class="icon icon-list"></span><span class="name">Списки Клиентов</span></a>
+                              </li>
+                              <li class="nav-item"><a href="pages-profile.html" class="nav-link"><span class="icon s7-download"></span><span class="name">Импорт</span></a>
+                              </li>
+                          </ul>
+                        </li>
+
+                        <!-- Settings -->
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-config"></span><span>Настройки</span></a>
+                          <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                              <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Каналы</span></a>
+                                  <!--<div role="menu" class="dropdown-menu mai-mega-menu mai-sub-nav">
+                                            <div class="mai-mega-menu-row">
+                                              <div class="mai-mega-menu-column">
+                                                          <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-note2"></span><span>Forms</span></a>
+                                                            <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="form-elements.html" class="dropdown-item">Elements</a><a href="form-validation.html" class="dropdown-item">Пользователи</a><a href="form-masks.html" class="dropdown-item">Input Masks</a><a href="form-xeditable.html" class="dropdown-item">X Editable</a><a href="form-multiselect.html" class="dropdown-item">Multiselect</a><a href="form-wizard.html" class="dropdown-item">Wizard</a><a href="form-upload.html" class="dropdown-item">Multi Upload</a><a href="form-editor.html" class="dropdown-item">Text Editor</a>
+                                                            </div>
+                                                          </div>
+                                              </div>
+                                              <div class="mai-mega-menu-column">
+                                                          <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-keypad"></span><span>Tables</span></a>
+                                                            <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="tables-general.html" class="dropdown-item">General</a><a href="tables-datatables.html" class="dropdown-item">Компания</a>
+                                                            </div>
+                                                          </div>
+                                              </div>
+                                              <div class="mai-mega-menu-column">
+                                                          <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-bookmarks"></span><span>Pages</span></a>
+                                                            <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="pages-login.html" class="dropdown-item">Login</a><a href="pages-sign-up.html" class="dropdown-item">Sign Up</a><a href="pages-forgot-password.html" class="dropdown-item">Forgot Password</a><a href="pages-blank.html" class="dropdown-item">Blank Page</a><a href="pages-calendar.html" class="dropdown-item">Calendar</a><a href="pages-gallery.html" class="dropdown-item">Gallery</a><a href="pages-pricing-tables.html" class="dropdown-item">Pricing Tables</a><a href="pages-invoice.html" class="dropdown-item">Invoice</a><a href="pages-profile.html" class="dropdown-item">Profile</a><a href="pages-404.html" class="dropdown-item">404 Page</a>
+                                                            </div>
+                                                          </div>
+                                              </div>
+                                              <div class="mai-mega-menu-column">
+                                                          <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-map"></span><span>Maps</span></a>
+                                                            <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="maps-google.html" class="dropdown-item">Google Maps</a><a href="maps-vector.html" class="dropdown-item">Vector Maps</a>
+                                                            </div>
+                                                          </div>
+                                                          <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-mail"></span><span>Mail</span></a>
+                                                            <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="email-inbox.html" class="dropdown-item">Inbox</a><a href="email-detail.html" class="dropdown-item">Detail</a><a href="email-compose.html" class="dropdown-item">Compose</a>
+                                                            </div>
+                                                          </div>
+                                              </div>
+                                            </div>
+                                          </div>-->
+                              </li>
+                              <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
+                              </li>
+                              <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
+                              </li>
+                          </ul>
+                        </li>
+                    </ul>
+                  </div>
+                </nav>
+
           <!--Search input-->
           <div class="search">
             <input type="text" placeholder="Поиск..." name="q"><span class="s7-search"></span>
           </div>
         </div>
       </nav>
+
+        <!-- !Our content! -->
       <div class="main-content container">
+
+          <!-- Top line -->
         <div class="row">
+
+            <!-- From template -->
           <div class="col-md-7">
             <div class="widget widget-fullwidth user-develop-chart">
               <div class="widget-head">
@@ -264,6 +268,8 @@
               </div>
             </div>
           </div>
+
+            <!-- Channels widget -->
           <div class="col-md-5">
             <div class="widget-indicators">
                 <div class="widget widget-fullwidth todo-list">
@@ -276,24 +282,18 @@
                                 <td class="td__iconHolder"><div class="icon-channel icon-channel-facebook"></div></td>
                                 <td>Facebook Messenger</td>
                                 <td><span class="badge badge-warning">Не настроен</span></td>
-
-
                                 <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
                             </tr>
                             <tr>
                                 <td class="td__iconHolder"><div class="icon-channel icon-channel-telegram"></div></td>
                                 <td>Telegram Bot</td>
                                 <td><span class="badge badge-warning">Не настроен</span></td>
-
-
                                 <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
                             </tr>
                             <tr>
                                 <td class="td__iconHolder"><div class="icon-channel icon-channel-viber"></div></td>
                                 <td>Viber Рассылки</td>
                                 <td><span class="badge badge-default">Активен</span></td>
-
-
                                 <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
                             </tr>
 
@@ -301,8 +301,6 @@
                                 <td class="td__iconHolder"><div class="icon-channel icon-channel-vk"></div></td>
                                 <td>VK.com</td>
                                 <td><span class="badge badge-default">Активен</span></td>
-
-
                                 <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
                             </tr>
 
@@ -310,21 +308,18 @@
                                 <td class="td__iconHolder"><div class="icon-channel icon-channel-sms"></div></td>
                                 <td>SMS Рассылки</td>
                                 <td><span class="badge badge-default">Активен</span></td>
-
-
                                 <td class="actions"><button type="button" class="btn btn-secondary "><i class="icon s7-config"></i></button></td>
                             </tr>
-
                             </tbody>
                         </table>
-
-
                     </div>
 
                     <a href="#" class="user-stats-more-details"> Управление каналами</a></div>
             </div>
           </div>
         </div>
+
+          <!-- Second line from template — no use so far -->
         <div class="row">
           <div class="col-md-4">
             <div class="widget widget-fullwidth week-chart">
@@ -382,7 +377,11 @@
             </div>
           </div>
         </div>
+
+          <!-- Third line -->
         <div class="row">
+
+            <!-- Service list -->
           <div class="col-12">
             <div class="project-list">
               <a id="services"></a>
@@ -498,6 +497,8 @@
             </div>
           </div>
         </div>
+
+          <!-- Fourth line from template — no use so far -->
         <div class="row">
           <div class="col-md-6">
             <div class="widget widget-fullwidth todo-list">

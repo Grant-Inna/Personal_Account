@@ -149,9 +149,10 @@
                                     </li>
                                 </ul>
                             </li>
+                            <!-- OPENED ITEM! -->
                             <li class="nav-item parent open"><a href="email-inbox.html" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-chat"></span><span>Диалоги</span></a>
                                 <ul class="mai-nav-tabs-sub mai-sub-nav nav">
-                                    <li class="nav-item"><a href="email-inbox.html" class="nav-link active"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
+                                    <!-- ACTIVE ITEM! --><li class="nav-item"><a href="email-inbox.html" class="nav-link active"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
                                     </li>
                                 </ul>
                             </li>
@@ -214,17 +215,24 @@
                 </div>
             </div>
         </nav>
+
+        <!-- !Our content! -->
       <div class="main-content container">
         <div class="row email">
+
+            <!-- Left column with nvigation -->
           <div class="col-md-3 email-aside">
             <div class="aside-content">
                 <div class="content">
+
+                    <!-- Left column button -->
                     <div class="aside-header navbar-toggleable-sm">
                         <div class="aside-compose">
                             <a href="email-compose.html" class="btn btn-secondary btn-block">Новое сообщение</a>
                         </div>
                     </div>
 
+                    <!-- Email sub navigation -->
                     <div class="aside-nav navbar-collapse collapse">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
@@ -244,6 +252,8 @@
                         </ul>
 
                         <hr>
+
+                        <!-- Left column sub caption -->
                         <span class="title">Каналы </span>
                           <ul class="navbar-nav nav-pills nav-stacked">
                             <li class="nav-item"><a href="#" class="nav-link"><span class="badge badge-default">2</span>Telegram</a></li>
@@ -257,7 +267,11 @@
                 </div>
             </div>
         </div>
+
+            <!-- Right column -->
           <div class="col-md-9 email-content">
+
+              <!-- Right column caption -->
             <div class="email-inbox-header">
               <div class="row">
                 <div class="col-md-9">
@@ -268,6 +282,8 @@
                       </div>
                       <span class="new-messages">есть новые сообщения (1)</span>  </div>
                 </div>
+
+                  <!-- Search input -->
                 <div class="col-md-3">
                   <div class="email-search mt-2">
                     <div class="input-group input-search">
@@ -278,11 +294,17 @@
                 </div>
               </div>
             </div>
+
+              <!-- Right column filter inputs -->
             <div class="email-filters">
               <div class="email-filters-left">
+
+                  <!-- Choose all letters checkbox -->
                 <label class="custom-control custom-checkbox mai-select-all">
                   <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
                 </label>
+
+                  <!-- Service choosing -->
                   <div class="btn-group">
                       <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выбрать сервис <span class="icon-dropdown s7-angle-down"></span></button>
                       <div role="menu" class="dropdown-menu">
@@ -292,6 +314,8 @@
                           <a href="#" class="dropdown-item"> Все сервисы </a>
                       </div>
                   </div>
+
+                  <!-- Chanel choosing -->
                 <div class="btn-group">
                   <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выбрать канал <span class="icon-dropdown s7-angle-down"></span></button>
                     <div role="menu" class="dropdown-menu">
@@ -317,11 +341,15 @@
                         </a>
                     </div>
                 </div>
+
+                  <!-- Action buttons -->
                 <div class="btn-group">
                   <button type="button" class="btn btn-secondary" title="В Архив"><i class="icon s7-box1"></i></button>
                   <button type="button" class="btn btn-secondary" title="Важное"><i class="icon s7-star"></i></button>
                   <button type="button" class="btn btn-secondary" title="Удалить"><i class="icon s7-trash"></i></button>
                 </div>
+
+                  <!-- Sorting -->
                 <div class="btn-group">
                   <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Сортировать <span class="icon-dropdown s7-angle-down"></span></button>
                   <div role="menu" class="dropdown-menu dropdown-menu-right">
@@ -332,6 +360,8 @@
                   </div>
                 </div>
               </div>
+
+                <!-- Pagination -->
               <div class="email-filters-right"><span class="email-pagination-indicator">1-50 of 253</span>
                 <div class="btn-group email-pagination-nav">
                   <button type="button" class="btn btn-secondary"><i class="s7-angle-left"></i></button>
@@ -339,17 +369,28 @@
                 </div>
               </div>
             </div>
+
+              <!-- Email list -->
             <div class="email-list">
-                <div class="email-list-item email-list-item-unread">
+                <!-- NEW MESSAGE (email-list-item-unread) --><div class="email-list-item email-list-item-unread">
                     <div class="email-list-actions">
+
+                        <!-- Choose letter checkbox -->
                         <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
-                        </label><a href="#" class="favorite"><span class="s7-star"></span></a>
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                        </label>
+
+                        <!-- "Favorite" star (always there, may be active) -->
+                        <a href="#" class="favorite"><span class="s7-star"></span></a>
+
+                        <!-- Channel icon -->
                         <div class="icon-channel icon-channel-telegram"></div>
                     </div>
                     <a href="pages-chat.html" class="email-list-detail">
                         <span class="from">Penelope Thornton</span>
-                        <p class="msg">Urgent - You forgot your keys in the class room, please come imediatly!</p>
+                        <p class="msg">Urgent - You forgot your sense of humor
+                            in the class room, please come imediatly!</p>
                         <span class="date"><i class="icon s7-paperclip"></i> 28 Jul</span>
                     </a>
                 </div>
@@ -357,12 +398,13 @@
                     <div class="email-list-actions">
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
-                        </label><a href="#" class="favorite active"><span class="s7-star"></span></a>
+                        </label>
+                        <!-- ACTIVE --><a href="#" class="favorite active"><span class="s7-star"></span></a>
                         <div class="icon-channel icon-channel-vk"></div>
                     </div>
                     <a href="pages-chat.html" class="email-list-detail">
-                        <span class="from">Penelope Thornton</span>
-                        <p class="msg">Urgent - You forgot your keys in the class room, please come imediatly!</p>
+                        <span class="from">Tommy Wiseau</span>
+                        <p class="msg">I did nat hit her, I did naaaaht. Oh, hi Mark!</p>
                         <span class="date"><i class="icon s7-paperclip"></i> 28 Jul</span>
                     </a>
                 </div>
@@ -372,9 +414,7 @@
                     <input type="checkbox" class="custom-control-input">
                         <span class="custom-control-indicator"></span>
                     </label>
-                    <a href="#" class="favorite active">
-                        <span class="s7-star"></span>
-                    </a>
+                    <!-- ACTIVE --><a href="#" class="favorite active"><span class="s7-star"></span></a>
                     <div class="icon-channel icon-channel-viber"></div>
                 </div>
                 <a href="pages-chat.html" class="email-list-detail">
@@ -387,7 +427,8 @@
                     <div class="email-list-actions">
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
-                        </label><a href="#" class="favorite active"><span class="s7-star"></span></a>
+                        </label>
+                        <!-- ACTIVE --><a href="#" class="favorite active"><span class="s7-star"></span></a>
                         <div class="icon-channel icon-channel-vk"></div>
                     </div>
                     <a href="pages-chat.html" class="email-list-detail">
@@ -400,12 +441,13 @@
                     <div class="email-list-actions">
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
-                        </label><a href="#" class="favorite active"><span class="s7-star"></span></a>
+                        </label>
+                        <a href="#" class="favorite"><span class="s7-star"></span></a>
                         <div class="icon-channel icon-channel-sms"></div>
                     </div>
                     <a href="pages-chat.html" class="email-list-detail">
                         <span class="from">Penelope Thornton</span>
-                        <p class="msg">Urgent - You forgot your keys in the class room, please come imediatly!</p>
+                        <p class="msg">Urgent - You forgot your conscience in the class room, please come imediatly!</p>
                         <span class="date"><i class="icon s7-paperclip"></i> 28 Jul</span>
                     </a>
                 </div>

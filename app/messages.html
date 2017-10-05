@@ -176,11 +176,13 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <!-- OPENED ITEM -->
                         <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-paper-plane"></span><span>Рассылки</span></a>
                             <ul class="mai-nav-tabs-sub mai-sub-nav nav">
                                 <li class="nav-item"><a href="email-compose.html" class="nav-link"><span class="icon s7-next-2"></span><span class="name">Отправить сообщение</span></a>
                                 </li>
-                                <li class="nav-item"><a href="messages.html" class="nav-link active"><span class="icon s7-photo-gallery"></span><span class="name">Рассылки</span></a>
+                                <!-- ACTIVE ITEM! --><li class="nav-item"><a href="messages.html" class="nav-link active"><span class="icon s7-photo-gallery"></span><span class="name">Рассылки</span></a>
                                 </li>
                                 <li class="nav-item"><a href="form-xeditable.html" class="nav-link"><span class="icon s7-credit"></span><span class="name">Шаблоны</span></a>
                                 </li>
@@ -319,14 +321,22 @@
     </nav>
 
 
-
+    <!-- !Our content! -->
     <div class="main-content container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-default panel-table">
+
+                    <!-- Content caption -->
+                    <div class="panel-heading panel-heading-divider">Список рассылок</div>
+
+                    <!-- Add new button -->
                     <div class="panel-heading">
                         <a href="new-messages.html" class="btn btn-space btn-success add-button">Добавить <strong>+</strong></a>
                     </div>
+
+                    <!-- Messages table -->
+                    <!-- !Control layout selects, search input, pagination, informing message on the bottom of page generate automatically! -->
                     <div class="panel-body">
                         <table id="table1" class="table table-striped table-hover">
                             <thead>
@@ -338,24 +348,34 @@
                             </tr>
                             </thead>
                             <tbody>
+
+                            <!-- One row. "odd/even" and "gradeX/C/A" classes may generate automatically -->
                             <tr class="odd gradeX">
+
+                                <!-- Message name + creation date (I suppose...)-->
                                 <td>
                                     <div class="table-inner-column">
                                         <a href="#" class="margin-bottom-sm">Рассылка 1</a>
                                         <span><small>21.02.14 14:32</small></span>
                                     </div>
                                 </td>
+
+                                <!-- Status badge -->
                                 <td>
                                     <div class="table-inner-column">
                                         <span class="badge badge-default status-label margin-bottom-sm">Черновик</span>
                                     </div>
                                 </td>
+
+                                <!-- Last update date + name of the user, who updated (I suppose) -->
                                 <td>
                                     <div class="table-inner-column">
                                         <span class="margin-bottom-sm">Макаронный Монстр</span>
                                         <span>22.01.15 13:52</span>
                                     </div>
                                 </td>
+
+                                <!-- Actions buttons (depends on message status) -->
                                 <td class="center actions">
                                     <a href="#" class="icon btn-primary"><i class="s7-paper-plane"></i></a>
                                     <a href="#" class="icon btn-danger"><i class="s7-trash"></i></a>
