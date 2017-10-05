@@ -15396,8 +15396,15 @@ table.dataTable .icon-channel {
 
 /* ========= COMMON ========= */
 
+.height-max-content {
+  height: max-content !important;
+}
+
 .margin-bottom-sm {
   margin-bottom: 3px;
+}
+.margin-bottom-md {
+  margin-bottom: 20px;
 }
 .margin-right-sm {
    margin-right: 15px;

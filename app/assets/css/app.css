@@ -18817,8 +18817,16 @@ table.dataTable .icon-channel {
             align-items: center; } }
 
 /* ========= COMMON ========= */
+.height-max-content {
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important; }
+
 .margin-bottom-sm {
   margin-bottom: 3px; }
+
+.margin-bottom-md {
+  margin-bottom: 20px; }
 
 .margin-right-sm {
   margin-right: 15px; }
