@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <meta charset="UTF-8">
+    <title>Messaggio | Пользователи</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/simple-line-icons/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="assets/lib/dropzone/dist/dropzone.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/fuelux/css/wizard.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/css/dataTables.bootstrap4.min.css"/>
+
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<!-- Top menu (always the same... so far) -->
+<nav class="navbar navbar-full mai-top-header-show-logo navbar-inverse navbar-fixed-top mai-top-header">
+    <div class="container">
+        <!-- Logo -->
+        <a href="#" class="navbar-brand">
+            <div class="navbar-logo"></div>
+        </a>
+        <!-- Global Menu -->
+        <ul class="nav navbar-nav mai-top-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">На Сайт</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">О Сервисе</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Документация<span class="angle-down s7-angle-down"></span>
+                </a>
+                <!-- No use so far -->
+                <div role="menu" class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Information</a>
+                    <a href="#" class="dropdown-item">Company</a>
+                    <a href="#" class="dropdown-item">Documentation</a>
+                    <a href="#" class="dropdown-item">API Settings</a>
+                    <a href="#" class="dropdown-item">Export Info</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="email-to-support.html" class="nav-link">Поддержка</a></li>
+        </ul>
+        <!-- Icons Menu -->
+        <ul class="navbar-nav float-lg-right mai-icons-nav">
+
+            <!-- Messages -->
+            <li class="dropdown nav-item mai-messages">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon s7-comment"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="title">Messages</div>
+                        <div class="mai-scroller">
+                            <div class="content">
+                                <ul>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img1.jpg"></div>
+                                        <div class="content"><span class="date">16 Sept</span><span class="name">Victor Jara</span><span class="desc">The song that has been brave, will always be the new song. </span></div></a></li>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img2.jpg"></div>
+                                        <div class="content"><span class="date">4 Sept</span><span class="name">Gustavo Cerati</span><span class="desc">You will see me fly across the city of fury where no one knows of me.</span></div></a></li>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img3.jpg"></div>
+                                        <div class="content"><span class="date">13 Aug</span><span class="name">Jaime Garzón</span><span class="desc">Now everything came back to the abnormality.</span></div></a></li>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img4.jpg"></div>
+                                        <div class="content"><span class="date">13 Aug</span><span class="name">Allen Collins</span><span class="desc">Things just couldn't even be the same 'Cause I'm as free as a bird now.</span></div></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer"> <a href="#">View all messages</a></div>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Notifications -->
+            <li class="dropdown nav-item mai-notifications"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="icon s7-bell"></span><span class="indicator"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="title">Notifications</div>
+                        <div class="mai-scroller">
+                            <div class="content">
+                                <ul>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-check"></span></div>
+                                        <div class="content"><span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span><span class="date">10 minutes ago</span></div></a></li>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-add-user"></span></div>
+                                        <div class="content"><span class="desc">You have a new fiend request pending from <strong>John Doe</strong>.</span><span class="date">2 days ago</span></div></a></li>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-graph1"></span></div>
+                                        <div class="content"><span class="desc">Your site visits have increased <strong>15.5%</strong> more since the last week.</span><span class="date">2 hours ago</span></div></a></li>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-check"></span></div>
+                                        <div class="content"><span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span><span class="date">10 minutes ago</span></div></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer"> <a href="#">View all notifications</a></div>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Language select -->
+            <li class="dropdown nav-item menu__languageSelect">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle menu__languageSelect-item">
+                    <span class="menu__languageSelect-title">RU</span>  <span class="angle-down s7-angle-down"></span>
+                </a>
+                <ul class="menu__languageSelect-holder dropdown-menu">
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/rf.png" alt="">  <span class="menu__languageSelect-title">RU</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/uf.png" alt="">  <span class="menu__languageSelect-title">UA</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/usaf.png" alt=""><span class="menu__languageSelect-title">ENG</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--User Menu-->
+        <ul class="nav navbar-nav float-lg-right mai-user-nav">
+            <li class="dropdown nav-item">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <img src="assets/img/avatar.jpg"><span class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span>
+                </a>
+                <div role="menu" class="dropdown-menu">
+                    <a href="#" class="dropdown-item"> <span class="icon s7-home"> </span>Личный кабинет</a>
+                    <a href="#" class="dropdown-item"> <span class="icon s7-user"> </span>Профиль</a>
+                    <a href="#" class="dropdown-item"> <span class="icon s7-cash"> </span>Платежи</a>
+                    <a href="account-settings.html" class="dropdown-item"> <span class="icon s7-tools"> </span>Настройки</a>
+                    <a href="#" class="dropdown-item"> <span class="icon s7-power"> </span>Выход</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="mai-wrapper">
+    <!-- Pages navigation -->
+    <nav class="navbar mai-sub-header">
+        <div class="container">
+            <!-- Mega Menu structure-->
+            <nav class="navbar navbar-toggleable-sm">
+                <button type="button" data-toggle="collapse" data-target="#mai-navbar-collapse" aria-controls="#mai-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler hidden-md-up collapsed">
+                    <div class="icon-bar"><span></span><span></span><span></span></div> <!-- Have no idea, WTF is this(( -->
+                </button>
+                <!-- Menu itself -->
+                <div id="mai-navbar-collapse" class="navbar-collapse collapse mai-nav-tabs">
+                    <ul class="nav navbar-nav">
+
+                        <!-- Main -->
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-home"></span><span>Главная</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="index.html" class="nav-link"><span class="icon s7-monitor"></span><span class="name">Панель управления</span></a>
+                            </li>
+                                <li class="nav-item"><a href="index.html#services" class="nav-link"><span class="icon s7-portfolio"></span><span class="name">Сервисы</span></a>
+                                </li>
+                                <li class="nav-item"><a href="ui-elements.html" class="nav-link"><span class="icon s7-cash"></span><span class="name">Платежи</span></a>
+                                </li>
+                                <li class="nav-item"><a href="plugins.html" class="nav-link"><span class="icon s7-timer"></span><span class="name">Действия пользователей</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Messages -->
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-paper-plane"></span><span>Рассылки</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="email-compose.html" class="nav-link"><span class="icon s7-next-2"></span><span class="name">Отправить сообщение</span></a>
+                                </li>
+                                <li class="nav-item"><a href="messages.html" class="nav-link"><span class="icon s7-photo-gallery"></span><span class="name">Рассылки</span></a>
+                                </li>
+                                <li class="nav-item"><a href="form-xeditable.html" class="nav-link"><span class="icon s7-credit"></span><span class="name">Шаблоны</span></a>
+                                </li>
+                                <li class="nav-item"><a href="senders.html" class="nav-link"><span class="icon s7-expand2"></span><span class="name">Отправители</span></a>
+                                </li>
+                                <li class="nav-item"><a href="form-wizard.html" class="nav-link"><span class="icon s7-graph2"></span><span class="name">Статистика</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Emails -->
+                        <li class="nav-item parent"><a href="email-inbox.html" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-chat"></span><span>Диалоги</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="email-inbox.html" class="nav-link"><span class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Clients -->
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-users"></span><span>Мои Клиенты</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="pages-chat.html" class="nav-link"><span class="icon icon-list"></span><span class="name">Списки Клиентов</span></a>
+                                </li>
+                                <li class="nav-item"><a href="pages-profile.html" class="nav-link"><span class="icon s7-download"></span><span class="name">Импорт</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Settings -->
+                        <!-- OPENED ITEM -->
+                        <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-config"></span><span>Настройки</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Каналы</span></a>
+                                </li>
+                                <!-- ACTIVE ITEM! --><li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link active"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
+                                </li>
+                                <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--Search input-->
+            <div class="search">
+                <input type="text" placeholder="Поиск..." name="q"><span class="s7-search"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- !Our content! -->
+    <div class="main-content container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default panel-table">
+
+                    <!-- Content caption -->
+                    <div class="panel-heading panel-heading-divider">Пользователи</div>
+
+                    <!-- Add new button -->
+                    <div class="panel-heading">
+                        <button data-modal="md-flipV"  href="" class="btn btn-space btn-success md-trigger add-button">Выслать приглашение <strong>+</strong></button>
+                    </div>
+
+                    <!-- Users table -->
+                    <!-- !Control layout selects, search input, pagination, informing message on the bottom of page generate automatically! -->
+                    <div class="panel-body">
+                        <table id="table1" class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>Логин</th>
+                                <th>Имя</th>
+                                <th>Телефон</th>
+                                <th>Роль</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr class="odd gradeX">
+
+                                <!-- User's login -->
+                                <td class="">Tommy@Wiseau.com</td>
+
+                                <!-- User's name -->
+                                <td>Tommy Wiseau</td>
+
+                                <!-- Phone number -->
+                                <td>+7(926)666-66-66</td>
+
+                                <!-- User's role -->
+                                <td>Владелец (Вы)</td>
+
+                            </tr>
+                            <tr class="even gradeC">
+                                <td class="">Tommy-the-best@Wiseau.com</td>
+                                <td>Tommy Wiseau</td>
+                                <td>+7(910)666-66-66</td>
+                                <td>Владелец (Вы)</td>
+                            </tr>
+                            <tr class="odd gradeA">
+                                <td class="">Tommy@Wiseau.com</td>
+                                <td>Tommy </td>
+                                <td>+7(909)666-66-66</td>
+                                <td>Владелец (Вы)</td>
+                            </tr>
+                            <tr class="">
+                                <td class="">Tommy@Wiseau.com</td>
+                                <td>Tommy Wiseau</td>
+                                <td>+7(666)666-66-06</td>
+                                <td>Владелец (Вы)</td>
+                            </tr>
+                            <tr class="odd gradeA">
+                                <td class="">Tommy@Wiseau.com</td>
+                                <td>Tommy Wiseau</td>
+                                <td>+7(666)666-69-66</td>
+                                <td>Владелец (Вы)</td>
+                            </tr>
+                            <tr class="even gradeA">
+                                <td class="">Tommy@Wiseau.com</td>
+                                <td>Tommy Wiseau</td>
+                                <td>+7(666)666-66-66</td>
+                                <td>Владелец (но не вы)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="md-flipV" class="modal-container modal-effect-9">
+                    <div class="modal-content">
+                        <div class="">
+                            <div class="panel-heading panel-heading-divider">
+                                Выслать приглашение
+                            </div>
+                        </div>
+                        <div class="modal-body panel-body">
+                            <div class="col-md-12">
+                                <div class="panel panel-default height-max-content">
+                                    <form action="">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label text-right">E-Mail</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" required="" parsley-type="email" placeholder="Enter e-mail" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row margin-bottom-md">
+                                            <label class="col-sm-3 control-label col-form-label text-right">Роль </label>
+                                            <div class="col-sm-9">
+                                                <select required="" class="tags" tabindex="-1" aria-hidden="true">
+                                                    <option value="1">Юрист</option>
+                                                    <option value="2">Штатный подлиза</option>
+                                                    <option value="2">Прогульщик</option>
+                                                    <option value="2">Весельчак</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-7 col-form-label text-right"></label>
+                                    <div class="col-sm-5 text-right">
+                                        <button type="button" data-dismiss="modal" class="btn btn-secondary modal-close">Закрыть</button>
+                                        <button type="button" data-dismiss="modal" class="btn btn-primary modal-close">Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/tether/js/tether.min.js" type="text/javascript"></script>
+<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/lib/parsley/parsley.min.js" type="text/javascript"></script>
+
+<!-- For  MultiTag Input-->
+<script src="assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
+<script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+<script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+<script src="assets/js/app-form-wizard.js" type="text/javascript"></script>
+<script src="assets/js/app-mail-compose.js" type="text/javascript"></script>
+<script src="assets/lib/dropzone/dist/min/dropzone.min.js" type="text/javascript"></script>
+
+<!-- DATA TABLES -->
+<script src="assets/lib/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.html5.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.flash.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.print.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.colVis.js" type="text/javascript"></script>
+<script src="assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+
+<script src="assets/js/app-mail-inbox.js" type="text/javascript"></script>
+
+<script src="assets/js/autosize.min.js" type="text/javascript"></script>
+
+<script src="assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //Set Nifty Modals defaults
+    $.fn.niftyModal('setDefaults',{
+        overlaySelector: '.modal-overlay',
+        contentSelector: '.modal-content',
+        closeSelector: '.modal-close',
+        classAddAfterOpen: 'modal-show',
+        classModalOpen: 'modal-open',
+        classScrollbarMeasure: 'modal-scrollbar-measure',
+        afterOpen: function(){
+            $("html").addClass('mai-modal-open');
+        },
+        afterClose: function(){
+            $("html").removeClass('mai-modal-open');
+        }
+    });
+    $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+        App.dataTables();
+        $('form').parsley();
+        App.mailInbox();
+        App.wizard();
+    });
+</script>
+
+</body>
+</html>
+
+
+
