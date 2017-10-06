@@ -9,7 +9,7 @@
     <title>Messaggio | Новое письмо в службу поддержки</title>
     <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
-      <link rel="stylesheet" type="text/css" href="assets/lib/dropzone/dist/dropzone.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/dropzone/dist/dropzone.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
   </head>
@@ -170,40 +170,8 @@
                           <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-config"></span><span>Настройки</span></a>
                               <ul class="mai-nav-tabs-sub mai-sub-nav nav">
                                   <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Каналы</span></a>
-                                      <div role="menu" class="dropdown-menu mai-mega-menu mai-sub-nav">
-                                          <div class="mai-mega-menu-row">
-                                              <div class="mai-mega-menu-column">
-                                                  <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-note2"></span><span>Forms</span></a>
-                                                      <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="form-elements.html" class="dropdown-item">Elements</a><a href="form-validation.html" class="dropdown-item">Пользователи</a><a href="form-masks.html" class="dropdown-item">Input Masks</a><a href="form-xeditable.html" class="dropdown-item">X Editable</a><a href="form-multiselect.html" class="dropdown-item">Multiselect</a><a href="form-wizard.html" class="dropdown-item">Wizard</a><a href="form-upload.html" class="dropdown-item">Multi Upload</a><a href="form-editor.html" class="dropdown-item">Text Editor</a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="mai-mega-menu-column">
-                                                  <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-keypad"></span><span>Tables</span></a>
-                                                      <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="tables-general.html" class="dropdown-item">General</a><a href="tables-datatables.html" class="dropdown-item">Компания</a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="mai-mega-menu-column">
-                                                  <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-bookmarks"></span><span>Pages</span></a>
-                                                      <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="pages-login.html" class="dropdown-item">Login</a><a href="pages-sign-up.html" class="dropdown-item">Sign Up</a><a href="pages-forgot-password.html" class="dropdown-item">Forgot Password</a><a href="pages-blank.html" class="dropdown-item">Blank Page</a><a href="pages-calendar.html" class="dropdown-item">Calendar</a><a href="pages-gallery.html" class="dropdown-item">Gallery</a><a href="pages-pricing-tables.html" class="dropdown-item">Pricing Tables</a><a href="pages-invoice.html" class="dropdown-item">Invoice</a><a href="pages-profile.html" class="dropdown-item">Profile</a><a href="pages-404.html" class="dropdown-item">404 Page</a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              <div class="mai-mega-menu-column">
-                                                  <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-map"></span><span>Maps</span></a>
-                                                      <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="maps-google.html" class="dropdown-item">Google Maps</a><a href="maps-vector.html" class="dropdown-item">Vector Maps</a>
-                                                      </div>
-                                                  </div>
-                                                  <div class="mai-mega-menu-section parent"><a href="#" class="nav-link"><span class="icon s7-mail"></span><span>Mail</span></a>
-                                                      <div class="mai-mega-menu-sub-items mai-sub-nav"><a href="email-inbox.html" class="dropdown-item">Inbox</a><a href="email-detail.html" class="dropdown-item">Detail</a><a href="email-compose.html" class="dropdown-item">Compose</a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
                                   </li>
-                                  <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
+                                  <li class="nav-item"><a href="users.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
                                   </li>
                                   <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
                                   </li>
@@ -237,7 +205,7 @@
                     </div>
 
                       <!-- Textarea -->
-                      <textarea rows="13" class="form-control">Сообщение</textarea>
+                      <textarea rows="13" placeholder="Сообщение" class="form-control"></textarea>
 
                       <!-- Priority -->
                       <div class="form-group row">
@@ -273,22 +241,18 @@
         </div>
       </div>
     </div>
-  <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-  <script src="assets/lib/tether/js/tether.min.js" type="text/javascript"></script>
-  <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
-  <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="assets/js/app.js" type="text/javascript"></script>
-  <script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
-  <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
-  <script src="assets/js/app-mail-compose.js" type="text/javascript"></script>
-  <script src="assets/lib/dropzone/dist/min/dropzone.min.js" type="text/javascript"></script>
 
-  <script src="assets/js/autosize.min.js" type="text/javascript"></script>
+  <script src="assets/js/root.common.js" type="text/javascript"></script>
+  <script src="assets/js/root.forms.js" type="text/javascript"></script>
+  <script src="assets/js/root.mail.js" type="text/javascript"></script>
+
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
       	App.init();
       	App.emailCompose();
+        App.wizard();
+        App.mailInbox();
       });
     </script>
   </body>

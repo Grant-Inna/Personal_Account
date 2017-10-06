@@ -211,7 +211,7 @@
                             <ul class="mai-nav-tabs-sub mai-sub-nav nav">
                                 <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Канал</span></a>
                                 </li>
-                                <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
+                                <li class="nav-item"><a href="users.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
                                 </li>
                                 <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
                                 </li>
@@ -327,6 +327,15 @@
                                 </div>
                             </div>
 
+                            <!-- Action buttons -->
+                            <div class="email-editor">
+                                <div class="form-group">
+                                    <label class="col-1 col-form-label text-right"></label>
+                                    <button type="submit" class="btn btn-primary btn-space">Добавить</button>
+                                    <a href="senders.html" type="button" class="btn btn-secondary btn-space">Отмена</a>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -337,30 +346,15 @@
 
 </div>
 
-<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="assets/lib/tether/js/tether.min.js" type="text/javascript"></script>
-<script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
-<script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/js/app.js" type="text/javascript"></script>
-<script src="assets/lib/parsley/parsley.min.js" type="text/javascript"></script>
 
-<!-- For  MultiTag Input-->
-<script src="assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
-<script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
-<script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
-<script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
-<script src="assets/js/app-form-wizard.js" type="text/javascript"></script>
-<script src="assets/js/app-mail-compose.js" type="text/javascript"></script>
-<script src="assets/lib/dropzone/dist/min/dropzone.min.js" type="text/javascript"></script>
+<script src="assets/js/root.common.js" type="text/javascript"></script>
+<script src="assets/js/root.forms.js" type="text/javascript"></script>
 
-<!-- For text area auto size change -->
-<script src="assets/js/autosize.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         //initialize the javascript
         App.init();
         $('form').parsley();
-        //App.emailCompose();
         App.wizard();
     });
 </script>

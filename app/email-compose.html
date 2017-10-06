@@ -168,7 +168,7 @@
                               <ul class="mai-nav-tabs-sub mai-sub-nav nav">
                                   <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Каналы</span></a>
                                   </li>
-                                  <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
+                                  <li class="nav-item"><a href="users.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
                                   </li>
                                   <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
                                   </li>
@@ -241,31 +241,33 @@
           <div class="col-md-9 email-content">
             <div class="email-compose-fields">
 
+
+
                 <!-- From/To section -->
               <div class="from">
                 <div class="form-group row">
                   <label class="col-sm-1 control-label">От:
                   </label>
-                    <div class="col-sm-11 form-group row">
+                    <form class="col-sm-11 form-group row">
                         <select class="tags select2-hidden-accessible" tabindex="-1" aria-hidden="true">
                             <option value="1">«Рога и Копыта»</option>
                             <option value="2">«Awesome Company»</option>
                             <option value="" disabled></option>
                             <option value="3">Все сервисы</option>
                         </select>
-                    </div>
+                    </form>
                 </div>
               </div>
               <div class="to">
                 <div class="form-group row">
                   <label class="col-sm-1 control-label">Кому: </label>
-                  <div class="col-sm-11">
+                  <form class="col-sm-11">
                     <select multiple="" class="tags">
                       <option value="1" selected="">Colorado</option>
                       <option value="2" selected="">Arkansas</option>
                       <option value="3" selected="">Nevada</option>
                     </select>
-                  </div>
+                  </form>
                 </div>
               </div>
 
@@ -279,7 +281,7 @@
               </form>
             </div>
 
-            <div class="email-editor">
+            <form class="email-editor">
               <textarea rows="13" class="form-control"></textarea>
 
                 <!-- Action buttons -->
@@ -288,27 +290,23 @@
                   <button type="submit" class="btn btn-primary btn-space">Отправить</button>
                   <a href="index.html" type="button" class="btn btn-secondary btn-space">Отмена</a>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/lib/tether/js/tether.min.js" type="text/javascript"></script>
-    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/js/app.js" type="text/javascript"></script>
-    <script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
-    <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
-    <script src="assets/js/app-mail-compose.js" type="text/javascript"></script>
-    <script src="assets/lib/dropzone/dist/min/dropzone.min.js" type="text/javascript"></script>
 
-  <script src="assets/js/autosize.min.js" type="text/javascript"></script>
+  <script src="assets/js/root.common.js" type="text/javascript"></script>
+  <script src="assets/js/root.forms.js" type="text/javascript"></script>
+  <script src="assets/js/root.mail.js" type="text/javascript"></script>
+
+
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
       	App.init();
       	App.emailCompose();
+        $('form').parsley();
       });
     </script>
   </body>
