@@ -87,31 +87,36 @@ gulp.task('watch_min', function() {
 
 gulp.task('concat.common', function(){
     return gulp.src( jsFiles.common )
+
         .pipe(concat('root.common.js', {newLine: '; \r\n '}))
+        .pipe(jsmin())
         .pipe(gulp.dest('app/assets/js/'));
 });
 
 gulp.task('concat.forms', function(){
     return gulp.src( jsFiles.forms )
+        .pipe(jsmin())
         .pipe(concat('root.forms.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
 
-
 gulp.task('concat.dataTables', function(){
     return gulp.src( jsFiles.dataTables )
+        .pipe(jsmin())
         .pipe(concat('root.dataTables.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
 
 gulp.task('concat.mail', function(){
     return gulp.src( jsFiles.mail )
+        .pipe(jsmin())
         .pipe(concat('root.mail.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
 
 gulp.task('concat.jqueryFlot', function(){
     return gulp.src( jsFiles.jqueryFlot )
+        .pipe(jsmin())
         .pipe(concat('root.jqueryFlot.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
