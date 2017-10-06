@@ -12,15 +12,11 @@ $primary-color-RGB5: rgba(79, 107, 181, 0.5);
 $primary-color-RGB: rgba(79, 107, 181, 0.3);
 
 
-@import "../lib/dropzone/dist/min/basic.min.css";
-@import "../lib/dropzone/dist/min/dropzone.min.css";
-@import "../lib/fuelux/css/wizard.css";
-@import "../lib/bootstrap-slider/css/bootstrap-slider.min.css";
-
-
-/*      Font-Face      */
+/*      COMMON      */
 
 @import "../lib/simple-line-icons/style.css";
+@import "../lib/stroke-7/style.css";
+@import "../lib/perfect-scrollbar/css/perfect-scrollbar.min.css";
 
 
 @font-face {
@@ -15440,6 +15436,28 @@ button {
 
 
 /* ========= SOME MEDIA ========= */
+
+/*  Extra Big  */
+
+@media (max-width: 1200px) {
+  .email-filters {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+}
+
+/*@media (max-width: 995px) {
+  .email-filters-left {
+    display: flex !important;
+    flex-direction: column-reverse;
+    > div {
+      width: 40%;
+    }
+  }
+  .email-filters > div {
+  }
+}*/
 
 /*  Extra small  */
 

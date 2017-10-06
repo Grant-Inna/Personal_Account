@@ -26,6 +26,7 @@ var jsFiles = {
         "app/assets/lib/select2/js/select2.full.min.js",
         "app/assets/lib/bootstrap-slider/bootstrap-slider.min.js",
         "app/assets/js/app-form-wizard.js",
+        "app/assets/js/app-form-elements.js",
         "app/assets/lib/dropzone/dist/min/dropzone.min.js",
         "app/assets/js/autosize.min.js"
     ],
@@ -58,6 +59,7 @@ var jsFiles = {
     ]
 };
 
+
 // Tasks ===============================================================================================================
 
 // CSS _____________________________________________________________________
@@ -83,26 +85,25 @@ gulp.task('watch_min', function() {
     gulp.watch('./app/assets/css/themes/night-city.css', ['minCss'])
 });
 
-// JS _____________________________________________________________________
+// CONCAT JS _____________________________________________________________________
 
 gulp.task('concat.common', function(){
     return gulp.src( jsFiles.common )
-
+        //.pipe(jsmin())
         .pipe(concat('root.common.js', {newLine: '; \r\n '}))
-        .pipe(jsmin())
         .pipe(gulp.dest('app/assets/js/'));
 });
 
 gulp.task('concat.forms', function(){
     return gulp.src( jsFiles.forms )
-        .pipe(jsmin())
+        //.pipe(jsmin())
         .pipe(concat('root.forms.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
 
 gulp.task('concat.dataTables', function(){
     return gulp.src( jsFiles.dataTables )
-        .pipe(jsmin())
+        //.pipe(jsmin())
         .pipe(concat('root.dataTables.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
@@ -116,11 +117,10 @@ gulp.task('concat.mail', function(){
 
 gulp.task('concat.jqueryFlot', function(){
     return gulp.src( jsFiles.jqueryFlot )
-        .pipe(jsmin())
+        //.pipe(jsmin())
         .pipe(concat('root.jqueryFlot.js', {newLine: '; \r\n '}))
         .pipe(gulp.dest('app/assets/js/'));
 });
-
 
 // Tasks arrays ========================================================================================================
 

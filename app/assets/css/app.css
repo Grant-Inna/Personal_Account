@@ -1,10 +1,8 @@
 @charset "UTF-8";
-@import url(../lib/dropzone/dist/min/basic.min.css);
-@import url(../lib/dropzone/dist/min/dropzone.min.css);
-@import url(../lib/fuelux/css/wizard.css);
-@import url(../lib/bootstrap-slider/css/bootstrap-slider.min.css);
-/*      Font-Face      */
+/*      COMMON      */
 @import url(../lib/simple-line-icons/style.css);
+@import url(../lib/stroke-7/style.css);
+@import url(../lib/perfect-scrollbar/css/perfect-scrollbar.min.css);
 @font-face {
   font-family: 'Open Sans';
   src: url("../lib/open-sans/light/opensans-light-webfont.eot");
@@ -18854,6 +18852,30 @@ button {
   cursor: pointer; }
 
 /* ========= SOME MEDIA ========= */
+/*  Extra Big  */
+@media (max-width: 1200px) {
+  .email-filters {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; } }
+
+/*@media (max-width: 995px) {
+  .email-filters-left {
+    display: flex !important;
+    flex-direction: column-reverse;
+    > div {
+      width: 40%;
+    }
+  }
+  .email-filters > div {
+  }
+}*/
 /*  Extra small  */
 @media (max-width: 580px) {
   .nav-item.open .mai-nav-tabs-sub {
