@@ -46,7 +46,8 @@ var jsFiles = {
     mail: [ // $('form').parsley(); App.emailCompose(); App.mailInbox();
 
         "app/assets/js/app-mail-compose.js",
-        "app/assets/js/app-mail-inbox.js"
+        "app/assets/js/app-mail-inbox.js",
+        "app/assets/js/autosize.min.js"
     ],
     jqueryFlot: [
         "app/assets/lib/jquery-flot/jquery.flot.js",
