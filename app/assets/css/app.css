@@ -4158,7 +4158,7 @@ a.badge:focus, a.badge:hover {
   background-color: #29b7eb; }
 
 .badge-warning {
-  background-color: #FFDC42; }
+  background-color: #e2c43f; }
 
 .badge-warning[href]:focus, .badge-warning[href]:hover {
   background-color: #ffd30f; }
@@ -11511,12 +11511,12 @@ li.L9 {
   background-color: #29b7eb; }
 
 .badge-warning {
-  background-color: #FFDC42;
+  background-color: #e2c43f;
   color: #FFFFFF;
-  border-color: #FFDC42; }
+  border-color: #e2c43f; }
 
 .badge-warning[href]:focus, .badge-warning[href]:hover {
-  background-color: #ffd30f; }
+  background-color: #dcbf3e; }
 
 .badge-danger {
   background-color: #F45846;
@@ -18271,28 +18271,50 @@ fieldset[disabled] .full-calendar .fc-button.active {
   padding: 45px 0; }
 
 .d-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
 
 .jc-center {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important; }
 
 .jc-sb {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+  -webkit-justify-content: space-between !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important; }
+
+.jc-end {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: end !important;
+  -webkit-justify-content: flex-end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important; }
 
 .at-center {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important; }
 
 .icon {
   min-width: 15px;
@@ -18307,7 +18329,7 @@ fieldset[disabled] .full-calendar .fc-button.active {
 .service-checkboxes {
   height: 100%; }
   .service-checkboxes .form-group {
-    min-width: 160px;
+    min-width: 115px;
     margin-bottom: 0; }
 
 /* ====== WIZARD ====== */
@@ -18841,6 +18863,9 @@ table.dataTable .icon-channel {
 .margin-right-sm {
   margin-right: 15px; }
 
+.margin-right-md {
+  margin-right: 35px; }
+
 .margin-left-md {
   margin-left: 20%; }
 
@@ -18852,6 +18877,9 @@ table.dataTable .icon-channel {
 
 .margin-center {
   margin: 0 auto; }
+
+.no-border {
+  border: none; }
 
 .half {
   width: 50%; }

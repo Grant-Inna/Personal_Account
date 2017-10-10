@@ -244,9 +244,10 @@
                     <div class="panel-heading">
                         <a href="add-sender.html" class="btn btn-space btn-success add-button">Добавить <strong>+</strong></a>
                     </div>
-                    <div class="email-filters align-items-center">
-                        <div class="email-filters-left align-items-center">
+                    <div class="email-filters align-items-center no-border">
+                        <div class="align-items-center jc-sb">
 
+                            <div class="email-filters-left">
                             <!-- Service choosing -->
                             <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выберите сервис <span class="icon-dropdown s7-angle-down"></span></button>
@@ -283,16 +284,17 @@
                                     </a>
                                 </div>
                             </div>
+                            </div>
 
                             <!-- Status choosing checkboxes -->
-                            <div class="btn-group service-checkboxes-holder row">
+                            <div class="btn-group jc-end seservice-checkboxes-holder col-sm-6">
 
                                 <h5 class="aside-header">Статус:</h5>
 
-                                <div class="service-checkboxes service-checkboxes-left table-inner-column margin-left-sm">
+                                <div class="service-checkboxes service-checkboxes-left table-inner-column margin-left-sm margin-right-md">
                                     <div class="form-group row">
-                                        <div class="col-sm-8 mt-2">
-                                            <div class="form-group">
+                                        <div class="mt-2">
+                                            <div class="form-group table-inner-column">
                                                 <label class="custom-control custom-checkbox has-default">
                                                     <input type="checkbox" class="custom-control-input">
                                                     <span class="custom-control-indicator"></span>
@@ -312,8 +314,8 @@
                                 <div class="service-checkboxes service-checkboxes-right table-inner-column">
 
                                     <div class="form-group row">
-                                        <div class="col-sm-8 mt-2">
-                                            <div class="form-group">
+                                        <div class="mt-2">
+                                            <div class="form-group table-inner-column">
                                                 <label class="custom-control custom-checkbox has-default">
                                                     <input type="checkbox" class="custom-control-input">
                                                     <span class="custom-control-indicator"></span>
@@ -374,7 +376,7 @@
                                 <!-- Status + date of status update -->
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -403,7 +405,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-warning status-label margin-bottom-sm">Новый</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -428,7 +430,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-danger status-label margin-bottom-sm">Отказано</span>
+                                        <span class="badge badge-danger status-label margin-bottom-sm">Отклонён</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -453,7 +455,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -478,7 +480,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -503,7 +505,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -528,7 +530,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-warning status-label margin-bottom-sm">Новый</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -553,7 +555,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -578,7 +580,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-danger status-label margin-bottom-sm">Отказано</span>
+                                        <span class="badge badge-danger status-label margin-bottom-sm">Отклонён</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -603,7 +605,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-warning status-label margin-bottom-sm">Новый</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -628,7 +630,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -653,7 +655,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-danger status-label margin-bottom-sm">Отказано</span>
+                                        <span class="badge badge-danger status-label margin-bottom-sm">Отклонён</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -678,7 +680,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -703,7 +705,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Одобрено</span>
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>

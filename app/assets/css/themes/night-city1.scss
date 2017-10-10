@@ -3448,7 +3448,7 @@ a.badge:focus, a.badge:hover {
     background-color: #29b7eb; }
 
 .badge-warning {
-  background-color: #FFDC42; }
+  background-color: #e2c43f; }
   .badge-warning[href]:focus, .badge-warning[href]:hover {
     background-color: #ffd30f; }
 
@@ -9576,11 +9576,11 @@ li.L9 {
     background-color: #29b7eb; }
 
 .badge-warning {
-  background-color: #FFDC42;
+  background-color: #e2c43f;
   color: #FFFFFF;
-  border-color: #FFDC42; }
+  border-color: #e2c43f; }
   .badge-warning[href]:focus, .badge-warning[href]:hover {
-    background-color: #ffd30f; }
+    background-color: #dcbf3e; }
 
 .badge-danger {
   background-color: #F45846;
@@ -14984,16 +14984,23 @@ height: 100%;
   padding: 45px 0;
 }
 .d-flex {
-  display: flex;
+  display: flex !important;
 }
 .jc-center {
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
 }
 .jc-sb {
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.jc-end {
+  display: flex !important;
+  justify-content: flex-end !important;
 }
 .at-center {
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
 }
 .icon {
   min-width: 15px;
@@ -15012,7 +15019,7 @@ height: 100%;
 .service-checkboxes {
   height: 100%;
   .form-group {
-    min-width: 160px;
+    min-width: 115px;
     margin-bottom: 0;
   }
 }
@@ -15423,6 +15430,9 @@ table.dataTable .icon-channel {
 .margin-right-sm {
    margin-right: 15px;
  }
+.margin-right-md {
+  margin-right: 35px;
+}
 .margin-left-md {
    margin-left: 20%;
  }
@@ -15434,6 +15444,10 @@ table.dataTable .icon-channel {
 }
 .margin-center {
   margin: 0 auto;
+}
+
+.no-border {
+  border: none;
 }
 
 .half {
