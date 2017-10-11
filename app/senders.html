@@ -252,9 +252,9 @@
                             <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выберите сервис <span class="icon-dropdown s7-angle-down"></span></button>
                                 <div role="menu" class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Сервис</a>
-                                    <a href="#" class="dropdown-item">Сервис</a>
-                                    <a href="#" class="dropdown-item">Или сервис?</a>
+                                    <a href="#" name="choose-service" class="dropdown-item">Сервис</a>
+                                    <a href="#" name="choose-service" class="dropdown-item">Сервис</a>
+                                    <a href="#" name="choose-service" class="dropdown-item">очень-очень_длинное_название_сервиса</a>
                                 </div>
                             </div>
 
@@ -262,25 +262,25 @@
                             <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выберите канал <span class="icon-dropdown s7-angle-down"></span></button>
                                 <div role="menu" class="dropdown-menu">
-                                    <a href="#" class="dropdown-item dropdown-item-channel">
+                                    <a href="#" name="choose-chanel" class="dropdown-item dropdown-item-channel">
                                         <span class="icon-channel icon-channel-telegram"></span>
-                                        <span>Telegram</span>
+                                        <span class="choose-chanel-text">Telegram</span>
                                     </a>
-                                    <a href="#" class="dropdown-item dropdown-item-channel">
+                                    <a href="#" name="choose-chanel" class="dropdown-item dropdown-item-channel">
                                         <span class="icon-channel icon-channel-viber"></span>
-                                        <span>Viber</span>
+                                        <span class="choose-chanel-text">Viber</span>
                                     </a>
-                                    <a href="#" class="dropdown-item dropdown-item-channel">
+                                    <a href="#" name="choose-chanel" class="dropdown-item dropdown-item-channel">
                                         <span class="icon-channel icon-channel-facebook"></span>
-                                        <span>Facebook Messanger</span>
+                                        <span class="choose-chanel-text">Facebook Messanger</span>
                                     </a>
-                                    <a href="#" class="dropdown-item dropdown-item-channel">
+                                    <a href="#" name="choose-chanel" class="dropdown-item dropdown-item-channel">
                                         <span class="icon-channel icon-channel-vk"></span>
-                                        <span>VK.com</span>
+                                        <span class="choose-chanel-text">VK.com</span>
                                     </a>
-                                    <a href="#" class="dropdown-item dropdown-item-channel">
+                                    <a href="#" name="choose-chanel" class="dropdown-item dropdown-item-channel">
                                         <span class="icon-channel icon-channel-sms"></span>
-                                        <SPAN>SMS</SPAN>
+                                        <span class="choose-chanel-text">SMS</span>
                                     </a>
                                 </div>
                             </div>
@@ -296,15 +296,11 @@
                                         <div class="mt-2">
                                             <div class="form-group table-inner-column">
                                                 <label class="custom-control custom-checkbox has-default">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-indicator"></span>
-                                                    <span class="custom-control-description">Новый</span>
+                                                    <span name="choose-status" class="custom-control-description choose-status-text">Новый</span>
                                                 </label>
 
                                                 <label class="custom-control custom-checkbox has-default">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-indicator"></span>
-                                                    <span class="custom-control-description">На согласовании</span>
+                                                    <span name="choose-status" class="custom-control-description choose-status-text">На согласовании</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -316,16 +312,13 @@
                                     <div class="form-group row">
                                         <div class="mt-2">
                                             <div class="form-group table-inner-column">
+                                                <!-- We need this &nbsp; to exclude from the issuance of the status "На согласовании"-->
                                                 <label class="custom-control custom-checkbox has-default">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-indicator"></span>
-                                                    <span class="custom-control-description">Согласован</span>
+                                                    <span name="choose-status" class="custom-control-description">Согласован&nbsp;</span>
                                                 </label>
 
                                                 <label class="custom-control custom-checkbox has-default">
-                                                    <input type="checkbox" class="custom-control-input">
-                                                    <span class="custom-control-indicator"></span>
-                                                    <span class="custom-control-description">Отклонён</span>
+                                                    <span name="choose-status" class="custom-control-description choose-status-text">Отклонён</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -357,8 +350,8 @@
                             <!-- One row. "odd/even" and "gradeX/C/A" classes may generate automatically -->
                             <tr class="odd gradeX">
 
-                                <!-- Channel icon. Need a letters (f, t, v, vk, sms) for sorting! -->
-                                <td class="icon icon-channel icon-channel-facebook">f</td>
+                                <!-- Channel icon. Need this names (Facebook Messanger, telegram, viber, vk.com, sms) for sorting and filters! -->
+                                <td class="icon icon-channel icon-channel-facebook">Facebook Messanger</td>
 
                                 <!-- Sender's avatar + name -->
                                 <td class="user-avatar"><a href="one-sender.html"><img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan</a> </td>
@@ -376,7 +369,8 @@
                                 <!-- Status + date of status update -->
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
+                                        <!-- We need this &nbsp; to exclude from the issuance of the status "На согласовании"-->
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -393,7 +387,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="">
-                                <td class="icon icon-channel icon-channel-viber">v</td>
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img2.jpg" alt="Avatar">Ryan Maria Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -418,7 +412,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="odd gradeA">
-                                <td class="icon icon-channel icon-channel-facebook">f</td>
+                                <td class="icon icon-channel icon-channel-facebook">Facebook Messanger</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -443,7 +437,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="">
-                                <td class="icon icon-channel icon-channel-telegram">t</td>
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img4.jpg" alt="Avatar">Ryan García Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -455,7 +449,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -468,7 +462,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="odd gradeA">
-                                <td class="icon icon-channel icon-channel-sms">s</td>
+                                <td class="icon icon-channel icon-channel-sms">sms</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -493,7 +487,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="even gradeA">
-                                <td class="icon icon-channel icon-channel-viber">v</td>
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img3.jpg" alt="Avatar">Ryan Adam Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -518,7 +512,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-vk">vk</td>
+                                <td class="icon icon-channel icon-channel-vk">vk.com</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -543,7 +537,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-sms">s</td>
+                                <td class="icon icon-channel icon-channel-sms">sms</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -555,7 +549,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -568,7 +562,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-viber">v</td>
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -593,7 +587,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-telegram">t</td>
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img2.jpg" alt="Avatar">Samuel L Jackson</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -618,7 +612,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-vk">vk</td>
+                                <td class="icon icon-channel icon-channel-vk">vk.com</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -630,7 +624,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -643,7 +637,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-telegram">t</td>
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -668,7 +662,7 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-facebook">f</td>
+                                <td class="icon icon-channel icon-channel-facebook">Facebook Messanger</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
@@ -680,7 +674,7 @@
                                 </td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован</span>
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
                                         <span>21.02.14 14:32</span>
                                     </div>
                                 </td>
@@ -693,11 +687,11 @@
                                 <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
                             </tr>
                             <tr class="gradeA">
-                                <td class="icon icon-channel icon-channel-viber">v</td>
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
                                 <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
                                 <td>
                                     <div class="table-inner-column">
-                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span class="margin-bottom-sm">очень-очень_длинное_название_сервиса</span>
                                         <span>
                                             <small>http://очень-очень_длинное_название_сервиса.ru  </small>
                                         </span>
@@ -735,6 +729,8 @@
         //initialize the javascript
         App.init();
         App.dataTables();
+        App.CustomFilters();
+
     });
 </script>
 

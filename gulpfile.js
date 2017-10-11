@@ -39,6 +39,7 @@ var jsFiles = {
         "app/assets/lib/datatables/plugins/buttons/js/buttons.print.js",
         "app/assets/lib/datatables/plugins/buttons/js/buttons.colVis.js",
         "app/assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js",
+        "app/assets/js/app-datatables-filters.js",
         "app/assets/js/app-tables-datatables.js",
         "app/assets/js/app-mail-inbox.js",
         "app/assets/js/autosize.min.js"

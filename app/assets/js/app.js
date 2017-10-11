@@ -202,5 +202,6 @@ var App = (function () {
 $(function(){
   autosize( $( 'textarea' ) );
   autosize( $( 'input[type="search"]' ) );
+  CustomFilters();
 
 });
