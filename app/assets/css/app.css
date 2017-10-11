@@ -18593,6 +18593,10 @@ td > .icon-channel {
     width: 20px;
     height: 20px; }
 
+.icon-channel-small {
+  width: 20px;
+  height: 20px; }
+
 .sup-full-width {
   width: 100% !important; }
 
@@ -18639,6 +18643,10 @@ table.dataTable .icon-channel {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+span[name="choose-status"],
+span[name="reset-filters"] {
+  cursor: pointer; }
 
 .templates-holder {
   height: auto;

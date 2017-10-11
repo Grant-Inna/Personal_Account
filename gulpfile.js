@@ -124,9 +124,13 @@ gulp.task('concat.jqueryFlot', function(){
         .pipe(gulp.dest('app/assets/js/'));
 });
 
+/*gulp.task('watch_concat', function() {
+    gulp.watch( "app/assets/js/app-datatables-filters.js" , ['concat.dataTables']);
+});*/
+
 // Tasks arrays ========================================================================================================
 
-var tasksConcat = ['concat.common', 'concat.forms', 'concat.dataTables', 'concat.mail', 'concat.jqueryFlot'];
+var tasksConcat = ['concat.common', 'concat.forms', 'concat.dataTables', 'concat.mail', 'concat.jqueryFlot', 'watch_concat'];
 
 var tasks = ['autoprefixer', 'minCss', 'watch_min', 'watch_autoprefixer'];
 

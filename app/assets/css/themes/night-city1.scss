@@ -15007,6 +15007,7 @@ height: 100%;
   width: auto;
 }
 
+
 /* ========= Service ========= */
 
 .service-checkboxes-holder {
@@ -15236,7 +15237,10 @@ td > .icon-channel {
     height: 20px;
   }
 }
-
+.icon-channel-small {
+  width: 20px;
+  height: 20px;
+}
 .sup-full-width {
   width: 100% !important;
 }
@@ -15281,6 +15285,11 @@ table.dataTable .icon-channel {
 .table-inner-column {
   display: flex;
   flex-direction: column;
+}
+
+span[name="choose-status"],
+span[name="reset-filters"] {
+  cursor: pointer;
 }
 
 .templates-holder {

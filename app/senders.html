@@ -294,12 +294,14 @@
                                 <div class="service-checkboxes service-checkboxes-left table-inner-column margin-left-sm margin-right-md">
                                     <div class="form-group row">
                                         <div class="mt-2">
-                                            <div class="form-group table-inner-column">
-                                                <label class="custom-control custom-checkbox has-default">
+                                            <div class="form-group table-inner-column margin-right-md">
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-warning jc-center at-center"><small name="new-status-count"></small></span>
                                                     <span name="choose-status" class="custom-control-description choose-status-text">Новый</span>
                                                 </label>
 
-                                                <label class="custom-control custom-checkbox has-default">
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-info jc-center at-center"><small name="process-status-count"></small></span>
                                                     <span name="choose-status" class="custom-control-description choose-status-text">На согласовании</span>
                                                 </label>
                                             </div>
@@ -313,11 +315,13 @@
                                         <div class="mt-2">
                                             <div class="form-group table-inner-column">
                                                 <!-- We need this &nbsp; to exclude from the issuance of the status "На согласовании"-->
-                                                <label class="custom-control custom-checkbox has-default">
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-success jc-center at-center"><small name="success-status-count"></small></span>
                                                     <span name="choose-status" class="custom-control-description">Согласован&nbsp;</span>
                                                 </label>
 
-                                                <label class="custom-control custom-checkbox has-default">
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-danger jc-center at-center"><small name="denied-status-count"></small></span>
                                                     <span name="choose-status" class="custom-control-description choose-status-text">Отклонён</span>
                                                 </label>
                                             </div>
@@ -327,7 +331,11 @@
                                 </div>
 
                             </div>
-
+                        </div>
+                        <div class="btn-group jc-end seservice-checkboxes-holder col-sm-6">
+                            <label>
+                                <button class="btn btn-secondary btn-sm " name="reset-filters">Сброс фильтра</button>
+                            </label>
                         </div>
                     </div>
 
