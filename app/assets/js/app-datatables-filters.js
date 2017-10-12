@@ -5,32 +5,43 @@ var App = (function () {
 
         /*  Filter trigger elements  */
         var table = $("#table1"),
+            t = table.dataTable(),
             serviceFilter = $('[name="choose-service"]'),
-            chanelFilter = $('[name="choose-chanel"]'),
+            channelFilter = $('[name="choose-channel"]'),
             statusFilter = $('[name="choose-status"]'),
-            resetFilter = $('[name="reset-filters"]'),
+            resetFilter = $('[name="reset-filters"]');
 
-            service_text, chanel_text, status_text;
+        function Filter (elem) {
+            let elem_text;
+            elem.on( 'click', function() {
+                elem_text = $(this).text();
+                /*  fnFilter — datatables function, see it on line 439 of jquery.dataTables.js  */
+                t.fnFilter( elem_text );
+            })
+        }
 
-        /*  Select our table  */
-        var t = table.dataTable();
+        function HardFilter (elem, elem_with_text) {
+            let elem_text;
+            elem.on( 'click', function() {
+                elem_text = $(this).find(elem_with_text).text();
+                /*  fnFilter — datatables function, see it on line 439 of jquery.dataTables.js  */
+                t.fnFilter( elem_text );
+            })
+        }
 
-        /*  fnFilter — datatables function, see it on line 439 of jquery.dataTables.js  */
-        serviceFilter.on('click', function () {
-            service_text = $(this).text();
-            t.fnFilter(service_text);
-        });
-        chanelFilter.on('click', function () {
-            chanel_text = $(this).find('.choose-chanel-text').text();
-            t.fnFilter(chanel_text);
-        });
-        statusFilter.on('click', function () {
-            status_text = $(this).text();
-            t.fnFilter(status_text);
-        });
-        resetFilter.on('click', function () {
-            t.fnFilter('');
-        });
+        function SpecialFilter (elem, text) {
+            elem.on( 'click', function() {
+                t.fnFilter(text);
+            })
+        }
+
+        Filter(serviceFilter);
+        Filter(statusFilter);
+
+        HardFilter(channelFilter, '.choose-channel-text');
+
+        SpecialFilter(resetFilter, '');
+
     };
 
     return App;

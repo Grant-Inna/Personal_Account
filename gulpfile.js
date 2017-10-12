@@ -130,7 +130,7 @@ gulp.task('concat.jqueryFlot', function(){
 
 // Tasks arrays ========================================================================================================
 
-var tasksConcat = ['concat.common', 'concat.forms', 'concat.dataTables', 'concat.mail', 'concat.jqueryFlot', 'watch_concat'];
+var tasksConcat = ['concat.common', 'concat.forms', 'concat.dataTables', 'concat.mail', 'concat.jqueryFlot'];
 
 var tasks = ['autoprefixer', 'minCss', 'watch_min', 'watch_autoprefixer'];
 
