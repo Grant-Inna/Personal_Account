@@ -1,0 +1,202 @@
+        <!-- Top menu (always the same... so far) -->
+nav.navbar.navbar-full.mai-top-header-show-logo.navbar-inverse.navbar-fixed-top.mai-top-header
+    div.container
+        <!-- Logo -->
+        a( href="#" ).navbar-brand
+            div.navbar-logo
+        <!-- Global Menu -->
+        ul.nav.navbar-nav.mai-top-nav
+            li.nav-item
+                a( href="index.html" ).nav-link На Сайт
+            li.nav-item
+                a( href="#" ).nav-link О Сервисе
+            li.nav-item.dropdown
+                a( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ).nav-link.dropdown-toggle Документация
+                    span.angle-down.s7-angle-down
+                <!-- No use so far -->
+                div(role="menu" ).dropdown-menu
+                    a( href="#" ).dropdown-item Information
+                    a( href="#" ).dropdown-item Company
+                    a( href="#" ).dropdown-item Documentation
+                    a( href="#" ).dropdown-item API Settings
+                    a( href="#" ).dropdown-item Export Info
+            li.nav-item
+                a( href="email-to-support.html" ).nav-link Поддержка
+
+        <!-- Icons Menu -->
+        ul.navbar-nav.float-lg-right.mai-icons-nav 
+
+            <!-- Messages -->
+            li.dropdown.nav-item.mai-messages
+                a( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ).nav-link.dropdown-toggle
+                    span.icon.s7-comment
+                ul.dropdown-menu 
+                    div.title Messages
+                    div.mai-scroller 
+                        div.content 
+                            ul
+                                li
+                                    a( href="#" )
+                                        div.img 
+                                            img(src="assets/img/avatars/img1.jpg" )
+                                        div.content 
+                                            span.date 16 Sept
+                                            span.name Victor Jara
+                                            span.desc The song that has been brave, will always be the new song.
+
+
+
+                                li
+                                    a( href="#" )
+                                        div.img 
+                                            img(src="assets/img/avatars/img2.jpg" )
+                                        div.content 
+                                            span.date 4 Sept
+                                            span.name Gustavo Cerati
+                                            span.desc You will see me fly across the city of fury where no one knows of me.
+
+
+
+                                li
+                                    a( href="#" )
+                                        div.img 
+                                            img(src="assets/img/avatars/img3.jpg" )
+                                            div.content 
+                                                span.date 13 Aug
+                                                span.name Jaime Garzón
+                                                span.desc Now everything came back to the abnormality.
+
+
+
+                                li
+                                    a( href="#" )
+                                        div.img 
+                                            img(src="assets/img/avatars/img4.jpg" )
+                                        div.content 
+                                            span.date 13 Aug
+                                            span.name Allen Collins
+                                            span.desc Things just couldn't even be the same 'Cause I'm as free as a bird now.
+
+
+
+                    div.footer 
+                        a( href="#" ) View all messages
+
+            <!-- Notifications -->
+            li.dropdown.nav-item.mai-notifications
+                a( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ).nav-link.dropdown-toggle
+                    span.icon.s7-bell
+                    span.indicator
+
+                ul.dropdown-menu
+                    li
+                        div.title Notifications
+                        div.mai-scroller
+                            div.content
+                                ul
+                                    li
+                                        a( href="#" )
+                                            div.icon
+                                                span.s7-check
+                                            div.content
+                                                span.desc This is a new message for my dear friend&nbsp;
+                                                    strong Rob&nbsp;
+                                                span.date 10 minutes ago
+
+
+                                    li
+                                        a( href="#" )
+                                            div.icon
+                                                span.s7-add-user
+                                            div.content
+                                                span.desc You have a new fiend request pending from&nbsp;
+                                                    strong John Doe&nbsp;
+                                                span.date 2 days ago
+
+
+                                    li
+                                        a( href="#" )
+                                            div.icon
+                                                span.s7-graph1
+                                            div.content
+                                                span.desc Your site visits have increased&nbsp;
+                                                    strong 15.5%&nbsp;
+                                                    | more since the last week.
+                                                span.date 2 hours ago
+
+
+                                    li
+                                        a( href="#" )
+                                            div.icon
+                                                span.s7-check
+                                            div.content
+                                                span.desc This is a new message for my dear friend&nbsp;
+                                                    strong Rob&nbsp;
+                                                span.date 10 minutes ago
+
+
+
+
+
+                        div.footer
+                            a( href="#" ) View all notifications
+
+
+
+
+            <!-- Language select -->
+            li.dropdown.nav-item.menu__languageSelect
+                a( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ).nav-link.dropdown-toggle.menu__languageSelect-item
+                    span.menu__languageSelect-title RU
+                    span.angle-down.s7-angle-down
+
+                ul.menu__languageSelect-holder.dropdown-menu
+                    li
+                        a( href="#" ).menu__languageSelect-item
+                            img(src="assets/img/rf.png" alt="" )
+                            span.menu__languageSelect-title RU
+
+                    li
+                        a( href="#" ).menu__languageSelect-item
+                            img(src="assets/img/uf.png" alt="" )
+                            span.menu__languageSelect-title UA
+
+                    li
+                        a( href="#" ).menu__languageSelect-item
+                            img(src="assets/img/usaf.png" alt="" )
+                            span.menu__languageSelect-title ENG
+
+
+
+
+
+        <!--User Menu-->
+        ul.nav.navbar-nav.float-lg-right.mai-user-nav
+            li.dropdown.nav-item
+                a( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ).dropdown-toggle.nav-link
+                    img(src="assets/img/avatar.jpg" )
+                    span.user-name Violeta Parra
+                    span.angle-down.s7-angle-down
+
+                div(role="menu" ).dropdown-menu
+                    a( href="#" ).dropdown-item
+                        span.icon.s7-home
+                        | Личный кабинет
+                    a( href="#" ).dropdown-item
+                        span.icon.s7-user
+                        | Профиль
+                    a( href="#" ).dropdown-item
+                        span.icon.s7-cash
+                        | Платежи
+                    a( href="account-settings.html" ).dropdown-item
+                        span.icon.s7-tools
+                        | Настройки
+                    a( href="#" ).dropdown-item
+                        span.icon.s7-power
+                        | Выход
+
+
+
+
+
+

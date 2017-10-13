@@ -13,6 +13,7 @@
     "gulp-jsmin": "^0.1.5",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-jade": "^1.1.0",
     "gulp-uncss": "^1.0.6"
   },
   "author": "Inna Grant",

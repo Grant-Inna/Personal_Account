@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     rename = require("gulp-rename"),
     jsmin = require('gulp-jsmin'),
     sass = require("gulp-sass"),
+    jade = require( 'gulp-jade' ),
     concat = require('gulp-concat'),
     uncss = require('gulp-uncss');
 
@@ -87,6 +88,29 @@ gulp.task('watch_min', function() {
     gulp.watch('./app/assets/css/themes/night-city.css', ['minCss'])
 });
 
+
+// JADE _____________________________________________________________________
+
+gulp.task( 'jade_pages', function() {
+    return gulp.src('./app/jade/pages/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest('./app/jade/dest'))
+});
+gulp.task( 'jade_static', function() {
+    return gulp.src('./app/jade/static/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest('./app/jade/dest/static'))
+});
+gulp.task( 'jade_template', function() {
+    return gulp.src('./app/jade/template/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest('./app/jade/dest/template'))
+});
+
+gulp.task( 'watch_jade', function() {
+    gulp.watch( "./app/jade/**/*.jade" , ['jade_pages', 'jade_static', 'jade_template']);
+});
+
 // CONCAT JS _____________________________________________________________________
 
 gulp.task('concat.common', function(){
@@ -134,10 +158,13 @@ var tasksConcat = ['concat.common', 'concat.forms', 'concat.dataTables', 'concat
 
 var tasks = ['autoprefixer', 'minCss', 'watch_min', 'watch_autoprefixer'];
 
+var tasksJade = ['jade_pages', 'jade_static', 'jade_template', 'watch_jade'];
+
 // Main tasks
 
 gulp.task('default', tasks);
 gulp.task('concat', tasksConcat);
+gulp.task('jade', tasksJade);
 
 
 
