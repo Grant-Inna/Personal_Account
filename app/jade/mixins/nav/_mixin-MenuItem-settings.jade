@@ -1,0 +1,19 @@
+mixin main-settings ( parent, link1, link2, link3)
+  li( class = "nav-item parent #{parent}" )
+    a( href="#", role="button", aria-expanded="false").nav-link
+      span.icon.s7-config
+      span Настройки
+    ul.mai-nav-tabs-sub.mai-sub-nav.nav
+      li.nav-item
+        a( href="email-compose.html", class = "nav-link #{link1}" )
+          span.icon.s7-network
+          span.name Каналы
+      li.nav-item
+        a( href="messages.html", class = "nav-link #{link2}" )
+          span.icon.s7-id
+          span.name Пользователи
+      li.nav-item
+        a( href="#", class = "nav-link #{link3}" )
+          span.icon.s7-global
+          span.name Компания
+

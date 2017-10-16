@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     sass = require("gulp-sass"),
     jade = require( 'gulp-jade' ),
     concat = require('gulp-concat'),
+    del = require('del'),
     uncss = require('gulp-uncss');
 
 var jsFiles = {
@@ -77,7 +78,7 @@ gulp.task('autoprefixer', function() {
 gulp.task('minCss', function() {
     return gulp.src('./app/assets/css/night-city.css')
         .pipe(cleanCSS())
-        .pipe(rename("app.min.css"))
+        .pipe(rename({suffix: ".min"}))
         .pipe(gulp.dest('./app/assets/css/'));
 });
 
@@ -91,24 +92,29 @@ gulp.task('watch_min', function() {
 
 // JADE _____________________________________________________________________
 
+gulp.task( 'jade_del-pages', function() {
+     del('./app/jade/dest/*.jade')
+});
+
 gulp.task( 'jade_pages', function() {
     return gulp.src('./app/jade/pages/*.jade')
         .pipe(jade())
-        .pipe(gulp.dest('./app/jade/dest'))
+        .pipe(rename({prefix: "jade-"}))
+        .pipe(gulp.dest('./app/'))
 });
-gulp.task( 'jade_static', function() {
-    return gulp.src('./app/jade/static/*.jade')
+/*gulp.task( 'jade_static', function() {
+    return gulp.src('./app/jade/static/!*.jade')
         .pipe(jade())
         .pipe(gulp.dest('./app/jade/dest/static'))
 });
 gulp.task( 'jade_template', function() {
-    return gulp.src('./app/jade/template/*.jade')
+    return gulp.src('./app/jade/template/!*.jade')
         .pipe(jade())
         .pipe(gulp.dest('./app/jade/dest/template'))
-});
+});*/
 
 gulp.task( 'watch_jade', function() {
-    gulp.watch( "./app/jade/**/*.jade" , ['jade_pages', 'jade_static', 'jade_template']);
+    gulp.watch( "./app/jade/**/*.jade" , ['jade_pages']);
 });
 
 // CONCAT JS _____________________________________________________________________
@@ -158,7 +164,7 @@ var tasksConcat = ['concat.common', 'concat.forms', 'concat.dataTables', 'concat
 
 var tasks = ['autoprefixer', 'minCss', 'watch_min', 'watch_autoprefixer'];
 
-var tasksJade = ['jade_pages', 'jade_static', 'jade_template', 'watch_jade'];
+var tasksJade = ['jade_pages', 'watch_jade'];
 
 // Main tasks
 

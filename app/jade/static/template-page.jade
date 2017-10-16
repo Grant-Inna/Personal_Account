@@ -1,0 +1,20 @@
+include ../template/index-main
+    include ../static/menu-index
+        include ../mixins/nav/_mixin-MenuItem-main
+        include ../mixins/nav/_mixin-MenuItem-senders
+        include ../mixins/nav/_mixin-MenuItem-email
+        include ../mixins/nav/_mixin-MenuItem-clients
+        include ../mixins/nav/_mixin-MenuItem-settings
+        +main-item()
+        +main-senders()
+        +main-email()
+        +main-clients()
+        +main-settings()
+    .search
+        input(type='text', placeholder='Поиск...', name='q')
+        span.s7-search
+div.main-content.container            <!-- OUR CONTENT -->
+include ../template/index-footer
+
+
+

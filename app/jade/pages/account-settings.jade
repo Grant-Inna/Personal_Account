@@ -1,0 +1,54 @@
+include ../template/index-main
+  include ../static/menu-index
+    include ../mixins/nav/_mixin-MenuItem-main
+    include ../mixins/nav/_mixin-MenuItem-senders
+    include ../mixins/nav/_mixin-MenuItem-email
+    include ../mixins/nav/_mixin-MenuItem-clients
+    include ../mixins/nav/_mixin-MenuItem-settings
+    +main-item()
+    +main-senders()
+    +main-email()
+    +main-clients()
+    +main-settings()
+  .search
+    input(type='text', placeholder='Поиск...', name='q')
+    span.s7-search
+div.main-content.container      <!-- OUR CONTENT -->
+  .row
+    .col-md-12
+      .panel.panel-default
+        // Content caption
+        .panel-heading.panel-heading-divider Профиль
+          span.panel-subtitle Настройки
+        // Change personal info form
+        .panel-body
+          form(data-parsley-validate='')
+            // First section
+            .form-group.row
+              label.col-sm-3.col-form-label.text-right(for='inputPassword3') ФИО
+              .col-sm-6
+                input#nick.form-control(type='text', placeholder='Игорь Владимирович Цаплин')
+            .form-group.row
+              label.col-sm-3.col-form-label.text-right(for='tel') Телефон
+              .col-sm-6
+                input#tel.form-control(type='tel', placeholder='8(928)228-42-08')
+            // Second section (with caption)
+            .panel-heading-divider Сменить пароль
+            span.panel-heading
+            .form-group.row
+              label.col-sm-3.col-form-label.text-right(for='inputPassword3') Текущий пароль
+              .col-sm-3
+                input#inputPassword3.form-control(type='password', required='', placeholder='Текущий пароль')
+            .form-group.row
+              label.col-sm-3.col-form-label.text-right Новый пароль
+              .col-sm-3
+                input#pass2.form-control(type='password', data-parsley-minlength='6', placeholder='Новый пароль')
+              .col-sm-3
+                input.form-control(type='password', data-parsley-equalto='#pass2', placeholder='Повторите пароль')
+              // Control buttons
+            .form-group
+              .text-right
+                button.btn.btn-space.btn-primary(type='submit') Сохранить
+                a.btn.btn-space.btn-secondary(href='index.html') Отмена
+    <!-- END OF OUR CONTENT -->
+include ../template/index-footer

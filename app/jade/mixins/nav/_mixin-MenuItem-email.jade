@@ -1,0 +1,11 @@
+mixin main-email ( parent, link1)
+  li( class = "nav-item parent #{parent}" )
+    a( href="#", role="button", aria-expanded="false").nav-link
+      span.icon.s7-chat
+      span Диалоги
+    ul.mai-nav-tabs-sub.mai-sub-nav.nav
+      li.nav-item
+        a( href="email-inbox.html", class = "nav-link #{link1}" )
+          span.icon.icon-speech
+          span.name Список диалогов
+

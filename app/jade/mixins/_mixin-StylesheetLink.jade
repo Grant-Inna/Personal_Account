@@ -1,0 +1,8 @@
+mixin StylesheetLink (type)
+  case ( type )
+    when forms
+      link( rel="stylesheet", href="assets/lib/select2/css/select2.min.css", type="text/css" )
+    when dataTables
+      link( rel="stylesheet", href="assets/lib/datatables/css/dataTables.bootstrap4.min.css", type="text/css" )
+    when dropzone
+      link( rel="stylesheet", href="assets/lib/dropzone/dist/dropzone.css", type="text/css" )

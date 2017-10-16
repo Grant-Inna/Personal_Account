@@ -1,23 +1,23 @@
 mixin main-item ( parent, link1, link2, link3, link4)
-  li.nav-item.parent #{parent}
+  li( class = "nav-item parent #{parent}" )
     a( href="#", role="button", aria-expanded="false").nav-link
       span.icon.s7-home
       span Главная
     ul.mai-nav-tabs-sub.mai-sub-nav.nav
       li.nav-item
-        a( href="index.html").nav-link #{link1}
+        a( href="index.html", class = "nav-link #{link1}" )
           span.icon.s7-monitor
           span.name Панель управления
       li.nav-item
-        a( href="index.html#services" ).nav-link #{link2}
+        a( href="index.html#services", class = "nav-link #{link2}" )
           span.icon.s7-portfolio
           span.name Сервисы
       li.nav-item
-        a( href="ui-elements.html" ).nav-link #{link3}
+        a( href="ui-elements.html", class = "nav-link #{link3}" )
           span.icon.s7-cash
           span.name Платежи
       li.nav-item
-        a( href="plugins.html" ).nav-link #{link4}
+        a( href="plugins.html", class = "nav-link #{link4}" )
           span.icon.s7-timer
           span.name Действия пользователей
 

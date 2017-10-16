@@ -1,0 +1,19 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta( name="viewport", content="width=device-width, initial-scale=1.0")
+    meta( name="description", content="" )
+    meta( name="author", content="" )
+    link( rel="shortcut icon", href="assets/img/favicon.png" )
+    include ../mixins/_mixin-StylesheetLink
+    +StylesheetLink(forms)
+    link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+    include ../mixins/_mixin-PageTitle
+      +PageTitle("Личный кабинет")
+  body
+    include ../static/static-menu
+    include ../static/menu-index-container
+
+
+
