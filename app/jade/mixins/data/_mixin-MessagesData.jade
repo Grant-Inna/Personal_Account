@@ -1,0 +1,43 @@
+mixin messages-data ( data )
+   for item in data
+      tr
+         td
+            .table-inner-column
+               a.margin-bottom-sm( href="#" ) #{item.name}
+               small #{item.nameUpdate}
+               <!-- Status badge -->
+         td
+            .table-inner-column
+               case ( item.status )
+                  when "draft"
+                     status_text = "Черновик"
+                     status_label = "default"
+                  when "approved"
+                     status_text = "Модерация прошла"
+                     status_label = "primary"
+                  when "success"
+                     status_text = "Рассылка успешно завершена"
+                     status_label = "success"
+                  when ''
+                     break
+            span.badge.status-label.margin-bottom-sm( class = "badge-#{staus_label}" ) #{status_text}
+               <!-- Last update date + name of the user, who updated (I suppose) -->
+         td
+            .table-inner-column
+               span.margin-bottom-sm #{item.user}
+               span
+                  small #{item.nameUpdate}
+               <!-- Actions buttons (depends on message status) -->
+         td.center.actions
+            case ( item.status )
+               when "draft"
+                  a.icon.btn-primary.s7-paper-plane( href="#" )
+                  a.icon.btn-danger.s7-trash( href="#" )
+               when "approved"
+                  a.icon.btn-primary.s7-paper-plane( href="#" )
+               when "success"
+                  a.icon.btn-info.s7-graph3( href="#" )
+               when ''
+                  break
+
+

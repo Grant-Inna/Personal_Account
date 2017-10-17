@@ -1,0 +1,122 @@
+[
+  {
+    "id" : "1",
+    "name" : "Рассылка 1",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "draft",
+    "user" : "Макаронный Монстр",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "2",
+    "name" : "Рассылка 2",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "approved",
+    "user" : "Человек молекула",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "3",
+    "name" : "Рассылка 3",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "success",
+    "user" : "Deadpool",
+    "userUpdate" : "22.01.15 13:58"
+  },
+  {
+    "id" : "4",
+    "name" : "Рассылка 4",
+    "nameUpdate" : "21.02.14 14:30",
+    "status" : "draft",
+    "user" : "Котэ",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "5",
+    "name" : "Рассылка 6",
+    "nameUpdate" : "21.02.24 14:32",
+    "status" : "draft",
+    "user" : "Рапунцель",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "6",
+    "name" : "Рассылка 8",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "success",
+    "user" : "Папа Римский",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "7",
+    "name" : "Рассылка",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "approved",
+    "user" : "Иисус",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "8",
+    "name" : "Рассылка – ссылка",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "draft",
+    "user" : "Спанч Боб",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "9",
+    "name" : "Рассылка 154",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "success",
+    "user" : "Ray William Jonson",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "10",
+    "name" : "Рассылка 007",
+    "nameUpdate" : "21.02.14 18:32",
+    "status" : "approved",
+    "user" : "ShaoBi",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "11",
+    "name" : "2346",
+    "nameUpdate" : "21.09.14 14:32",
+    "status" : "success",
+    "user" : "Бот",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "12",
+    "name" : "Рассылка – ссылка",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "draft",
+    "user" : "Спанч Боб",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "13",
+    "name" : "Рассылка 3",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "success",
+    "user" : "Deadpool",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "14",
+    "name" : "Рассылка 1",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "draft",
+    "user" : "Макаронный Монстр",
+    "userUpdate" : "22.01.15 13:52"
+  },
+  {
+    "id" : "15",
+    "name" : "Рассылка 8",
+    "nameUpdate" : "21.02.14 14:32",
+    "status" : "success",
+    "user" : "Папа Римский",
+    "userUpdate" : "22.01.15 13:52"
+  }
+]
