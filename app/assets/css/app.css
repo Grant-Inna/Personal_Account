@@ -565,7 +565,7 @@ input[type="month"] {
   -webkit-appearance: listbox; }
 
 textarea {
-  resize: vertical; }
+  resize: vertical !important; }
 
 fieldset {
   min-width: 0;
