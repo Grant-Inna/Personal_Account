@@ -1,0 +1,55 @@
+doctype
+html
+    include ../template/index-main
+        include ../mixins/_mixin-StylesheetLink
+        +StylesheetLink('dt')
+        link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+        include ../mixins/_mixin-PageTitle
+        +PageTitle("Рассылки")
+    body
+        include ../static/static-menu
+        include ../static/static-menu-index-container
+            include ../static/static-menu-index
+                include ../mixins/nav/_mixin-MenuItem-main
+                include ../mixins/nav/_mixin-MenuItem-senders
+                include ../mixins/nav/_mixin-MenuItem-email
+                include ../mixins/nav/_mixin-MenuItem-clients
+                include ../mixins/nav/_mixin-MenuItem-settings
+                +main-item()
+                +main-senders('open', '', 'active')
+                +main-email()
+                +main-clients()
+                +main-settings()
+            .search
+                input(type='text', placeholder='Поиск...', name='q')
+                span.s7-search
+        div.main-content.container      <!-- OUR CONTENT -->
+            .row
+                .col-md-12
+                    .panel.panel-default.panel-table
+                        .panel-heading.panel-heading-divider Список рассылок
+                                <!-- Add new button -->
+                        .panel-heading
+                            a.btn.btn-space.btn-success.add-button( href="new-messages.html" ) Добавить
+                                strong +
+
+                                <!-- Messages table -->
+                                <!-- !Control layout selects, search input, pagination, informing message on the bottom of page generate automatically! -->
+                        .panel-body
+                            table#table1.table.table-striped.table-hover
+                                thead
+                                    tr
+                                        th Название
+                                        th Статус
+                                        th Дата обновления
+                                        th.actions
+                                tbody
+                                    include ../mixins/data/_mixin-MessagesData
+                                    +messages-data( 'messages' )
+
+
+        include ../mixins/_mixin-ScriptLink
+        +ScriptLink('dt')
+
+
+

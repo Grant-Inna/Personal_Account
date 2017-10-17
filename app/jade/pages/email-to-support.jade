@@ -1,0 +1,63 @@
+doctype
+html
+    include ../template/index-main
+        include ../mixins/_mixin-StylesheetLink
+        +StylesheetLink('frms')
+        +StylesheetLink('drpzone')
+        link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+        include ../mixins/_mixin-PageTitle
+        +PageTitle("Письмо в службу поддержки")
+    body
+        include ../static/static-menu
+        include ../static/static-menu-index-container
+            include ../static/static-menu-index
+                include ../mixins/nav/_mixin-MenuItem-main
+                include ../mixins/nav/_mixin-MenuItem-senders
+                include ../mixins/nav/_mixin-MenuItem-email
+                include ../mixins/nav/_mixin-MenuItem-clients
+                include ../mixins/nav/_mixin-MenuItem-settings
+                +main-item()
+                +main-senders()
+                +main-email()
+                +main-clients()
+                +main-settings()
+            .search
+                input(type='text', placeholder='Поиск...', name='q')
+                span.s7-search
+        div.main-content.container      <!-- OUR CONTENT -->
+            .row.email
+                .col-md-12.email-content
+                    .email-head    <!-- Content caption -->
+                        .email-head-title.text-center.panel-heading-divider Написать в службу поддержки
+                    .email-editor
+                        .form-group.row         <!-- Theme input -->
+                            .col-sm-12
+                                input.form-control( type="text", required="true", placeholder="Тема обращения" )
+                        textarea.form-control( rows="13", placeholder="Сообщение" )
+                        .form-group.row         <!-- Priority -->
+                            label.col-sm-2.col-form-label.text-left Приоритет
+                            .col-sm-3
+                                select.form-control.custom-select
+                                    include ../mixins/_mixin-FormGroup
+                                    +form-group-option( 'Низкий' )
+                                    +form-group-option( 'Нормальный', 'selected' )
+                                    +form-group-option( 'Средний' )
+                                    +form-group-option( 'Высокий' )
+                                    +form-group-option( 'Немедленный' )
+                        .form-group.row         <!-- Add files section -->
+                            label.col-sm-2.col-form-label.text-left Прикрепить файлы
+                            .col-sm-3.text-left
+                                input#file-2.inputfile( type="file", name="file-2", data-multiple-caption="{count} files selected", multiple )
+                                label.sup-full-width.full-width.btn.btn-primary( for="file-2" )
+                                    i.icon.s7-upload
+                                    span Browse files...
+                        .form-group         <!-- Action buttons -->
+                            label.col-1.col-form-label.text-left
+                            button.btn.btn-primary.btn-space( type="button" ) Отправить
+                            a.btn.btn-secondary.btn-space( href="index.html", type="button" ) Отмена
+        include ../mixins/_mixin-ScriptLink
+        +ScriptLink('frms')
+        +ScriptLink('email')
+
+
+
