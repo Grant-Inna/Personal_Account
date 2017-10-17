@@ -1,0 +1,33 @@
+doctype
+html
+    include ../template/index-main
+        include ../mixins/_mixin-StylesheetLink
+        +StylesheetLink(  )
+        link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+        include ../mixins/_mixin-PageTitle
+        +PageTitle("  ")
+    body
+        include ../static/static-menu
+        include ../static/static-menu-index-container
+            include ../static/static-menu-index
+                include ../mixins/nav/_mixin-MenuItem-main
+                include ../mixins/nav/_mixin-MenuItem-senders
+                include ../mixins/nav/_mixin-MenuItem-email
+                include ../mixins/nav/_mixin-MenuItem-clients
+                include ../mixins/nav/_mixin-MenuItem-settings
+                +main-item()
+                +main-senders()
+                +main-email()
+                +main-clients()
+                +main-settings()
+            .search
+                input(type='text', placeholder='Поиск...', name='q')
+                span.s7-search
+        div.main-content.container      <!-- OUR CONTENT -->
+            .row
+                .col-md-12
+        include ../mixins/_mixin-ScriptLink
+        +ScriptLink(  )
+
+
+
