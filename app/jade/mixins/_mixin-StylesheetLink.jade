@@ -1,8 +1,10 @@
 mixin StylesheetLink (type)
   case ( type )
-    when forms
+    when 'frms'
       link( rel="stylesheet", href="assets/lib/select2/css/select2.min.css", type="text/css" )
-    when dataTables
+    when 'dt'
       link( rel="stylesheet", href="assets/lib/datatables/css/dataTables.bootstrap4.min.css", type="text/css" )
-    when dropzone
+    when 'drpzone'
       link( rel="stylesheet", href="assets/lib/dropzone/dist/dropzone.css", type="text/css" )
+    when ''
+      break

@@ -1,0 +1,5 @@
+mixin form-group-option ( text, selected )
+   if ( selected == undefined )
+      option( value = '#{text}' ) #{text}
+   else
+      option( value = '#{text}', selected ) #{text}
