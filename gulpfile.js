@@ -92,22 +92,28 @@ gulp.task('watch_min', function() {
 
 // JADE _____________________________________________________________________
 
-gulp.task( 'jade_del-pages', function() {
-     del('./app/jade/dest/*.jade')
-});
+/*gulp.task( 'jade_del-pages', function() {
+     del('./app/jade/dest/!*.jade')
+});*/
 
 gulp.task( 'jade_pages', function() {
+
+    var messages = require('./app/jade/json/messages.json');
+
     return gulp.src('./app/jade/pages/*.jade')
-        .pipe(jade())
+        .pipe(jade({
+            locals: messages
+        }))
         .pipe(rename({prefix: "jade-"}))
         .pipe(gulp.dest('./app/'))
 });
-/*gulp.task( 'jade_static', function() {
-    return gulp.src('./app/jade/static/!*.jade')
-        .pipe(jade())
-        .pipe(gulp.dest('./app/jade/dest/static'))
-});
-gulp.task( 'jade_template', function() {
+/*gulp.task( 'jade_to_php', function() {
+    return gulp.src('./app/jade/static/static-template-page.jade')
+        .pipe(toPHP())
+        .pipe(gulp.dest('./app/jade/dest/'))
+});*/
+
+/*gulp.task( 'jade_template', function() {
     return gulp.src('./app/jade/template/!*.jade')
         .pipe(jade())
         .pipe(gulp.dest('./app/jade/dest/template'))
