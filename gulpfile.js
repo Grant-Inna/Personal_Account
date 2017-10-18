@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     jade = require( 'gulp-jade' ),
     concat = require('gulp-concat'),
     del = require('del'),
+    /*toPHP = require('gulp-jade-php'),*/
     uncss = require('gulp-uncss');
 
 var jsFiles = {
@@ -108,7 +109,8 @@ gulp.task( 'jade_pages', function() {
         .pipe(gulp.dest('./app/'))
 });
 /*gulp.task( 'jade_to_php', function() {
-    return gulp.src('./app/jade/static/static-template-page.jade')
+    connect.server()
+    return gulp.src('./app/jade/pages/messages.jade')
         .pipe(toPHP())
         .pipe(gulp.dest('./app/jade/dest/'))
 });*/
