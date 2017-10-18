@@ -1,0 +1,363 @@
+doctype
+html
+    include ../template/index-main
+        include ../mixins/_mixin-StylesheetLink
+        +StylesheetLink( 'frms' )
+        +StylesheetLink( 'dt' )
+        link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+        include ../mixins/_mixin-PageTitle
+        +PageTitle("  ")
+    body
+        include ../static/static-menu
+        include ../static/static-menu-index-container
+            include ../static/static-menu-index
+                include ../mixins/nav/_mixin-MenuItem-main
+                include ../mixins/nav/_mixin-MenuItem-senders
+                include ../mixins/nav/_mixin-MenuItem-email
+                include ../mixins/nav/_mixin-MenuItem-clients
+                include ../mixins/nav/_mixin-MenuItem-settings
+                +main-item()
+                +main-senders()
+                +main-email()
+                +main-clients()
+                +main-settings()
+            .search
+                input(type='text', placeholder='Поиск...', name='q')
+                span.s7-search
+        div.main-content.container      <!-- OUR CONTENT -->
+            .row
+                .col-md-12
+                    .panel.panel-default
+                        .panel-heading.panel-heading-divider Создание рассылки
+                        .panel-body         <!-- Create message form -->
+                            form
+                                .form-group.row
+                                    label.col-sm-3.col-form-label.text-right Название рассылки
+                                    .col-sm-8
+                                        input.form-control( type="text", required="required", placeholder="Рассылка 27-09-2049 16:21" )
+                                .form-group.row         <!-- Choose channel checkbox -->
+                                    label.col-sm-3.col-form-label.text-right Канал отправки
+                                    .col-sm-8.mt-2
+                                        include ../mixins/_mixin-FormGroup
+                                        +form-group-checkbox( 'SMS' )
+                                        +form-group-checkbox( 'Viber' )
+                                .form-group.row         <!-- Choose a sender select -->
+                                    label.col-sm-3.col-form-label.text-right Отправитель
+                                    .col-sm-8
+                                        select( required="", class="tags", tabindex="-1", aria-hidden="true" )
+                                            include ../mixins/_mixin-FormGroup
+                                            +form-group-option( 'ChatTest' )
+                                            +form-group-option( 'Почта России' )
+                                .col-sm-12          <!-- Create a new message section -->
+                                    .tab-container.mb-5
+                                        ul.nav.nav-tabs.nav-tabs-dark.jc-sb.text-center( role="tablist" )          <!-- Choose the way navigation -->
+                                            li.half.nav-item
+                                                a.nav-link.active(href='#d-home', data-toggle='tab', role='tab') Создать сообщение
+                                            li.half.nav-item
+                                                a.nav-link(href='#d-profile', data-toggle='tab', role='tab') Использовать шаблон
+                                        .tab-content            <!-- #d-home inner -->
+                                            #d-home.tab-pane.active( role="tabpanel" )
+                                                .form-group.row         <!-- Message template section  -->
+                                                    label.col-sm-3.col-form-label.text-right Макет сообщения
+                                                    .templates-holder.col-sm-8
+                                                        .templates-wrapper
+                                                            .templates-one.templates-one-plain          <!-- Simple template with text -->
+                                                                .templates-plain-text           <!-- One templates-plain-text — one line -->
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                        .templates-wrapper          <!-- Template with text & banner -->
+                                                            .templates-one.templates-one-banner
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-banner           <!-- Our banner -->
+                                                        .templates-wrapper          <!-- Template with text, banner & image -->
+                                                            .templates-one.templates-one-banner-image
+                                                                .templates-plain-text
+                                                                .templates-plain-text
+                                                                .templates-image            <!-- Our image -->
+                                                                    .templates-image-circle         <!-- "Sun" -->
+                                                                    .templates-image-house-holder           <!-- "City" -->
+                                                                        .templates-image-house.templates-image-house-10
+                                                                        .templates-image-house.templates-image-house-7
+                                                                        .templates-image-house.templates-image-house-3
+                                                                        .templates-image-house.templates-image-house-8
+                                                                        .templates-image-house.templates-image-house-10
+                                                                        .templates-image-house.templates-image-house-6
+                                                                        .templates-image-house.templates-image-house-9
+                                                                        .templates-image-house.templates-image-house-4
+                                                                        .templates-image-house.templates-image-house-2
+                                                                        .templates-image-house.templates-image-house-5
+                                                                        .templates-image-house.templates-image-house-9
+                                                                        .templates-image-house.templates-image-house-7
+                                                                        .templates-image-house.templates-image-house-3
+                                                                        .templates-image-house.templates-image-house-10
+                                                                .templates-banner
+                                                        .templates-wrapper
+                                                            .templates-one.templates-one-image
+                                                                .templates-image
+                                                                    .templates-image-circle
+                                                                    .templates-image-house-holder
+                                                                        .templates-image-house.templates-image-house-10
+                                                                        .templates-image-house.templates-image-house-7
+                                                                        .templates-image-house.templates-image-house-4
+                                                                        .templates-image-house.templates-image-house-8
+                                                                        .templates-image-house.templates-image-house-10
+                                                                        .templates-image-house.templates-image-house-6
+                                                                        .templates-image-house.templates-image-house-9
+                                                                        .templates-image-house.templates-image-house-4
+                                                                        .templates-image-house.templates-image-house-2
+                                                                        .templates-image-house.templates-image-house-5
+                                                                        .templates-image-house.templates-image-house-9
+                                                .form-group.row
+                                                    label.col-sm-3.col-form-label.text-right Текст сообщения
+                                                    .col-sm-8
+                                                        textarea.form-control( placeholder="Проснись и пой!" rows="auto" cols="100%" )
+                                                .panel.panel-border.panel-border-color.panel-border-color-primary.col-md-12.col-lg-10.margin-center         <!-- More settings section -->
+                                                    .panel-heading.panel-heading-divider
+                                                        span.title Расширенные настройки            <!-- Section caption -->
+                                                        span.panel-subtitle Дополнительные настройки позволяют отправлять собственный текст каждому получателю и устанавливать текст для SMS, если у получаетля нет Viber Messenger
+                                                    .panel-body             <!-- More settings form -->
+                                                        form
+                                                            .form-group.row
+                                                                label.col-sm-4.col-lg-3.col-form-label.text-right Персонализированная
+                                                                .col-sm-7.col-lg-8.mt-2.row
+                                                                    .form-group.col-sm-3
+                                                                        label.custom-control.custom-checkbox.has-default
+                                                                            input.custom-control-input(type='checkbox')
+                                                                            span.custom-control-indicator
+                                                                    span.custom-control-description
+                                                                        a( href='' ) Что это?
+                                                            .form-group.row
+                                                                label.col-sm-4.col-lg-3.col-form-label.text-right Текст сообщения
+                                                                .col-sm-7.col-lg-8
+                                                                    textarea.form-control(placeholder='Проснись и пой!', rows='auto', cols='100%')
+                                            #d-profile.tab-pane( role='tabpanel' )
+
+                                .row            <!-- Phone numbers section -->
+                                    .col-sm-11.margin-center
+                                        .panel.panel-default.row
+                                            .panel-heading.col-sm-4.col-md-3            <!-- Section caption -->
+                                                span Загрузка телефонов
+                                            .col-sm-7.col-md-8.messages-add-btn-holder          <!-- Action buttons -->
+                                                button.btn.btn-space.btn-xs.btn-secondary.messages-add-btn.mr-1 Добавить из файла
+                                                button.btn.btn-space.btn-xs.btn-secondary.messages-add-btn.mr-1 Добавить из textarea
+                                                button.btn.btn-space.btn-xs.btn-secondary.messages-add-btn.mr-1 Добавить из тулуфонной книги
+                                        .panel-body             <!-- Phone numbers table -->
+                                            table#table1.table.table-striped.table-hover
+                                                thead
+                                                    tr
+                                                        th.sorting_asc_disabled.sorting_desc_disabled           <!-- Choose all checkbox -->
+                                                            label.custom-control.custom-checkbox.mai-select-all.has-default.col-sm-8
+                                                                input#table-checkbox-main.custom-control-input(type='checkbox')
+                                                                span.custom-control-indicator
+                                                        th Телефон
+                                                        th Парамерты 
+                                                        th.actions
+                                                tbody.telephone-list
+                                                    tr.odd.gradeX
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103826
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.odd.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79169103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.odd.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.odd.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.odd.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103576
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.odd.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103956
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.odd.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103256
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+                                                    tr.even.gradeA
+                                                        td
+                                                            label.custom-control.custom-checkbox.has-default.col-sm-8
+                                                                input.custom-control-input(type='checkbox', name='table-checkbox')
+                                                                span.custom-control-indicator
+                                                        td +79269103456
+                                                        td
+                                                        td.center.actions
+                                                            a.icon.btn-primary.mr-1(href='#')
+                                                                i.s7-look
+                                                            a.icon.btn-danger(href='#')
+                                                                i.s7-trash
+
+                                .row
+                                    .col-sm-12.margin-center
+                                        .panel-default.row
+                                            .panel-heading.col-sm-2         <!-- Status -->
+                                                small.badge-default.panel-subtitle — черновик —
+                                            .col-sm-9.messages-add-btn-holder           <!-- Action buttons -->
+                                                button.btn.btn-space.btn-xs.btn-default.messages-add-btn
+                                                    i.icon.icon-left.s7-look
+                                                    | &nbsp;Предпросмотр
+                                                button.btn.btn-space.btn-xs.btn-success.messages-add-btn
+                                                    i.icon.icon-left.s7-lock
+                                                    | &nbsp;Сохранить
+                                                button.btn.btn-space.btn-xs.btn-primary.messages-add-btn
+                                                    i.icon.icon-left.s7-paper-plane
+                                                    | &nbsp;Разослать сейчас
+                                                button.btn.btn-space.btn-xs.btn-info.messages-add-btn
+                                                    i.icon.icon-left.s7-clock
+                                                    | &nbsp;Запланировать
+                                                a.btn.btn-secondary.btn-space.btn-xs( href="messages.html" type="button" ) Отмена
+
+
+        script( src="assets/js/root.common.js" type="text/javascript" )
+        include ../mixins/_mixin-ScriptLink
+        +ScriptLink( 'frms' )
+        +ScriptLink( 'email' )
+        +ScriptLink( 'dt' )
+
+
+
