@@ -1,0 +1,453 @@
+doctype
+html
+    include ../template/index-main
+        include ../mixins/_mixin-StylesheetLink
+        +StylesheetLink( 'dt' )
+        link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+        include ../mixins/_mixin-PageTitle
+        +PageTitle(" Отправители ")
+    body
+        include ../static/static-menu
+        include ../static/static-menu-index-container
+            include ../static/static-menu-index
+                include ../mixins/nav/_mixin-MenuItem-main
+                include ../mixins/nav/_mixin-MenuItem-senders
+                include ../mixins/nav/_mixin-MenuItem-email
+                include ../mixins/nav/_mixin-MenuItem-clients
+                include ../mixins/nav/_mixin-MenuItem-settings
+                +main-item()
+                +main-senders( 'open', '', '', '', 'active')
+                +main-email()
+                +main-clients()
+                +main-settings()
+            .search
+                input(type='text', placeholder='Поиск...', name='q')
+                span.s7-search
+        div.main-content.container      <!-- OUR CONTENT -->
+            .row.emil
+                .col-md-3.email-aside   <!-- Left column with filters -->
+                    .aside-content
+                        .content
+                            .aside-header.navbar-toggleable-sm
+                                .at-center.justify-content-between
+                                    span.title.margin-bottom-md.text-center Отправители
+                                    a.btn.btn-success.btn-sm.at-center(href='add-sender.html') +
+                            hr
+                            .aside-nav.navbar-collapse.collapse
+                                ul.navbar-nav
+                                        // Service choosing
+                                    .navbar-nav.padding-left-md.padding-right-sm
+                                        .btn-group.nav-link
+                                                button.btn.btn-secondary.dropdown-toggle.width-100(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Выберите сервис
+                                                    span.icon-dropdown.s7-angle-down
+                                                .dropdown-menu(role='menu')
+                                                    a.dropdown-item(href='#', name='choose-service') Сервис
+                                                    a.dropdown-item(href='#', name='choose-service') Сервис с длинным названием
+                                                    a.dropdown-item(href='#', name='choose-service') Сервис с очень–очень длинным названием
+                                                    a.dropdown-item(href='#', name='choose-service') Сычуаньский соус
+                                        // Channel choosing
+                                        .btn-group.nav-link
+                                            button.btn.btn-secondary.dropdown-toggle.width-100(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Выберите канал
+                                                span.icon-dropdown.s7-angle-down
+                                            .dropdown-menu(role='menu')
+                                                a.dropdown-item.dropdown-item-channel(href='#', name='choose-channel')
+                                                    span.icon-channel.icon-channel-telegram
+                                                    span.choose-channel-text Telegram
+                                                a.dropdown-item.dropdown-item-channel(href='#', name='choose-channel')
+                                                    span.icon-channel.icon-channel-viber
+                                                    span.choose-channel-text Viber
+                                                a.dropdown-item.dropdown-item-channel(href='#', name='choose-channel')
+                                                    span.icon-channel.icon-channel-facebook
+                                                    span.choose-channel-text Facebook Messanger
+                                                a.dropdown-item.dropdown-item-channel(href='#', name='choose-channel')
+                                                    span.icon-channel.icon-channel-vk
+                                                    span.choose-channel-text VK.com
+                                                a.dropdown-item.dropdown-item-channel(href='#', name='choose-channel')
+                                                    span.icon-channel.icon-channel-sms
+                                                    span.choose-channel-text SMS
+                                    ul.navbar-nav.nav-pills.nav-stacked
+                                        li.nav-item.nav-link.padding-left-md.padding-right-sm
+                                            label.custom-control.custom-checkbox.has-default
+                                                span.custom-control-description Новый
+                                                input.custom-control-input(type='checkbox')
+                                                span.custom-control-indicator
+                                            span.badge.badge-warning 4
+                                        li.nav-item.nav-link.padding-left-md.padding-right-sm
+                                            label.custom-control.custom-checkbox.has-default
+                                                span.custom-control-description На согласовании
+                                                input.custom-control-input(type='checkbox')
+                                                span.custom-control-indicator
+                                            span.badge.badge-info 4
+                                        li.nav-item.nav-link.padding-left-md.padding-right-sm
+                                            label.custom-control.custom-checkbox.has-default
+                                                span.custom-control-description Согласован&nbsp;
+                                                input.custom-control-input(type='checkbox')
+                                                span.custom-control-indicator
+                                            span.badge.badge-success 5
+                                        li.nav-item.nav-link.padding-left-md.padding-right-sm
+                                            label.custom-control.custom-checkbox.has-default
+                                                span.custom-control-description Отклонён
+                                                input.custom-control-input(type='checkbox')
+                                                span.custom-control-indicator
+                                            span.badge.badge-danger 2
+
+                                hr
+                                ul.navbar-nav
+                                    .navbar-nav.padding-left-md.padding-right-sm
+                                        .btn-group.nav-link
+                                            label.btn-block
+                                                button.btn.btn-secondary.btn-block.width-100(name='reset-filters') Сброс фильтров
+                .col-md-9.email-content    <!-- Right column -->
+                    // Right column caption
+                    .email-inbox-header
+                        .row.margin-bottom-md
+                            .col-md-12
+                                .email-search.mt-2
+                                    .input-group.input-search
+                                         input.form-control(type='text', placeholder='Поиск по сообщениям...')
+                                         span.input-group-btn
+                                            button.btn.btn-secondary(type='button')
+                                               i.icon.s7-search
+
+                        table#table1.table.table-striped.table-hover        <!-- Senders table -->
+                            thead
+                                tr
+                                    th Канал
+                                    th Отправитель
+                                    th Сервис
+                                    th Статус
+                                    th Пользователь
+                            tbody
+                                tr.odd.gradeX           <!-- One row classes "odd/even" and "gradeX/C/A" classes may generate automatically -->
+                                    td.icon.icon-channel.icon-channel-facebook Facebook Messanger            <!-- Channel icon. Need this names (Facebook Messanger, telegram, viber, vk.com, sms) for sorting and filters! -->
+                                    td.user-avatar          <!-- Sender's avatar + name -->
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img4.jpg" alt="Avatar" )
+                                        | Ryan
+                                    td            <!-- Service -->
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td            <!-- Status + date of status update -->
+                                        div.table-inner-column
+                                            span.badge.badge-success.status-label.margin-bottom-sm Согласован&nbsp;             <!-- We need this &nbsp; to exclude from the issuance of the status "На согласовании"-->
+                                            span
+                                                small 21.02.14 14:32
+                                    td            <!-- User's name + date -->
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Кот Бегемот
+                                            span
+                                                small 22.01.15 13:52
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-vk VK.com
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img5.jpg" alt="Avatar" )
+                                        | Ryan Willson
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сервис с длинным названием
+                                            span
+                                                small http://название_сервиса_с_длинным_названием.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-success.status-label.margin-bottom-sm Согласован&nbsp;
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Октав Паранго
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-viber Viber
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img9.jpg" alt="Avatar" )
+                                        | Макаронный Монстр
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сервис с очень–очень длинным названием
+                                            span
+                                                small http://название_сервиса_с_очень–очень_длинным_названием.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-warning.status-label.margin-bottom-sm Новый
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Рик
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-telegram Telegram
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img8.jpg" alt="Avatar" )
+                                        | Бот
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-danger.status-label.margin-bottom-sm Отклонён
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Pickle Rick
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-viber Viber
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img12.jpg" alt="Avatar" )
+                                        | Jon Dow
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сервис с длинным названием
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-info.status-label.margin-bottom-sm На согласовании
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Морти
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-viber Viber
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img5.jpg" alt="Avatar" )
+                                        | Настальгирующий Критик
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сычуаньский соус
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-success.status-label.margin-bottom-sm Согласован&nbsp;
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Октав Паранго
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-vk VK.com
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img3.jpg" alt="Avatar" )
+                                        | Lawrence Krauss
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сервис с очень–очень длинным названием
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-info.status-label.margin-bottom-sm На согласовании
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Брейн
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-telegram Telegram
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img4.jpg" alt="Avatar" )
+                                        | Макаронный Монстр
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-warning.status-label.margin-bottom-sm Новый
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Эрик Картман
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-sms SMS
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img2.jpg" alt="Avatar" )
+                                        | Бот2
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сычуаньский соус
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-info.status-label.margin-bottom-sm На согласовании
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Pickle Rick
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-viber Viber
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img13.jpg" alt="Avatar" )
+                                        | Спанч Боб
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-info.status-label.margin-bottom-sm На согласовании
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Октав Паранго
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-vk VK.com
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img6.jpg" alt="Avatar" )
+                                        | Папа Римский
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-warning.status-label.margin-bottom-sm Новый
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Морти
+                                            span
+                                                small 22.01.15 13:52
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-viber Viber
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img10.jpg" alt="Avatar" )
+                                        | Настальгирующий Критик
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-success.status-label.margin-bottom-sm Согласован&nbsp;
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Санта
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-sms SMS
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img7.jpg" alt="Avatar" )
+                                        | Lawrence Krauss
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Сычуаньский соус
+                                            span
+                                                small http://верните_сычуаньский_соус_падлы.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-danger.status-label.margin-bottom-sm Отклонён
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Эрик Картман
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.odd.gradeA
+                                    td.icon.icon-channel.icon-channel-facebook Facebook Messanger
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img9.jpg" alt="Avatar" )
+                                        | Папа Римский
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-warning.status-label.margin-bottom-sm Новый
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Pickle Rick
+                                            span
+                                                small 22.01.15 13:52
+
+                                tr.even.gradeA
+                                    td.icon.icon-channel.icon-channel-telegram Telegram
+                                    td.user-avatar
+                                        a( href="one-sender.html" )
+                                            img( src="assets/img/avatars/img1.jpg" alt="Avatar" )
+                                        | Рапунцель
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm сервис
+                                            span
+                                                small http://название_сервиса.ru
+                                    td
+                                        div.table-inner-column
+                                            span.badge.badge-success.status-label.margin-bottom-sm Согласован&nbsp;
+                                            span
+                                                small 21.02.14 14:32
+                                    td
+                                        div.table-inner-column
+                                            span.margin-bottom-sm Санта
+                                            span
+                                                small 22.01.15 13:52
+        script( src="assets/js/root.common.js" type="text/javascript" )
+        script( src="assets/js/root.dataTables-special.js" type="text/javascript" )
+        script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.dataTables(); App.CustomFilters();});
+
+
+
