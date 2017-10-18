@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <title>Messaggio | Отправители</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/lib/datatables/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+
+</head>
+<body>
+
+<nav class="navbar navbar-full mai-top-header-show-logo navbar-inverse navbar-fixed-top mai-top-header">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <div class="navbar-logo"></div>
+        </a>
+        <!--Left Menu-->
+        <ul class="nav navbar-nav mai-top-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">На Сайт</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">О Сервисе</a></li>
+            <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+                                             class="nav-link dropdown-toggle">Документация<span
+                    class="angle-down s7-angle-down"></span></a>
+
+                <div role="menu" class="dropdown-menu"><a href="#" class="dropdown-item">Information</a><a href="#"
+                                                                                                           class="dropdown-item">Company</a><a
+                        href="#" class="dropdown-item">Documentation</a><a href="#" class="dropdown-item">API
+                    Settings</a><a href="#" class="dropdown-item">Export Info</a></div>
+            </li>
+            <li class="nav-item"><a href="email-to-support.html" class="nav-link">Поддержка</a></li>
+        </ul>
+        <!--Icons Menu-->
+        <ul class="navbar-nav float-lg-right mai-icons-nav">
+            <li class="dropdown nav-item mai-messages"><a href="#" data-toggle="dropdown" role="button"
+                                                          aria-expanded="false" class="nav-link dropdown-toggle"><span
+                    class="icon s7-comment"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="title">Messages</div>
+                        <div class="mai-scroller">
+                            <div class="content">
+                                <ul>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img1.jpg"></div>
+                                        <div class="content"><span class="date">16 Sept</span><span class="name">Victor Jara</span><span
+                                                class="desc">The song that has been brave, will always be the new song. </span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img2.jpg"></div>
+                                        <div class="content"><span class="date">4 Sept</span><span class="name">Gustavo Cerati</span><span
+                                                class="desc">You will see me fly across the city of fury where no one knows of me.</span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img3.jpg"></div>
+                                        <div class="content"><span class="date">13 Aug</span><span class="name">Jaime Garzón</span><span
+                                                class="desc">Now everything came back to the abnormality.</span></div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="img"><img src="assets/img/avatars/img4.jpg"></div>
+                                        <div class="content"><span class="date">13 Aug</span><span class="name">Allen Collins</span><span
+                                                class="desc">Things just couldn't even be the same 'Cause I'm as free as a bird now.</span>
+                                        </div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer"><a href="#">View all messages</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown nav-item mai-notifications"><a href="#" data-toggle="dropdown" role="button"
+                                                               aria-expanded="false"
+                                                               class="nav-link dropdown-toggle"><span
+                    class="icon s7-bell"></span><span class="indicator"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="title">Notifications</div>
+                        <div class="mai-scroller">
+                            <div class="content">
+                                <ul>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-check"></span></div>
+                                        <div class="content"><span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span><span
+                                                class="date">10 minutes ago</span></div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-add-user"></span></div>
+                                        <div class="content"><span class="desc">You have a new fiend request pending from <strong>John
+                                            Doe</strong>.</span><span class="date">2 days ago</span></div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-graph1"></span></div>
+                                        <div class="content"><span class="desc">Your site visits have increased <strong>15.5%</strong> more since the last week.</span><span
+                                                class="date">2 hours ago</span></div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="icon"><span class="s7-check"></span></div>
+                                        <div class="content"><span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span><span
+                                                class="date">10 minutes ago</span></div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer"><a href="#">View all notifications</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown nav-item menu__languageSelect">
+                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+                   class="nav-link dropdown-toggle menu__languageSelect-item">
+                    <span class="menu__languageSelect-title">RU</span> <span class="angle-down s7-angle-down"></span>
+                </a>
+                <ul class="menu__languageSelect-holder dropdown-menu">
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/rf.png" alt=""> <span
+                                class="menu__languageSelect-title">RU</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/uf.png" alt=""> <span
+                                class="menu__languageSelect-title">UA</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__languageSelect-item"><img src="assets/img/usaf.png" alt=""><span
+                                class="menu__languageSelect-title">ENG</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--User Menu-->
+        <ul class="nav navbar-nav float-lg-right mai-user-nav">
+            <li class="dropdown nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+                                             class="dropdown-toggle nav-link"> <img src="assets/img/avatar.jpg"><span
+                    class="user-name">Violeta Parra</span><span class="angle-down s7-angle-down"></span></a>
+
+                <div role="menu" class="dropdown-menu">
+                    <a href="#" class="dropdown-item"> <span class="icon s7-home"> </span>Личный кабинет</a>
+                    <a href="#" class="dropdown-item"> <span class="icon s7-user"> </span>Профиль</a>
+                    <a href="#" class="dropdown-item"> <span class="icon s7-cash"> </span>Платежи</a>
+                    <a href="account-settings.html" class="dropdown-item"> <span class="icon s7-tools"> </span>Настройки</a>
+                    <a href="#" class="dropdown-item"> <span class="icon s7-power"> </span>Выход</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="mai-wrapper">
+    <nav class="navbar mai-sub-header">
+        <div class="container">
+            <!-- Mega Menu structure-->
+            <nav class="navbar navbar-toggleable-sm">
+                <button type="button" data-toggle="collapse" data-target="#mai-navbar-collapse"
+                        aria-controls="#mai-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler hidden-md-up collapsed">
+                    <div class="icon-bar"><span></span><span></span><span></span></div>
+                </button>
+                <div id="mai-navbar-collapse" class="navbar-collapse collapse mai-nav-tabs">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item parent"><a href="index.html" role="button" aria-expanded="false"
+                                                            class="nav-link"><span class="icon s7-home"></span><span>Главная</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="index.html" class="nav-link"><span class="icon s7-monitor"></span><span class="name">Панель управления</span></a>
+                                </li>
+                                <li class="nav-item"><a href="index.html#services" class="nav-link"><span class="icon s7-portfolio"></span><span class="name">Сервисы</span></a>
+                                </li>
+                                <li class="nav-item"><a href="ui-elements.html" class="nav-link"><span class="icon s7-cash"></span><span class="name">Платежи</span></a>
+                                </li>
+                                <li class="nav-item"><a href="plugins.html" class="nav-link"><span class="icon s7-timer"></span><span class="name">Действия пользователей</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- OPENED ITEM -->
+                        <li class="nav-item parent open"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-paper-plane"></span><span>Рассылки</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="email-compose.html" class="nav-link"><span class="icon s7-next-2"></span><span class="name">Отправить сообщение</span></a>
+                                </li>
+                                <li class="nav-item"><a href="messages.html" class="nav-link"><span class="icon s7-photo-gallery"></span><span class="name">Рассылки</span></a>
+                                </li>
+                                <li class="nav-item"><a href="form-xeditable.html" class="nav-link"><span class="icon s7-credit"></span><span class="name">Шаблоны</span></a>
+                                </li>
+                                <!-- ACTIVE ITEM --><li class="nav-item"><a href="senders.html" class="nav-link active"><span class="icon s7-expand2"></span><span class="name">Отправители</span></a>
+                                </li>
+                                <li class="nav-item"><a href="form-wizard.html" class="nav-link"><span class="icon s7-graph2"></span><span class="name">Статистика</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item parent"><a href="email-inbox.html" role="button" aria-expanded="false"
+                                                       class="nav-link"><span
+                                class="icon s7-chat"></span><span>Диалоги</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="email-inbox.html" class="nav-link"><span
+                                        class="icon icon-speech"></span><span class="name">Список диалогов</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false"
+                                                       class="nav-link"><span class="icon s7-users"></span><span>Мои Клиенты</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item"><a href="pages-chat.html" class="nav-link"><span
+                                        class="icon icon-list"></span><span class="name">Списки Клиентов</span></a>
+                                </li>
+                                <li class="nav-item"><a href="pages-profile.html" class="nav-link"><span
+                                        class="icon s7-download"></span><span class="name">Импорт</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item parent"><a href="#" role="button" aria-expanded="false" class="nav-link"><span class="icon s7-config"></span><span>Настройки</span></a>
+                            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+                                <li class="nav-item dropdown parent mega-menu"><a href="mega-menu.html" data-toggle="dropdown" class="nav-link"><span class="icon s7-network"></span><span class="name">Каналы</span></a>
+                                </li>
+                                <li class="nav-item"><a href="users.html" class="nav-link"><span class="icon s7-id"></span><span class="name">Пользователи</span></a>
+                                </li>
+                                <li class="nav-item"><a href="layout-logo-mobile.html" class="nav-link"><span class="icon s7-global"></span><span class="name">Компания</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Search input-->
+            <div class="search">
+                <input type="text" placeholder="Поиск..." name="q"><span class="s7-search"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- !Our content! -->
+    <div class="main-content container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default panel-table">
+
+                    <!-- Content caption -->
+                    <div class="panel-heading panel-heading-divider">Список отправителей</div>
+
+                    <!-- Add new button -->
+                    <div class="panel-heading">
+                        <a href="add-sender.html" class="btn btn-space btn-success add-button">Добавить <strong>+</strong></a>
+                    </div>
+                    <div class="email-filters align-items-center no-border">
+                        <div class="align-items-center jc-sb">
+
+                            <div class="email-filters-left">
+                            <!-- Service choosing -->
+                            <div class="btn-group">
+                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выберите сервис <span class="icon-dropdown s7-angle-down"></span></button>
+                                <div role="menu" class="dropdown-menu">
+                                    <a href="#" name="choose-service" class="dropdown-item">Сервис</a>
+                                    <a href="#" name="choose-service" class="dropdown-item">длинное_название_сервиса</a>
+                                    <a href="#" name="choose-service" class="dropdown-item">очень-очень_длинное_название_сервиса</a>
+                                    <a href="#" name="choose-service" class="dropdown-item">Сычуаньский соус</a>
+                                </div>
+                            </div>
+
+                            <!-- Channel choosing -->
+                            <div class="btn-group">
+                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">Выберите канал <span class="icon-dropdown s7-angle-down"></span></button>
+                                <div role="menu" class="dropdown-menu">
+                                    <a href="#" name="choose-channel" class="dropdown-item dropdown-item-channel">
+                                        <span class="icon-channel icon-channel-telegram"></span>
+                                        <span class="choose-channel-text">Telegram</span>
+                                    </a>
+                                    <a href="#" name="choose-channel" class="dropdown-item dropdown-item-channel">
+                                        <span class="icon-channel icon-channel-viber"></span>
+                                        <span class="choose-channel-text">Viber</span>
+                                    </a>
+                                    <a href="#" name="choose-channel" class="dropdown-item dropdown-item-channel">
+                                        <span class="icon-channel icon-channel-facebook"></span>
+                                        <span class="choose-channel-text">Facebook Messanger</span>
+                                    </a>
+                                    <a href="#" name="choose-channel" class="dropdown-item dropdown-item-channel">
+                                        <span class="icon-channel icon-channel-vk"></span>
+                                        <span class="choose-channel-text">VK.com</span>
+                                    </a>
+                                    <a href="#" name="choose-channel" class="dropdown-item dropdown-item-channel">
+                                        <span class="icon-channel icon-channel-sms"></span>
+                                        <span class="choose-channel-text">SMS</span>
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Status choosing checkboxes -->
+                            <div class="btn-group jc-end seservice-checkboxes-holder col-sm-6">
+
+                                <h5 class="aside-header">Статус:</h5>
+
+                                <div class="service-checkboxes service-checkboxes-left table-inner-column margin-left-sm margin-right-md">
+                                    <div class="form-group row">
+                                        <div class="mt-2">
+                                            <div class="form-group table-inner-column margin-right-md">
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-warning jc-center at-center"><small name="new-status-count">3</small></span>
+                                                    <span name="choose-status" class="custom-control-description choose-status-text">Новый</span>
+                                                </label>
+
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-info jc-center at-center"><small name="process-status-count">4</small></span>
+                                                    <span name="choose-status" class="custom-control-description choose-status-text">На согласовании</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="service-checkboxes service-checkboxes-right table-inner-column">
+
+                                    <div class="form-group row">
+                                        <div class="mt-2">
+                                            <div class="form-group table-inner-column">
+                                                <!-- We need this &nbsp; to exclude from the issuance of the status "На согласовании"-->
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-success jc-center at-center"><small name="success-status-count">4</small></span>
+                                                    <span name="choose-status" class="custom-control-description">Согласован&nbsp;</span>
+                                                </label>
+
+                                                <label class="d-flex align-items-center">
+                                                    <span  class="icon icon-channel badge-pill badge-danger jc-center at-center"><small name="denied-status-count">3</small></span>
+                                                    <span name="choose-status" class="custom-control-description choose-status-text">Отклонён</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="btn-group jc-end seservice-checkboxes-holder col-sm-6">
+                            <label>
+                                <button class="btn btn-secondary btn-sm " name="reset-filters">Сброс фильтра</button>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- Senders table -->
+                    <!-- !Control layout selects, search input, pagination, informing message on the bottom of page generate automatically! -->
+                    <div class="panel-body">
+                        <table id="table1" class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>Канал</th>
+                                <th>Отправитель</th>
+                                <th>Сервис</th>
+                                <th>Статус</th>
+                                <th>Пользователь</th>
+                                <th class="actions sorting_asc_disabled sorting_desc_disabled"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- One row. "odd/even" and "gradeX/C/A" classes may generate automatically -->
+                            <tr class="odd gradeX">
+
+                                <!-- Channel icon. Need this names (Facebook Messanger, telegram, viber, vk.com, sms) for sorting and filters! -->
+                                <td class="icon icon-channel icon-channel-facebook">Facebook Messanger</td>
+
+                                <!-- Sender's avatar + name -->
+                                <td class="user-avatar"><a href="one-sender.html"><img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan</a> </td>
+
+                                <!-- Service -->
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <!-- Status + date of status update -->
+                                <td>
+                                    <div class="table-inner-column">
+                                        <!-- We need this &nbsp; to exclude from the issuance of the status "На согласовании"-->
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+
+                                <!-- User's name + date -->
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Кот Бегемот</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+
+                                <!-- Action button -->
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="">
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img2.jpg" alt="Avatar">Ryan Maria Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-warning status-label margin-bottom-sm">Новый</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Пинки</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="odd gradeA">
+                                <td class="icon icon-channel icon-channel-facebook">Facebook Messanger</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-danger status-label margin-bottom-sm">Отклонён</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Брейн</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="even gradeA">
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
+                                <td class="user-avatar"> <img src="https://pp.userapi.com/c633928/v633928034/282ce/SNIHYHQExTQ.jpg" alt="Avatar">Rick</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Сычуаньский Соус</span>
+                                        <span>
+                                            <small>http://верните_соус_падлы.com</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Морти</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="">
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img4.jpg" alt="Avatar">Ryan García Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru</small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="odd gradeA">
+                                <td class="icon icon-channel icon-channel-sms">sms</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">длинное_название_сервиса</span>
+                                        <span>
+                                            <small>http://длинное_название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Сильвестр Сталоне</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="even gradeA">
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img3.jpg" alt="Avatar">Ryan Adam Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Морти</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-vk">VK.com</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-warning status-label margin-bottom-sm">Новый</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-sms">sms</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Pickle Rick</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-danger status-label margin-bottom-sm">Отклонён</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img2.jpg" alt="Avatar">Samuel L Jackson</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://очень_длинное_название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-warning status-label margin-bottom-sm">Новый</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-vk">vk.com</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-telegram">telegram</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-danger status-label margin-bottom-sm">Отклонён</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-facebook">Facebook Messanger</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">сервис</span>
+                                        <span>
+                                            <small>http://название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-success status-label margin-bottom-sm">Согласован&nbsp;</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Pickle Rick</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td class="icon icon-channel icon-channel-viber">viber</td>
+                                <td class="user-avatar"> <img src="assets/img/avatars/img1.jpg" alt="Avatar">Ryan Lawrence</td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">очень-очень_длинное_название_сервиса</span>
+                                        <span>
+                                            <small>http://очень-очень_длинное_название_сервиса.ru  </small>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="badge badge-info status-label margin-bottom-sm">На согласовании</span>
+                                        <span>21.02.14 14:32</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-inner-column">
+                                        <span class="margin-bottom-sm">Настальгирующий Критик</span>
+                                        <span>22.01.15 13:52</span>
+                                    </div>
+                                </td>
+                                <td class="center actions"><a href="#" class="icon btn-danger"><i class="s7-trash"></i></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="assets/js/root.common.js" type="text/javascript"></script>
+<script src="assets/js/root.dataTables.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+        App.dataTables();
+        App.CustomFilters();
+
+    });
+</script>
+
+</body>
+</html>
+
