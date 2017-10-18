@@ -32,7 +32,7 @@ html
                         .panel-body
                             form
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Страна нахождения:
+                                    label.col-sm-3.col-form-label.text-right Страна нахождения
                                     .col-sm-8
                                         select.tags.select2-hidden-accessible( required="", tabindex="-1", aria-hidden="true")
                                             include ../mixins/_mixin-FormGroup
@@ -41,7 +41,7 @@ html
                                             +form-group-option( 'Зимбабве' )
                                             +form-group-option( 'Деревня Санта–Клауса' )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Страны, в которые будут рассылки:
+                                    label.col-sm-3.col-form-label.text-right Страны, в которые будут рассылки
                                     .col-sm-8
                                         select.tags( required="true", multiple="true", tabindex="-1", aria-hidden="true" )
                                             include ../mixins/_mixin-FormGroup
@@ -53,7 +53,7 @@ html
                                             +form-group-option( 'Исландия' )
                                             +form-group-option( 'КНДР' )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Тематика проводимых рассылок:
+                                    label.col-sm-3.col-form-label.text-right Тематика проводимых рассылок
                                     .col-sm-8
                                         select.tags.select2-hidden-accessible( required="", tabindex="-1", aria-hidden="true")
                                             include ../mixins/_mixin-FormGroup
@@ -65,19 +65,19 @@ html
                                             +form-group-option( 'Ежедневный гороскоп' )
                                             +form-group-option( 'Спам' )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Цели рассылки:
+                                    label.col-sm-3.col-form-label.text-right Цели рассылки
                                     .col-sm-8
                                         input.form-control( type="text", required="true" )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Пример текста сообщения:
+                                    label.col-sm-3.col-form-label.text-right Пример текста сообщения
                                     .col-sm-8
                                         textarea.form-control( resize = 'vertical' )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Планируемый объём трафика в день:
+                                    label.col-sm-3.col-form-label.text-right Планируемый объём трафика в день
                                     .col-sm-8
                                         input.form-control( type="text", required="true" )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Тип сервиса:
+                                    label.col-sm-3.col-form-label.text-right Тип сервиса
                                     .col-sm-8.mt-2
                                         label.custom-control.custom-radio
                                             input.custom-control-input( type="radio", name="radio-color", checked="checked" )
@@ -88,21 +88,21 @@ html
                                             span.custom-control-indicator.custom-control-color
                                             span.custom-control-description Чат
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Возможные пиковые нагрузки (сообщений в секунду):
+                                    label.col-sm-3.col-form-label.text-right Возможные пиковые нагрузки (сообщений в секунду)
                                     .col-sm-8
                                         input.form-control( type="text", required="true" )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Отправитель:
+                                    label.col-sm-3.col-form-label.text-right Отправитель
                                     .col-sm-8
                                         input.form-control( type="text", required="true" )
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Адрес сайта:
+                                    label.col-sm-3.col-form-label.text-right Адрес сайта
                                     .col-sm-8.input-group.mb-2
                                         input.form-control( parsley-type="url", type="url", placeholder="http://", required="true" )
                                         i.input-group-addon.icon.icon-arrow-left
                                         span.input-group-addon введите адрес сайта
                                 .form-group.row
-                                    label.col-sm-3.col-form-label.text-right Дата согласования:
+                                    label.col-sm-3.col-form-label.text-right Дата согласования
                                     .col-sm-8
                                         input.form-control( type="text", disabled="disabled", placeholder="Не указана" )
                                         <!-- Action buttons -->
@@ -112,6 +112,7 @@ html
                                         button.btn.btn-primary.btn-space( type="submit" ) Добавить
                                         a.btn.btn-secondary.btn-space( href="senders.html", type="button" ) Отмена
 
+        script( src="assets/js/root.common.js" type="text/javascript" )
         include ../mixins/_mixin-ScriptLink
         +ScriptLink('frms')
 
