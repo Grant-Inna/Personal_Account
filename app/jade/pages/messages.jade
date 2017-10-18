@@ -31,7 +31,7 @@ html
                                 <!-- Add new button -->
                         .panel-heading
                             a.btn.btn-space.btn-success.add-button( href="new-messages.html" ) Добавить
-                                strong +
+                                strong &nbsp;+
 
                                 <!-- Messages table -->
                                 <!-- !Control layout selects, search input, pagination, informing message on the bottom of page generate automatically! -->
@@ -47,7 +47,7 @@ html
                                     include ../mixins/data/_mixin-MessagesData
                                     +messages-data( 'messages' )
 
-
+        script( src="assets/js/root.common.js" type="text/javascript" )
         include ../mixins/_mixin-ScriptLink
         +ScriptLink('dt')
 

@@ -1,27 +1,21 @@
 mixin ScriptLink (type)
   case ( type )
     when 'frms'
-      script( src="assets/js/root.common.js" type="text/javascript" )
       script( src="assets/js/root.forms.js" type="text/javascript" )
       script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.wizard(); $('form').parsley(); });
     when 'dt'
-      script( src="assets/js/root.common.js" type="text/javascript" )
       script( src="assets/js/root.dataTables.js" type="text/javascript" )
       script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.dataTables(); App.CustomFilters(); });
     when 'drpzone'
-      script( src="assets/js/root.common.js" type="text/javascript" )
       script( src="assets/js/root.mail.js" type="text/javascript" )
       script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.emailCompose(); $('form').parsley(); });
     when 'email'
-      script( src="assets/js/root.common.js" type="text/javascript" )
       script( src="assets/js/root.mail.js" type="text/javascript" )
       script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.emailCompose(); $('form').parsley(); });
     when 'jqFlot'
-      script( src="assets/js/root.common.js" type="text/javascript" )
       script( src="assets/js/root.jqueryFlot.js" type="text/javascript" )
       script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.emailCompose(); });
     when 'dshbrd'
-      script( src="assets/js/root.common.js" type="text/javascript" )
       script( src="assets/js/app-dashboard.js" type="text/javascript" )
       script( type="text/javascript" ) $(document).ready(function(){ App.init(); App.dashboard(); });
     when ''
