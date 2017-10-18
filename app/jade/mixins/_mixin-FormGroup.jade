@@ -3,3 +3,9 @@ mixin form-group-option ( text, selected )
       option( value = '#{text}' ) #{text}
    else
       option( value = '#{text}', selected ) #{text}
+
+mixin form-group-checkbox ( text )
+   label.custom-control.custom-checkbox.has-default
+      input.custom-control-input( type="checkbox" )
+      span.custom-control-indicator
+      span.custom-control-description #{text}
