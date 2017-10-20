@@ -174,11 +174,14 @@ var tasks = ['autoprefixer', 'minCss', 'watch_min', 'watch_autoprefixer'];
 
 var tasksJade = ['jade_pages', 'watch_jade'];
 
+var mainTasks = [ 'autoprefixer', 'minCss', 'watch_min', 'watch_autoprefixer', 'jade_pages', 'watch_jade' ];
+
 // Main tasks
 
-gulp.task('default', tasks);
+gulp.task('CSS', tasks);
 gulp.task('concat', tasksConcat);
 gulp.task('jade', tasksJade);
+gulp.task('default', mainTasks);
 
 
 
