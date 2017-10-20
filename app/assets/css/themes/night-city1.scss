@@ -11960,7 +11960,7 @@ padding-left: 0}
     margin-left: 3px; }
 
 .email-filters {
-  padding: 0 20px 30px;
+  padding: 0 0 20px 0;
   border-bottom: 1px solid #e6e5e5;
   background-color: #FFFFFF;
   display: table;
@@ -11990,6 +11990,10 @@ padding-left: 0}
     text-align: right; }
   .email-filters input {
     margin-right: 8px; }
+.email-filters-left {
+  padding-left: 20px;
+  align-items: center;
+}
 
 .email-pagination-indicator {
   display: inline-block;
@@ -11997,10 +12001,7 @@ padding-left: 0}
   margin-right: 13px; }
   @media (max-width: 767px) {
     .email-pagination-indicator {
-      position: absolute;
-      margin-right: 0;
-      top: 36px;
-      right: 25px; } }
+      margin-right: 5px; } }
 
 .email-pagination-nav .btn {
   min-width: 30px;
@@ -15439,6 +15440,10 @@ span[name="reset-filters"] {
 .d-flex {
   display: flex !important;
 }
+.wrap {
+  flex-wrap: wrap;
+}
+
 .jc-center {
   display: flex !important;
   justify-content: center !important;
@@ -15542,26 +15547,49 @@ button {
 /*  Extra Big  */
 
 @media (max-width: 1200px) {
-  .email-filters {
+  .table-filters-dropdown {
+    margin-right: 10px;
+  }
+  .media-lg-column {
     display: flex;
-    flex-direction: column-reverse;
-
+    flex-direction: column;
+  }
+  .media-lg-left {
+    display: flex;
+    justify-content: flex-start !important;
+  }
+  .media-lg-column-left {
+    display: flex;
+    align-items: flex-start !important;
+  }
+  .media-lg-no-ml {
+    margin-left: 0 !important;
+  }
+  .media-lg-mt {
+    margin-top: 10px !important;
+  }
+  .email-filters-left {
+    align-items: flex-start;
   }
 }
 
-/*@media (max-width: 995px) {
-  .email-filters-left {
-    display: flex !important;
-    flex-direction: column-reverse;
-    > div {
-      width: 40%;
-    }
-  }
-  .email-filters > div {
-  }
-}*/
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+
+}
 
 /*  Extra small  */
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media (max-width: 614px) {
+
+}
 
 @media (max-width: 580px) {
 
@@ -15575,4 +15603,22 @@ button {
   .mai-nav-tabs-sub > .nav-item > .nav-link {
     padding: 3px 0;
   }
+  .col-xs-12 {
+    width: 100%;
+  }
+
+}
+@media (max-width: 445px) {
+  .email-list-item .msg {
+    display: none;
+  }
+  .email-list-item .from {
+    flex: 0 0 60%
+  }
+  .email-list-item .date {
+    flex: 0 0 20%
+  }
+}
+@media (max-width: 335px) {
+
 }
