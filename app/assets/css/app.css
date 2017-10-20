@@ -14364,6 +14364,9 @@ input[type="checkbox"] {
       -ms-flex-align: center;
           align-items: center; }
 
+.table-filters-dropdown {
+  margin-right: 10px; }
+
 .email-pagination-indicator {
   display: inline-block;
   vertical-align: middle;
