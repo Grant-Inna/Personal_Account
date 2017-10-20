@@ -1,0 +1,193 @@
+doctype
+html
+    include ../template/index-main
+        include ../mixins/_mixin-StylesheetLink
+        +StylesheetLink( 'frms' )
+        link( rel="stylesheet", href="assets/css/app.css", type="text/css" )
+        include ../mixins/_mixin-PageTitle
+        +PageTitle( 'Важные сообщения' )
+    body
+        include ../static/static-menu
+        include ../static/static-menu-index-container
+            include ../static/static-menu-index
+                include ../mixins/nav/_mixin-MenuItem-main
+                include ../mixins/nav/_mixin-MenuItem-senders
+                include ../mixins/nav/_mixin-MenuItem-email
+                include ../mixins/nav/_mixin-MenuItem-clients
+                include ../mixins/nav/_mixin-MenuItem-settings
+                +main-item()
+                +main-senders()
+                +main-email( 'open', 'active' )
+                +main-clients()
+                +main-settings()
+            .search
+                input(type='text', placeholder='Поиск...', name='q')
+                span.s7-search
+        div.main-content.container      <!-- OUR CONTENT -->
+            .row.emil
+                .col-md-3.email-aside   <!-- Left column -->
+                    .aside-content
+                        .content
+                            .aside-header.navbar-toggleable-sm
+                                .aside-compose
+                                    a.btn.btn-secondary.btn-block(href='email-compose.html') Новое сообщение
+
+                            .aside-nav.navbar-collapse.collapse
+                                ul.navbar-nav
+                                    li.nav-item
+                                        a.nav-link( href="email-inbox.html" )
+                                            span.badge.badge-primary 1
+                                            i.icon.s7-drawer
+                                            span Диалоги
+                                    li.nav-item.active
+                                        a.nav-link( href="email-important.html" ) <!-- ACTIVE -->
+                                            span.badge.badge-default 2
+                                            i.icon.s7-star
+                                            span Важные
+
+                                hr
+
+                                span.title Каналы
+                                ul.navbar-nav.nav-pills.nav-stacked
+                                    li.nav-item
+                                        a.nav-link( href="#" )
+                                            span.badge.badge-default 4
+                                            | Telegram
+                                    li.nav-item
+                                        a.nav-link( href="#" )
+                                            span.badge.badge-default 5
+                                            | Viber
+                                    li.nav-item
+                                        a.nav-link( href="#" )
+                                            span.badge.badge-default 3
+                                            | Facebook Messanger
+                                    li.nav-item
+                                        a.nav-link( href="#" )
+                                            span.badge.badge-default 7
+                                            | VK.com
+                                    li.nav-item
+                                        a.nav-link( href="#" )
+                                            span.badge.badge-default 1
+                                            | SMS
+
+                .col-md-9.email-content         <!-- Right column -->
+                    .email-inbox-header             <!-- Caption -->
+                        .row
+                            .col-md-9
+                                .email-title
+                                    .email-title-holder
+                                        i.icon.s7-drawer
+                                        span Все диалоги
+                                    span.new-messages есть новые сообщения (1)
+
+                            .col-md-12.col-lg-3               <!-- Search input -->
+                                .email-search.mt-2
+                                    .input-group.input-search
+                                        input.form-control(type='text', placeholder='Поиск по сообщениям...')
+                                        span.input-group-btn
+                                            button.btn.btn-secondary(type='button')
+                                                i.icon.s7-search
+
+                    .email-filters.d-flex.justify-content-between.wrap
+                        .email-filters-left.col-sm-12.col-md-8.jc-sb.media-lg-left         <!-- Choose all letters checkbox -->
+                            .table-filters-main-checkbox
+                                label.custom-control.custom-checkbox.mai-select-all
+                                    input.custom-control-input(type='checkbox')
+                                    span.custom-control-indicator
+
+                            .table-filters-dropdown.media-lg-column
+                                .btn-group.media-lg-no-ml          <!-- Service choosing -->
+                                    button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Выбрать сервис
+                                        span.icon-dropdown.s7-angle-down
+                                    .dropdown-menu(role='menu')
+                                        a.dropdown-item(href='#') «Рога и Копыта»
+                                        a.dropdown-item(href='#') &laquo;Awesome Company&raquo;
+                                        .dropdown-divider
+                                        a.dropdown-item(href='#')  Все сервисы
+
+                                .btn-group.media-lg-no-ml.media-lg-mt         <!-- Chanel choosing -->
+                                    button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Выбрать канал
+                                        span.icon-dropdown.s7-angle-down
+                                    .dropdown-menu(role='menu')
+                                        a.dropdown-item.dropdown-item-channel(href='#')
+                                            span.icon-channel.icon-channel-telegram
+                                            span Telegram
+                                        a.dropdown-item.dropdown-item-channel(href='#')
+                                            span.icon-channel.icon-channel-viber
+                                            span Viber
+                                        a.dropdown-item.dropdown-item-channel(href='#')
+                                            span.icon-channel.icon-channel-facebook
+                                            span Facebook Messanger
+                                        a.dropdown-item.dropdown-item-channel(href='#')
+                                            span.icon-channel.icon-channel-vk
+                                            span VK.com
+                                        a.dropdown-item.dropdown-item-channel(href='#')
+                                            span.icon-channel.icon-channel-sms
+                                            span SMS
+
+                                .btn-group.media-lg-no-ml.media-lg-mt           <!-- Sorting -->
+                                    button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Сортировать
+                                        span.icon-dropdown.s7-angle-down
+                                    .dropdown-menu.dropdown-menu-right(role='menu')
+                                        a.dropdown-item(href='#') По дате
+                                        a.dropdown-item(href='#') По отправителю
+                                        a.dropdown-item(href='#') По теме
+                                        a.dropdown-item(href='#') По каналам
+
+                            .table-filters-buttons
+                                .btn-group      <!-- Action buttons -->
+                                    button.btn.btn-secondary(type='button', title='В Архив')
+                                        i.icon.s7-box1
+                                    button.btn.btn-secondary(type='button', title='Важное')
+                                        i.icon.s7-star
+                                    button.btn.btn-secondary(type='button', title='Удалить')
+                                        i.icon.s7-trash
+
+
+                        .email-filters-right.col-sm-12.col-md-4.col-lg-3       <!-- Pagination -->
+                            span.email-pagination-indicator 1-50 of 253
+                            .btn-group.email-pagination-nav
+                                button.btn.btn-secondary(type='button')
+                                    i.s7-angle-left
+                                button.btn.btn-secondary(type='button')
+                                    i.s7-angle-right
+
+                    .email-list         <!-- Email list -->
+                        .email-list-item
+                            .email-list-actions
+                                label.custom-control.custom-checkbox
+                                    input.custom-control-input(type='checkbox')
+                                    span.custom-control-indicator
+                                a.favorite.active(href='#')   <!-- ACTIVE -->
+                                    span.s7-star
+                                .icon-channel.icon-channel-viber
+                            a.email-list-detail(href='pages-chat.html')
+                                span.from Tommy Wiseau
+                                p.msg I did nat hit her, I did naaaaht. Oh, hi Mark!
+                                span.date
+                                    i.icon.s7-paperclip
+                                    |  28 Jul
+                        .email-list-item
+                            .email-list-actions
+                                label.custom-control.custom-checkbox
+                                    input.custom-control-input(type='checkbox')
+                                    span.custom-control-indicator
+                                a.favorite.active(href='#')   <!-- ACTIVE -->
+                                    span.s7-star
+                                .icon-channel.icon-channel-sms
+                            a.email-list-detail(href='pages-chat.html')
+                                span.from Tommy Wiseau
+                                p.msg I did nat hit her, I did naaaaht. Oh, hi Mark!
+                                span.date
+                                    i.icon.s7-paperclip
+                                    |  28 Jul
+
+
+
+
+        script( src="assets/js/root.common.js" type="text/javascript" )
+        include ../mixins/_mixin-ScriptLink
+        +ScriptLink( 'email' )
+
+
+
